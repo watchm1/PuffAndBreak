@@ -424,6 +424,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackEnvironment
       objectReference: {fileID: 0}
+    - target: {fileID: 1548731340894426081, guid: 26869911e955d754296fb26bafcb9248,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6216.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26869911e955d754296fb26bafcb9248, type: 3}
 --- !u!1001 &3821528775650457281
@@ -433,6 +438,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1335787965833767007, guid: 2f5720665ee029946ac0d05b658da332,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 227.99768
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335787965833767007, guid: 2f5720665ee029946ac0d05b658da332,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 78.80968
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335787965833767007, guid: 2f5720665ee029946ac0d05b658da332,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 184.00552
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335787965833767007, guid: 2f5720665ee029946ac0d05b658da332,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 321.54123
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335787965833767007, guid: 2f5720665ee029946ac0d05b658da332,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -210.1937
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335787965833767007, guid: 2f5720665ee029946ac0d05b658da332,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 352.26202
+      objectReference: {fileID: 0}
+    - target: {fileID: 3343010198694281672, guid: 2f5720665ee029946ac0d05b658da332,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3343010198694281672, guid: 2f5720665ee029946ac0d05b658da332,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 17.18
+      objectReference: {fileID: 0}
     - target: {fileID: 3821528776854784260, guid: 2f5720665ee029946ac0d05b658da332,
         type: 3}
       propertyPath: m_Name
