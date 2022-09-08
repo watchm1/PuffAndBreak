@@ -1,13 +1,9 @@
-using System;
-using _Watchm1.Helpers.Effects.Abstract;
 using _Watchm1.SceneManagment.Manager;
-using imports._Watchm1.SceneManagment.Settings;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace _Game.Scripts
+namespace _Game.Scripts.Camera
 {
     public class CameraMovement : SerializedMonoBehaviour
     {

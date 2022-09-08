@@ -12,8 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a23e1e2f2ad8da4f9c419045380e775, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  restrictedDistance: 0
-  playerForwardSpeed: 0
-  playerHorizontalSpeed: 0
-  playerRotateAngle: 0
-  playerRotateSpeed: 0
+  playerForwardSpeed: 20
+  playerHorizontalSpeed: 20

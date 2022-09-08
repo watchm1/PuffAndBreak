@@ -3,17 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Distant Lands/Thalassophobia - Low Poly Oceans/Contents/Materials/Water Surface.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Distant Lands/Thalassophobia - Low Poly Oceans/Contents/Materials/Water Surface.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/_Watchm1/EditorWindows/WatchmExtensionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/_Watchm1/EditorWindows/WatchmExtensionMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/_Watchm1/SceneManagment/Settings/GameSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/_Watchm1/SceneManagment/Settings/GameSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/CameraMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/CameraMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Settings/Resources/GameSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Settings/Resources/GameSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,7 +74,7 @@
       <workItem from="1662203459273" duration="9000" />
       <workItem from="1662209964744" duration="55000" />
       <workItem from="1662501412612" duration="1815000" />
-      <workItem from="1662627192562" duration="3133000" />
+      <workItem from="1662627192562" duration="8189000" />
     </task>
     <servers />
   </component>
