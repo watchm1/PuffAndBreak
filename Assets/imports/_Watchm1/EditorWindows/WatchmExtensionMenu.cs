@@ -1,29 +1,15 @@
 using System;
 using System.IO;
-using _Watchm1.Config;
 using _Watchm1.Helpers.Logger;
-using _Watchm1.SceneManagment.Settings;
+using imports._Watchm1.SceneManagment.Settings;
 using UnityEditor;
 using Object = UnityEngine.Object;
 
-namespace _Watchm1.EditorWindows
+namespace imports._Watchm1.EditorWindows
 {
     public class WatchmExtensionMenu : UnityEditor.Editor
     {
         
-        [MenuItem("WATCHMEXTENSION/Level Settings")]
-        static void OpenLevelSettings()
-        {
-            var settings = LevelSettings.Current;
-
-            if (settings == null)
-            {
-                settings = CreateInstance<LevelSettings>();
-                CreateAssetIfNotExist(settings, "_Game/Settings/Resources");
-            }
-            EditorUtility.FocusProjectWindow();
-            Selection.activeObject = settings;
-        }
        
         [MenuItem("WATCHMEXTENSION/Game Settings")]
 
