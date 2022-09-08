@@ -43,7 +43,7 @@ namespace _Game.Scripts.Camera
         private bool IsPlayerInsideViewBounds()
         {
             var viewPos = _camScript.WorldToViewportPoint(player.transform.position);
-            if (viewPos.x is > -0.3f and < 1)
+            if (viewPos.x is > -0.1f and < 1.1f)
             {
                 return true;
             }

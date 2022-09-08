@@ -2,6 +2,7 @@ using System;
 using _Watchm1.Helpers.Logger;
 using _Watchm1.SceneManagment.Manager;
 using imports._Watchm1.SceneManagment.Settings;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _Game.Scripts.Player
@@ -26,6 +27,7 @@ namespace _Game.Scripts.Player
             _verticalSpeed = _settings.playerForwardSpeed;
             _horizontalSpeed = _settings.playerHorizontalSpeed;
             _floatingJoystick = FindObjectOfType<FloatingJoystick>();
+            
         }
 
         private void Update()
@@ -37,6 +39,9 @@ namespace _Game.Scripts.Player
             if (Input.touchCount > 0)
             {
                 HandleMovement();
+            }
+            else
+            {
             }
         }
 
