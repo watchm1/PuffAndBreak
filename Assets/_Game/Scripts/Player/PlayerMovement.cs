@@ -12,7 +12,6 @@ namespace _Game.Scripts.Player
     public class PlayerMovement : MonoBehaviour
     {
         #region Definition
-        [SerializeField] private GameObject childObject;
         private GameSettings _settings;
         private float _verticalSpeed;
         private float _horizontalSpeed;
@@ -67,9 +66,9 @@ namespace _Game.Scripts.Player
 
         private void HandleRotation(float vertical, float horizontal)
         {
-            var direction = new Vector3(childObject.transform.localRotation.x + (horizontal * 10), 
-                childObject.transform.localRotation.y +  (vertical * 10),childObject.transform.localRotation.z);
-            childObject.transform.localRotation = Quaternion.Slerp(childObject.transform.localRotation, Quaternion.LookRotation(direction), Time.deltaTime *10);
+            var direction = new Vector3(_player.childObject.transform.localRotation.x + (horizontal * 10), 
+                _player.childObject.transform.localRotation.y +  (vertical * 10),_player.childObject.transform.localRotation.z);
+            _player.childObject.transform.localRotation = Quaternion.Slerp(_player.childObject.transform.localRotation, Quaternion.LookRotation(direction), Time.deltaTime *10);
         }
 
         private void PuffedMovement()
@@ -78,9 +77,9 @@ namespace _Game.Scripts.Player
             transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime);
 
             var defaultLocalRotation = Quaternion.Euler(0,90,0);
-            if (childObject.transform.localRotation != defaultLocalRotation)
+            if (_player.childObject.transform.localRotation != defaultLocalRotation)
             {
-                childObject.transform.localRotation = Quaternion.Lerp(childObject.transform.localRotation, defaultLocalRotation, Time.deltaTime) ;
+                _player.childObject.transform.localRotation = Quaternion.Lerp(_player.childObject.transform.localRotation, defaultLocalRotation, Time.deltaTime) ;
             }
             else
             {
