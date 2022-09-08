@@ -30,6 +30,7 @@ namespace _Game.Scripts.Player
             props.currentState = FishState.Puff;
             props.canMove = false;
             props.childObjectMeshRenderer = childObject.GetComponent<SkinnedMeshRenderer>();
+            props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
         }
 
         private void Update()
