@@ -28,7 +28,7 @@ namespace _Game.Scripts.Camera
            
         }
 
-        private void FixedUpdate()
+        private void LateUpdate()
         {
             if (LevelManager.Instance.PlayModeActive())
             {
