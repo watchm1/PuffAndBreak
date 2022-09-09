@@ -1,10 +1,8 @@
 using System;
 using _Watchm1.EventSystem.Events;
 using _Watchm1.Helpers.Logger;
-using imports._Watchm1.SceneManagment.Settings;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.Screen;
+using UnityEngine.SceneManagement;
 
 namespace _Game.Scripts.Camera
 {
@@ -31,7 +29,6 @@ namespace _Game.Scripts.Camera
         {
             if (!IsPlayerInsideViewBounds())
             {
-                WatchmLogger.Log("dışında");
                 outOfRange.InvokeEvent();
             }
         }
@@ -55,7 +52,7 @@ namespace _Game.Scripts.Camera
 
         public void QuitApp()
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         #endregion
     }

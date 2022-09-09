@@ -16,91 +16,14 @@ MonoBehaviour:
   deleteDllAfterBuilds: 1
   AutomateForAllAOTPlatforms: 1
   automateForPlatforms: 0900000014000000
-  lastScan: 637918805820213010
+  lastScan: 637983398109844616
   supportSerializedTypes:
-  - TypeName: YamyStudio.ArcadeIdleSystem.Items.CharacterItemUpgrade, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.ArcadeIdleSystem.Items.CharacterLevelUpgrade, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.ArcadeIdleSystem.Items.CharacterLevelUpgrades, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.ArcadeIdleSystem.Items.CharacterLevelUpgradeType, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.ArcadeIdleSystem.Items.Cost, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.ArcadeIdleSystem.Items.CostType, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.ArcadeIdleSystem.Items.Currency, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[YamyStudio.UIElements.DynamicScroll.SegmentItemView`1[[YamyStudio.ArcadeIdleSystem.HR.UpgradeItemView,
-      Assembly-CSharp]], Assembly-CSharp]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.EnumEqualityComparer`1[[YamyStudio.ArcadeIdleSystem.Items.CharacterLevelUpgradeType,
-      Assembly-CSharp]], mscorlib
+  - TypeName: System.Boolean, mscorlib
     IsCustom: 0
     Emit: 1
   - TypeName: System.Single, mscorlib
     IsCustom: 0
     Emit: 1
   - TypeName: UnityEngine.GameObject, UnityEngine.CoreModule
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
-      mscorlib]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.ArcadeIdleSystem.Configs.IdleUIItem, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.IEqualityComparer`1[[YamyStudio.ArcadeIdleSystem.Items.CharacterLevelUpgradeType,
-      Assembly-CSharp]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.IEqualityComparer`1[[System.Int32, mscorlib]],
-      mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Int32, mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.List`1[[YamyStudio.ArcadeIdleSystem.Items.CharacterItemUpgrade,
-      Assembly-CSharp]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.List`1[[YamyStudio.ArcadeIdleSystem.HR.UpgradeItemView,
-      Assembly-CSharp]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Object, mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Object[], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.UIElements.DynamicScroll.SegmentItemView`1[[YamyStudio.ArcadeIdleSystem.HR.UpgradeItemView,
-      Assembly-CSharp]], Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: UnityEngine.Sprite, UnityEngine.CoreModule
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.String, mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: UnityEngine.UI.Toggle, UnityEngine.UI
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.ArcadeIdleSystem.Configs.UIElements, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: YamyStudio.ArcadeIdleSystem.HR.UpgradeItemView, Assembly-CSharp
     IsCustom: 0
     Emit: 1

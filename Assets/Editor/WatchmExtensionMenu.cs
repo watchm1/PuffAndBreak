@@ -5,14 +5,11 @@ using imports._Watchm1.SceneManagment.Settings;
 using UnityEditor;
 using Object = UnityEngine.Object;
 
-namespace imports._Watchm1.EditorWindows
+namespace Editor
 {
     public class WatchmExtensionMenu : UnityEditor.Editor
     {
-        
-       
         [MenuItem("WATCHMEXTENSION/Game Settings")]
-
         static void OpenGameSettings()
         {
             var settings = GameSettings.Current;

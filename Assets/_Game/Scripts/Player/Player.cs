@@ -1,7 +1,4 @@
-using System;
 using _Game.Scripts.Managers;
-using _Watchm1.Helpers.Logger;
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace _Game.Scripts.Player

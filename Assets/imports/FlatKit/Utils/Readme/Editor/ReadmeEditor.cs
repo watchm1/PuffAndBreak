@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 
 namespace FlatKit {
 [CustomEditor(typeof(FlatKitReadme))]
-public class ReadmeEditor : Editor {
+public class ReadmeEditor : UnityEditor.Editor {
     private static readonly string AssetName = "Flat Kit";
 
     private static readonly GUID UnityPackageUrpGuid = new GUID("41e59f562b69648719f2424c438758f3");
