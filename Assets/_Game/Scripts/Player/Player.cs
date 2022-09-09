@@ -1,6 +1,7 @@
 using System;
 using _Game.Scripts.Managers;
 using _Watchm1.Helpers.Logger;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace _Game.Scripts.Player
@@ -24,13 +25,17 @@ namespace _Game.Scripts.Player
         }
         public PlayerProps props;
         [SerializeField] public GameObject childObject;
+        private Animator _childAnimator;
+        private static readonly int Trigger = Animator.StringToHash("Trigger");
+
         private void Start()
         {
             props.health = 100;
             props.currentState = FishState.Puff;
             props.canMove = false;
-            props.childObjectMeshRenderer = childObject.GetComponent<SkinnedMeshRenderer>();
+            props.childObjectMeshRenderer = childObject.GetComponentInChildren<SkinnedMeshRenderer>();
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
+            _childAnimator = childObject.GetComponent<Animator>();
         }
 
         private void Update()
@@ -56,9 +61,9 @@ namespace _Game.Scripts.Player
         private void HandlePuffState()
         {
             props.currentState = FishState.Puff;
-            WatchmLogger.Warning("puffed");
             props.canMove = false;
             props.childObjectMeshRenderer.SetBlendShapeWeight(0, 100);
+            _childAnimator.SetBool(Trigger, false);
         }
 
         private void HandleShrinkState()
@@ -66,9 +71,8 @@ namespace _Game.Scripts.Player
         
             props.currentState = FishState.Shrinked;
             props.canMove = true;
-            WatchmLogger.Warning("shrinked");
             props.childObjectMeshRenderer.SetBlendShapeWeight(0, 0);
-
+            _childAnimator.SetBool(Trigger, true);
         }
 
         #endregion
