@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/DeepRock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/DeepRock.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/ShallowRock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/ShallowRock.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/PusfferFish.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/PusfferFish.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/Fish.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/Fish.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/animation/FishAnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/animation/FishAnimController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/animation/PusfferFish.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/animation/PusfferFish.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Environment/Underwater/BubbleRisingUnderwater.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Environment/Underwater/BubbleRisingUnderwater.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d9f8c363c2ad402e9dc0b44edbea30d67400/62/56776367/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Camera/DeadZoneController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Managers/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/ParticleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -84,7 +84,7 @@
       <workItem from="1662501412612" duration="1815000" />
       <workItem from="1662627192562" duration="18496000" />
       <workItem from="1662650541519" duration="1582000" />
-      <workItem from="1662726093473" duration="708000" />
+      <workItem from="1662726093473" duration="2058000" />
     </task>
     <servers />
   </component>
