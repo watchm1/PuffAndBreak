@@ -17,6 +17,7 @@ namespace _Game.Scripts.Player
         private float _horizontalSpeed;
         private FloatingJoystick _floatingJoystick;
         private Player _player;
+        public float multiplier = 1f ;
         #endregion
 
         #region LifeCycle
@@ -53,8 +54,8 @@ namespace _Game.Scripts.Player
 
         private void HandleMovement()
         {
-            var horizontal = _floatingJoystick.Horizontal;
-            var vertrical = _floatingJoystick.Vertical;
+            var horizontal = _floatingJoystick.Horizontal * multiplier;
+            var vertrical = _floatingJoystick.Vertical * multiplier;
             var mutliplyWithSpeedValueHor = horizontal * _horizontalSpeed;
             var mutliplyWithSpeedValueVer = vertrical * _verticalSpeed;
             var desiredPosition = new Vector3(transform.position.x + mutliplyWithSpeedValueHor,

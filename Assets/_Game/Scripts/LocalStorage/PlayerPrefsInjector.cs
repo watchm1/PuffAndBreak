@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using _Game.Scripts.AbilitySystem;
 using UnityEngine;
 
 namespace _Game.Scripts.LocalStorage
@@ -10,16 +7,19 @@ namespace _Game.Scripts.LocalStorage
         public static void SetIntValue(string name, int value)
         {
             PlayerPrefs.SetInt(name, value);
+            PlayerPrefs.Save();
         }
 
         public static void SetString(string name, string value)
         {
             PlayerPrefs.SetString(name, value);
+            PlayerPrefs.Save();
         }
 
         public static void SetFloat(string name, float value)
         {
             PlayerPrefs.SetFloat(name, value);
+            PlayerPrefs.Save();
         }
 
         public static int GetIntValue(string name)
@@ -35,6 +35,10 @@ namespace _Game.Scripts.LocalStorage
         public static float GetFloat(string name)
         {
             return PlayerPrefs.GetFloat(name);
+        }
+        public static void HardReset()
+        {
+            PlayerPrefs.DeleteAll();
         }
     }
 }

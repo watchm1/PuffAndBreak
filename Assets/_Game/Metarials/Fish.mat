@@ -171,7 +171,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 0.8869519, b: 0.2971698, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorDim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _ColorDim: {r: 0.6415094, g: 0.42000645, b: 0.19063723, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorDimExtra: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}

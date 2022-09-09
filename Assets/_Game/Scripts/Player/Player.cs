@@ -1,5 +1,6 @@
 using _Game.Scripts.Managers;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Player
 {
@@ -24,7 +25,7 @@ namespace _Game.Scripts.Player
         [SerializeField] public GameObject childObject;
         private Animator _childAnimator;
         private static readonly int Trigger = Animator.StringToHash("Trigger");
-
+        public ThrowMechanicController throwMechanicController;
         private void Start()
         {
             props.health = 100;
@@ -33,6 +34,7 @@ namespace _Game.Scripts.Player
             props.childObjectMeshRenderer = childObject.GetComponentInChildren<SkinnedMeshRenderer>();
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
             _childAnimator = childObject.GetComponent<Animator>();
+            throwMechanicController = GetComponent<ThrowMechanicController>();
         }
 
         private void Update()
@@ -61,6 +63,7 @@ namespace _Game.Scripts.Player
             props.canMove = false;
             props.childObjectMeshRenderer.SetBlendShapeWeight(0, 100);
             _childAnimator.SetBool(Trigger, false);
+            UseThrowMechanic();
         }
 
         private void HandleShrinkState()
@@ -72,6 +75,10 @@ namespace _Game.Scripts.Player
             _childAnimator.SetBool(Trigger, true);
         }
 
+        public void UseThrowMechanic()
+        {
+            StartCoroutine(throwMechanicController.ThrowThrown());
+        }
         #endregion
     }
 }
