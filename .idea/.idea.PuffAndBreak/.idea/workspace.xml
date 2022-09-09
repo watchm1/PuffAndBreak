@@ -3,23 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/Fish.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/Fish.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/Ability.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/Ability.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/AbilityController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/AbilityController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/Folder.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/Folder/FastMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/Folder/FastMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/IExecuter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/IExecuter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/LocalStorage/PlayerPrefsInjector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/LocalStorage/PlayerPrefsInjector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/ThrowThornAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/ThrowThornAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/abstract/Ability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/abstract/Ability.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/imports/_Watchm1/SceneManagment/Settings/GameSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/_Watchm1/SceneManagment/Settings/GameSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +17,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d9f8c363c2ad402e9dc0b44edbea30d67400/62/56776367/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/ac/c75eba71/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/FastMovementAbility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/IncreaseMassAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/ThrowThornAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/abstract/Ability.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Camera/CameraMovement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -102,7 +90,7 @@
       <workItem from="1662650541519" duration="1582000" />
       <workItem from="1662726093473" duration="3136000" />
       <workItem from="1662731773202" duration="7246000" />
-      <workItem from="1662749794754" duration="6908000" />
+      <workItem from="1662749794754" duration="9467000" />
     </task>
     <servers />
   </component>

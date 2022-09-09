@@ -11,7 +11,6 @@ namespace imports._Watchm1.SceneManagment.Settings
         [Header("Player mechanic side")]
         [SerializeField]  public float playerForwardSpeed;
         [SerializeField]  public float playerHorizontalSpeed;
-
         [Space(10)] [Header("AbilitySide")] 
         [SerializeField] public string fastMovementAbilityName;
         [SerializeField] public string throwThornsAbilityName;

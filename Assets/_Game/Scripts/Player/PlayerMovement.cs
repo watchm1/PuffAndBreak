@@ -67,9 +67,13 @@ namespace _Game.Scripts.Player
 
         private void HandleRotation(float vertical, float horizontal)
         {
-            var direction = new Vector3(_player.childObject.transform.localRotation.x + (horizontal * 10), 
-                _player.childObject.transform.localRotation.y +  (vertical * 10),_player.childObject.transform.localRotation.z);
-            _player.childObject.transform.localRotation = Quaternion.Slerp(_player.childObject.transform.localRotation, Quaternion.LookRotation(direction), Time.deltaTime *10);
+            if (horizontal != 0f || vertical != 0f)
+            {
+                var direction = new Vector3(_player.childObject.transform.localRotation.x + (horizontal * 10), 
+                    _player.childObject.transform.localRotation.y +  (vertical * 10),_player.childObject.transform.localRotation.z);
+                _player.childObject.transform.localRotation = Quaternion.Slerp(_player.childObject.transform.localRotation, Quaternion.LookRotation(direction), Time.deltaTime *10);    
+            }
+            
         }
 
         private void PuffedMovement()

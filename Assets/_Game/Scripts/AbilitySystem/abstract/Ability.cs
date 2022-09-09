@@ -43,7 +43,6 @@ namespace _Game.Scripts.AbilitySystem.@abstract
                 price = PlayerPrefsInjector.GetIntValue($"{abilityName}-Price");
             }
         }
-
         public virtual void UpgradeAction()
         {
             PlayerPrefsInjector.SetString($"{abilityName}", abilityName);
@@ -52,6 +51,5 @@ namespace _Game.Scripts.AbilitySystem.@abstract
             PlayerPrefsInjector.SetFloat($"{abilityName}-Power", abilityPower);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-Price", price);
         }
-        
     }
 }
