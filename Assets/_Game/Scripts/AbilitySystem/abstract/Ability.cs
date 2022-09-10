@@ -31,7 +31,6 @@ namespace _Game.Scripts.AbilitySystem.@abstract
         {
             if (!PlayerPrefsInjector.CheckLocalStorageValue(abilityName))
             {
-                
                 upgradeCount = 0;
                 maxUpgradeCount = 5;
                 // todo:: max upgrade count will define dynamicly
@@ -44,8 +43,9 @@ namespace _Game.Scripts.AbilitySystem.@abstract
             {
                 upgradeCount = PlayerPrefsInjector.GetIntValue($"{abilityName}-CurrentUpgradeCount");
                 maxUpgradeCount = PlayerPrefsInjector.GetIntValue($"{abilityName}-MaxUpgradeCount");
-                abilityPower = PlayerPrefsInjector.GetIntValue($"{abilityName}-Power");
+                abilityPower = PlayerPrefsInjector.GetFloat($"{abilityName}-Power");
                 price = PlayerPrefsInjector.GetIntValue($"{abilityName}-Price");
+                WatchmLogger.Log(abilityPower);
             }
         }
         public virtual void UpgradeAction()
@@ -57,5 +57,6 @@ namespace _Game.Scripts.AbilitySystem.@abstract
             PlayerPrefsInjector.SetIntValue($"{abilityName}-Price", price);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-Unlocked", unlocked);
         }
+        
     }
 }

@@ -1,3 +1,4 @@
+using System.Threading;
 using _Game.Scripts.AbilitySystem.@abstract;
 using _Game.Scripts.LocalStorage;
 using _Game.Scripts.Player;
@@ -22,18 +23,26 @@ namespace _Game.Scripts.AbilitySystem
 
         public override void Activate(GameObject player)
         {
+            PlayerMovement ownerMovement = player.GetComponent<PlayerMovement>();
             if (upgradeCount > 0)
             {
                 //todo: do fast movement one time !!
-                PlayerMovement ownerMovement = player.GetComponent<PlayerMovement>();
-                ownerMovement.multiplier = abilityPower;
+                if (abilityPower > 0)
+                {
+                    ownerMovement.multiplier = abilityPower;
+                }
+                else
+                {
+                    ownerMovement.multiplier = 1;
+                }
             }
             else
             {
                 WatchmLogger.Log("ability not active");
+                ownerMovement.multiplier = 1;
             }
         }
-
+        
         public override void UpgradeAction()
         {
             if (unlocked == 1)

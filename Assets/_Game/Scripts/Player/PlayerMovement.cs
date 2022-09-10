@@ -66,7 +66,7 @@ namespace _Game.Scripts.Player
             var desiredPosition = new Vector3(transform.position.x + mutliplyWithSpeedValueHor,
                 transform.position.y + mutliplyWithSpeedValueVer, transform.position.z);
             transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime);
-            
+                
             HandleRotation(_vertical, _horizontal);
         }
 

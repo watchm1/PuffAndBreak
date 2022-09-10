@@ -25,18 +25,9 @@ namespace _Game.Scripts.AbilitySystem
 
         #region LifeCycle
 
-        private void Start()
+        private void Awake()
         {
-            WatchmLogger.Log(GameSettings.Current.throwThornsAbilityName);
             Initializer();
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(key: KeyCode.M))
-            {
-                InvokeMoveAbility();
-            }
         }
 
         #endregion
@@ -83,46 +74,77 @@ namespace _Game.Scripts.AbilitySystem
 
         public void UpgradeMovementAbility()
         {
-            if (abilities[0].unlocked == 0)
+            if (PlayerPrefsInjector.CheckLocalStorageValue(abilities[0].abilityName))
             {
-                abilities[0].unlocked = 1;
-                abilities[0].UpgradeAction();
-                abilities[0].Activate(gameObject.transform.parent.gameObject);
+                if (abilities[0].unlocked == 0)
+                {
+                    abilities[0].unlocked = 1;
+                    abilities[0].UpgradeAction();
+                    abilities[0].Activate(gameObject.transform.parent.gameObject);
+                }
+                else
+                {
+                    abilities[0].UpgradeAction();
+                    abilities[0].Activate(gameObject.transform.parent.gameObject);
+                }
             }
             else
             {
-                abilities[0].UpgradeAction();
+                abilities[0].Initialize();
                 abilities[0].Activate(gameObject.transform.parent.gameObject);
+
             }
+
         }
 
         public void UpgradeThrowAbility()
         {
-            if (abilities[2].unlocked == 0)
+            if (PlayerPrefsInjector.CheckLocalStorageValue(abilities[2].abilityName))
             {
-                abilities[2].unlocked = 1;
-                abilities[2].UpgradeAction();
-                abilities[2].Activate(gameObject.transform.parent.gameObject);
+                if (abilities[2].unlocked == 0)
+                {
+                    abilities[2].unlocked = 1;
+                    abilities[2].UpgradeAction();
+                    abilities[2].Activate(gameObject.transform.parent.gameObject);
+                }
+                else
+                {
+                    abilities[2].UpgradeAction();
+                    abilities[2].Activate(gameObject.transform.parent.gameObject);
+
+                }
             }
             else
             {
-                abilities[2].UpgradeAction();
+                abilities[2].Initialize();
                 abilities[2].Activate(gameObject.transform.parent.gameObject);
             }
+
         }
+
         public void UpgradeIncreaseMassAbility()
         {
-            if (abilities[1].unlocked == 0)
+            if (PlayerPrefsInjector.CheckLocalStorageValue(abilities[2].abilityName))
             {
-                abilities[1].unlocked = 1;
-                abilities[1].UpgradeAction();
-                abilities[1].Activate(gameObject.transform.parent.gameObject);
+                if (abilities[1].unlocked == 0)
+                {
+                    abilities[1].unlocked = 1;
+                    abilities[1].UpgradeAction();
+                    abilities[1].Activate(gameObject.transform.parent.gameObject);
+                }
+                else
+                {
+                    abilities[1].UpgradeAction();
+                    abilities[1].Activate(gameObject.transform.parent.gameObject);
+                }    
             }
             else
             {
-                abilities[1].UpgradeAction();
+                abilities[1].Initialize();
                 abilities[1].Activate(gameObject.transform.parent.gameObject);
             }
+            
+            
         }
     }
 }
