@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 1654860761241172625}
   - component: {fileID: 399158491}
   - component: {fileID: 399158492}
+  - component: {fileID: 399158493}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -188,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childObject: {fileID: 6638843042148839108}
+  throwMechanicController: {fileID: 0}
 --- !u!114 &399158492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +200,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b48b214e8cc438f458728822cbc36362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  earnedAbility: 0
+  coolDown: 0
+  thornSpeed: 0
+  throwBeginLocations: []
+--- !u!114 &399158493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654860761241172627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e116a4b5d528943abc3f27882553bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2341270093301656755

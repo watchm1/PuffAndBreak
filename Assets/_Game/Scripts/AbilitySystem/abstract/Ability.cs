@@ -1,4 +1,5 @@
 using _Game.Scripts.LocalStorage;
+using _Watchm1.Helpers.Logger;
 using imports._Watchm1.SceneManagment.Settings;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -19,24 +20,28 @@ namespace _Game.Scripts.AbilitySystem.@abstract
         public int upgradeCount;
         public int maxUpgradeCount;
         public int price;
+        public int unlocked;
         public abstract void Activate(GameObject player);
 
+        public Ability()
+        {
+            
+        }
         public virtual void Initialize()
         {
-            var name = PlayerPrefsInjector.GetString(abilityName);
-            if (name is null or "")
+            if (!PlayerPrefsInjector.CheckLocalStorageValue(abilityName))
             {
-                abilityName = GameSettings.Current.fastMovementAbilityName;
+                
                 upgradeCount = 0;
                 maxUpgradeCount = 5;
+                // todo:: max upgrade count will define dynamicly
                 abilityPower = 1.4f;
                 price = 100;
-
-                UpgradeAction();
+                unlocked = 0;
+                this.UpgradeAction();
             }
             else
             {
-                abilityName = name;
                 upgradeCount = PlayerPrefsInjector.GetIntValue($"{abilityName}-CurrentUpgradeCount");
                 maxUpgradeCount = PlayerPrefsInjector.GetIntValue($"{abilityName}-MaxUpgradeCount");
                 abilityPower = PlayerPrefsInjector.GetIntValue($"{abilityName}-Power");
@@ -50,6 +55,7 @@ namespace _Game.Scripts.AbilitySystem.@abstract
             PlayerPrefsInjector.SetIntValue($"{abilityName}-MaxUpgradeCount", maxUpgradeCount);
             PlayerPrefsInjector.SetFloat($"{abilityName}-Power", abilityPower);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-Price", price);
+            PlayerPrefsInjector.SetIntValue($"{abilityName}-Unlocked", unlocked);
         }
     }
 }

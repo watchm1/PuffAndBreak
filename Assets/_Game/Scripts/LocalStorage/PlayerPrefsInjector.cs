@@ -40,5 +40,15 @@ namespace _Game.Scripts.LocalStorage
         {
             PlayerPrefs.DeleteAll();
         }
+
+        public static bool CheckLocalStorageValue(string key)
+        {
+            return PlayerPrefs.HasKey(key);
+        }
+
+        public static void DeleteAll()
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 }

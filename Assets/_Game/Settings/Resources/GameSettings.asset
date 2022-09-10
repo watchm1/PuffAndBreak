@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerForwardSpeed: 25
   playerHorizontalSpeed: 25
+  fastMovementAbilityName: FastMove
+  throwThornsAbilityName: ThrowThorn
+  largeMassAbilityName: IncreaseMass
+  abilityCoolDown: 2
+  fastMovementSprite: {fileID: 0}
+  throwThornsAbilitySprite: {fileID: 0}
+  largeMassAbilitySprite: {fileID: 0}
