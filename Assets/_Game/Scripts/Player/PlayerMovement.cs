@@ -1,4 +1,6 @@
 using System;
+using _Game.Scripts.AbilitySystem;
+using _Game.Scripts.LocalStorage;
 using _Watchm1.Helpers.Logger;
 using _Watchm1.SceneManagment.Manager;
 using imports._Watchm1.SceneManagment.Settings;
@@ -18,6 +20,8 @@ namespace _Game.Scripts.Player
         private FloatingJoystick _floatingJoystick;
         private Player _player;
         public float multiplier = 1f ;
+        private float _horizontal;
+        private float _vertical;
         #endregion
 
         #region LifeCycle
@@ -29,6 +33,7 @@ namespace _Game.Scripts.Player
             _horizontalSpeed = _settings.playerHorizontalSpeed;
             _floatingJoystick = FindObjectOfType<FloatingJoystick>();
             _player = GetComponent<Player>();
+            GetComponentInChildren<AbilityController>().abilities[0].Activate(gameObject);
         }
 
         private void Update()
@@ -54,15 +59,15 @@ namespace _Game.Scripts.Player
 
         private void HandleMovement()
         {
-            var horizontal = _floatingJoystick.Horizontal * multiplier;
-            var vertrical = _floatingJoystick.Vertical * multiplier;
-            var mutliplyWithSpeedValueHor = horizontal * _horizontalSpeed;
-            var mutliplyWithSpeedValueVer = vertrical * _verticalSpeed;
+            _horizontal = _floatingJoystick.Horizontal * multiplier;
+            _vertical = _floatingJoystick.Vertical * multiplier;
+            var mutliplyWithSpeedValueHor = _horizontal * _horizontalSpeed;
+            var mutliplyWithSpeedValueVer = _vertical * _verticalSpeed;
             var desiredPosition = new Vector3(transform.position.x + mutliplyWithSpeedValueHor,
                 transform.position.y + mutliplyWithSpeedValueVer, transform.position.z);
             transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime);
             
-            HandleRotation(vertrical, horizontal);
+            HandleRotation(_vertical, _horizontal);
         }
 
         private void HandleRotation(float vertical, float horizontal)

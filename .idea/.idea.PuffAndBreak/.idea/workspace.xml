@@ -5,14 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/FastMovementAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/FastMovementAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/IncreaseMassAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/IncreaseMassAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/ThrowThornAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/ThrowThornAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/abstract/Ability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/abstract/Ability.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/LocalStorage/PlayerPrefsInjector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/LocalStorage/PlayerPrefsInjector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Settings/Resources/GameSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Settings/Resources/GameSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/_Watchm1/SceneManagment/Settings/GameSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/_Watchm1/SceneManagment/Settings/GameSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/AbilityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +92,7 @@
       <workItem from="1662726093473" duration="3136000" />
       <workItem from="1662731773202" duration="7246000" />
       <workItem from="1662749794754" duration="9545000" />
-      <workItem from="1662802974823" duration="4597000" />
+      <workItem from="1662802974823" duration="6994000" />
     </task>
     <servers />
   </component>

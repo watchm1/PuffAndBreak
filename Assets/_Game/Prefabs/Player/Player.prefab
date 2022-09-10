@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1894441349}
   - component: {fileID: 1906493459}
+  - component: {fileID: 1906493460}
+  - component: {fileID: 1906493461}
+  - component: {fileID: 1906493462}
   m_Layer: 0
   m_Name: AbilityHolder
   m_TagString: Untagged
@@ -47,7 +50,10 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 2703ceb461a21084d8076d6b826d82af, type: 2}
+    - {fileID: 11400000, guid: a415288d6cfcb0445a73fabb9ef388d4, type: 2}
+    - {fileID: 11400000, guid: 96460b8228f76a646abc316de8e084ce, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -56,6 +62,102 @@ MonoBehaviour:
     - Name: abilities
       Entry: 6
       Data: 
+    - Name: movementUpgrade
+      Entry: 10
+      Data: 0
+    - Name: throwThornUpgrade
+      Entry: 10
+      Data: 1
+    - Name: increaseMassUpgrade
+      Entry: 10
+      Data: 2
+--- !u!114 &1906493460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894441348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d75b895455e5f40964c55aec7218eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2703ceb461a21084d8076d6b826d82af, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1906493459}
+        m_TargetAssemblyTypeName: _Game.Scripts.AbilitySystem.AbilityController,
+          Assembly-CSharp
+        m_MethodName: UpgradeMovementAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1906493461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894441348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d75b895455e5f40964c55aec7218eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a415288d6cfcb0445a73fabb9ef388d4, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1906493459}
+        m_TargetAssemblyTypeName: _Game.Scripts.AbilitySystem.AbilityController,
+          Assembly-CSharp
+        m_MethodName: UpgradeThrowAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1906493462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894441348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d75b895455e5f40964c55aec7218eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 96460b8228f76a646abc316de8e084ce, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1906493459}
+        m_TargetAssemblyTypeName: _Game.Scripts.AbilitySystem.AbilityController,
+          Assembly-CSharp
+        m_MethodName: UpgradeIncreaseMassAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &652825930232769980
 GameObject:
   m_ObjectHideFlags: 0
