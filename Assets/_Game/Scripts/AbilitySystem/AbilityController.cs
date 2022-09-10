@@ -110,7 +110,6 @@ namespace _Game.Scripts.AbilitySystem
                 abilities[2].Activate(gameObject.transform.parent.gameObject);
             }
         }
-
         public void UpgradeIncreaseMassAbility()
         {
             if (abilities[1].unlocked == 0)
