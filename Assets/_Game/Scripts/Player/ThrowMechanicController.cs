@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using _Game.Scripts.AbilitySystem;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -17,6 +18,7 @@ namespace _Game.Scripts.Player
         void Start()
         {
             _randomPointIndexes = new List<int>();
+            GetComponentInChildren<AbilityController>().abilities[3].Activate(gameObject);
         }
 
         // Update is called once per frame
@@ -41,7 +43,6 @@ namespace _Game.Scripts.Player
                 //todo: throw Mechanic
                 yield return new WaitForSeconds(coolDown);
                 _randomPointIndexes.Clear();
-                _multiplier = 0;
             }
             else
             {

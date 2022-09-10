@@ -1,4 +1,5 @@
 using _Game.Scripts.AbilitySystem.@abstract;
+using _Game.Scripts.Player;
 using _Watchm1.Helpers.Logger;
 using imports._Watchm1.SceneManagment.Settings;
 using UnityEngine;
@@ -18,14 +19,23 @@ namespace _Game.Scripts.AbilitySystem
         }
         public override void Activate(GameObject player)
         {
+            Player.Player owner = player.GetComponent<Player.Player>();
             if (upgradeCount > 0)
             {
-                Player.Player owner = player.GetComponent<Player.Player>();
-                owner.throwMechanicController.SetRequirementsForMechanic(upgradeCount, abilityPower);
+                owner.throwMechanicController.earnedAbility = true;
+                if (abilityPower > 0)
+                {
+                    owner.throwMechanicController.SetRequirementsForMechanic(upgradeCount, abilityPower);
+                }
+                else
+                {
+                    owner.throwMechanicController.earnedAbility = false;
+                }
             }
             else
             {
                 WatchmLogger.Error("You haven't earn this ability");
+                owner.throwMechanicController.earnedAbility = false;
             }
         }
         public override void UpgradeAction()
