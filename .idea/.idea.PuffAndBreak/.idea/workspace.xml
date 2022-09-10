@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/AbilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/FastMovementAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/FastMovementAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/abstract/Ability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/abstract/Ability.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Buttons/Btn_IconButton_Circle_105_Dark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Buttons/Btn_IconButton_Circle_105_Dark.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Buttons/Btn_IconButton_Circle_90-Group.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Buttons/Btn_IconButton_Circle_90-Group.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Buttons/_PrefabsPanel_Buttons_00.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Buttons/_PrefabsPanel_Buttons_00.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/IncreaseMassAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/IncreaseMassAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +92,7 @@
       <workItem from="1662726093473" duration="3136000" />
       <workItem from="1662731773202" duration="7246000" />
       <workItem from="1662749794754" duration="9545000" />
-      <workItem from="1662802974823" duration="11040000" />
+      <workItem from="1662802974823" duration="12193000" />
     </task>
     <servers />
   </component>

@@ -42,9 +42,22 @@ namespace _Game.Scripts.AbilitySystem
 
         public override void Activate(GameObject player)
         {
+            Transform childMesh = player.transform.GetChild(0);
+            var oldLocaleScale = new Vector3(11.3f, 11.3f, 11.3f);
             if (upgradeCount > 0)
             {
-                //todo: localscale
+                if (abilityPower > 0)
+                {
+                    childMesh.transform.localScale *= abilityPower;
+                }
+                else
+                {
+                    childMesh.transform.localScale = oldLocaleScale;
+                }
+            }
+            else
+            {
+                childMesh.transform.localScale = oldLocaleScale;
             }
         }
     }

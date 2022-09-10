@@ -1,3 +1,4 @@
+using _Game.Scripts.AbilitySystem;
 using _Game.Scripts.Managers;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -35,6 +36,7 @@ namespace _Game.Scripts.Player
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
             _childAnimator = childObject.GetComponent<Animator>();
             throwMechanicController = GetComponent<ThrowMechanicController>();
+            GetComponentInChildren<AbilityController>().abilities[1].Activate(gameObject);
         }
 
         private void Update()
