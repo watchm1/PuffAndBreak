@@ -18,7 +18,7 @@ namespace _Game.Scripts.AbilitySystem
 
             if (!other.CompareTag("Player") && !other.CompareTag("Thorn"))
             {
-                PoolManager.Instance.pool.ReturnObjectToPool(0,gameObject);
+                ObjectPool.Instance.ReturnObjectToPool(0,gameObject);
             }
         }
     }

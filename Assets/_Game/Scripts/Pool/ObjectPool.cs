@@ -1,14 +1,17 @@
 using System;
 using System.Collections.Generic;
+using _Watchm1.EventSystem.Events;
 using _Watchm1.Helpers.Extensible.@abstract;
 using _Watchm1.Helpers.Extensible.concrete;
 using _Watchm1.Helpers.Logger;
+using _Watchm1.Helpers.Singleton;
 using TMPro.Examples;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _Game.Scripts.Pool
 {
-    public class ObjectPool : MonoBehaviour, IExtensible
+    public class ObjectPool : Singleton<ObjectPool>, IExtensible
     {
         #region Definition
 
@@ -25,8 +28,18 @@ namespace _Game.Scripts.Pool
         #endregion
 
         #region LifeCycle
+        
+        private void Start()
+        {
+            WatchmLogger.Log("çalıştı");
+            PoolInitializer();
+        }
 
-        private void Awake()
+        #endregion
+
+        #region Methods
+
+        public void PoolInitializer()
         {
             for (int i = 0; i < pools.Length; i++)
             {
@@ -42,11 +55,6 @@ namespace _Game.Scripts.Pool
                 }
             }
         }
-
-        #endregion
-
-        #region Methods
-
         public GameObject GetObjectFromPool(int type)
         {
             if (type >= pools.Length)

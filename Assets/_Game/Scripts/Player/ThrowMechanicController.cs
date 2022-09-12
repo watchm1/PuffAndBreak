@@ -42,7 +42,7 @@ namespace _Game.Scripts.Player
                 {
                     for (int i = 0; i < _multiplier; i++)
                     {
-                        var obj = PoolManager.Instance.pool.GetObjectFromPool(0);
+                        var obj = ObjectPool.Instance.GetObjectFromPool(0);
                         WatchmLogger.Log("name => "+ obj.name);
                         obj.SetActive(true);
                         obj.transform.position = throwBeginPosition.position;
@@ -50,7 +50,7 @@ namespace _Game.Scripts.Player
                         obj.transform.localRotation = Quaternion.Euler(obj.transform.localRotation.x,
                             obj.transform.localRotation.y
                             , newRandomAngle);
-                        obj.GetComponent<Rigidbody>().AddForce(obj.transform.up * (thornSpeed * 500));
+                        obj.GetComponent<Rigidbody>().AddForce(obj.transform.up * (thornSpeed * 1000));
                     }
                     lunched = true;
                 }

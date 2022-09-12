@@ -322,7 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1527050734}
-  - component: {fileID: 1527050735}
+  - component: {fileID: 1527050736}
   m_Layer: 0
   m_Name: ---MANAGERS---
   m_TagString: Untagged
@@ -345,7 +345,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1527050735
+--- !u!114 &1527050736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -354,11 +354,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1527050733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13ad2e5f8f264c14890b4f31aa3becff, type: 3}
+  m_Script: {fileID: 11500000, guid: dc05cf1f37e6be442bfa31251003f5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroy: 1
-  pool: {fileID: 0}
+  currentState: 0
+  currentGameState: 0
 --- !u!4 &1776205248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1776205248, guid: e18577fa85e8a4b4096c62d7dd28741a,
@@ -380,7 +381,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2001913952
 Transform:
@@ -409,6 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9ebaba55ad1214d8a4ded66fbe081d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroy: 1
   pools:
   - poolObjectPrefab: {fileID: 7676830653585674905, guid: 34af39bed24ef0745a93ced564804d39,
       type: 3}
