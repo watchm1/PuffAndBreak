@@ -53,9 +53,15 @@ namespace _Game.Scripts.Player
                         obj.GetComponent<Rigidbody>().AddForce(obj.transform.up * (thornSpeed * 1000));
                     }
                     lunched = true;
+                    yield return new WaitForSecondsRealtime(coolDown);
+                    lunched = false;
+                    
                 }
-                yield return new WaitForSecondsRealtime(coolDown);
-                lunched = false;
+                else
+                {
+                    yield break;
+                }
+                
             }
             else
             {

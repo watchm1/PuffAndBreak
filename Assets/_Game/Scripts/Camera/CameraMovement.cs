@@ -9,11 +9,13 @@ namespace _Game.Scripts.Camera
     public class CameraMovement : SerializedMonoBehaviour
     {
         #region Definition
+
         [OdinSerialize] private GameObject _followObject = null;
         [OdinSerialize] private bool _lerped;
         [OdinSerialize] private float _movementSpeed;
         [OdinSerialize] private float _offSet;
         private float _defaultOffset;
+
         #endregion
 
         #region LifeCycle
@@ -27,7 +29,7 @@ namespace _Game.Scripts.Camera
 
         private void Update()
         {
-           
+            _defaultOffset = _offSet;
         }
 
         private void LateUpdate()
@@ -36,6 +38,7 @@ namespace _Game.Scripts.Camera
             {
                 //todo: menuler ayarlandıktan sonra eklenecek;
             }
+
             MoveCamToHorizontalAxis();
             FollowTargetAtVerticalAxis();
         }
@@ -44,21 +47,30 @@ namespace _Game.Scripts.Camera
 
         private void MoveCamToHorizontalAxis()
         {
-            var desiredPosition = new Vector3(transform.position.x + _movementSpeed, transform.position.y, transform.position.z);
+            var desiredPosition = new Vector3(transform.position.x + _movementSpeed, transform.position.y,
+                transform.position.z);
             transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 10);
         }
+
         private void FollowTargetAtVerticalAxis()
         {
-            var desiredPosition = new Vector3(transform.position.x, _followObject.transform.position.y, _followObject.transform.position.z - _offSet);
-            var lerpedPosition = Vector3.Lerp(transform.position,desiredPosition, Time.deltaTime * 10);
+            var desiredPosition = new Vector3(transform.position.x, _followObject.transform.position.y,
+                _followObject.transform.position.z - _offSet);
+            var lerpedPosition = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 10);
             transform.position = lerpedPosition;
         }
 
         public void UpgradeOffset()
         {
-            
+            if (PlayerPrefsInjector.CheckLocalStorageValue("IncreaseMass"))
+            {
+                if (PlayerPrefsInjector.GetIntValue("IncreaseMass-Unlocked") == 1)
+                {
+                    _offSet += _defaultOffset * 0.2f;
+                }
+            }
         }
-        
+
         #endregion
     }
 }

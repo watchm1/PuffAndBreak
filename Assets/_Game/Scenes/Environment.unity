@@ -471,7 +471,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399158492, guid: e18577fa85e8a4b4096c62d7dd28741a, type: 3}
       propertyPath: coolDown
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 399158492, guid: e18577fa85e8a4b4096c62d7dd28741a, type: 3}
       propertyPath: throwBeginPosition

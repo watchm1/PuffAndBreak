@@ -11,6 +11,7 @@ namespace _Game.Scripts.AbilitySystem
         {
             abilityName = GameSettings.Current.largeMassAbilityName;
             base.Initialize();
+            abilityPower = 1.1f;
         }
 
         public IncreaseMassAbility() : base()
@@ -24,7 +25,7 @@ namespace _Game.Scripts.AbilitySystem
             {
                 if (upgradeCount < maxUpgradeCount)
                 {
-                    abilityPower += (upgradeCount * 0.2f);
+                    abilityPower += (0.02f);
                     upgradeCount += 1;
                     price *= 2;
                     base.UpgradeAction();
@@ -39,7 +40,6 @@ namespace _Game.Scripts.AbilitySystem
                 base.UpgradeAction();
             }
         }
-
         public override void Activate(GameObject player)
         {
             Transform childMesh = player.transform.GetChild(0);
