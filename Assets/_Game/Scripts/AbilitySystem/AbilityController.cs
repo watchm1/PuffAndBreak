@@ -143,8 +143,6 @@ namespace _Game.Scripts.AbilitySystem
                 abilities[1].Initialize();
                 abilities[1].Activate(gameObject.transform.parent.gameObject);
             }
-            
-            
         }
     }
 }

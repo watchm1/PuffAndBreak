@@ -1,3 +1,4 @@
+using _Game.Scripts.LocalStorage;
 using _Watchm1.SceneManagment.Manager;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -11,14 +12,15 @@ namespace _Game.Scripts.Camera
         [OdinSerialize] private GameObject _followObject = null;
         [OdinSerialize] private bool _lerped;
         [OdinSerialize] private float _movementSpeed;
-        [OdinSerialize] private float offSet;
+        [OdinSerialize] private float _offSet;
+        private float _defaultOffset;
         #endregion
 
         #region LifeCycle
 
         private void Start()
         {
-            
+            _defaultOffset = _offSet;
         }
 
         #endregion
@@ -47,11 +49,16 @@ namespace _Game.Scripts.Camera
         }
         private void FollowTargetAtVerticalAxis()
         {
-            var desiredPosition = new Vector3(transform.position.x, _followObject.transform.position.y, _followObject.transform.position.z - offSet);
+            var desiredPosition = new Vector3(transform.position.x, _followObject.transform.position.y, _followObject.transform.position.z - _offSet);
             var lerpedPosition = Vector3.Lerp(transform.position,desiredPosition, Time.deltaTime * 10);
             transform.position = lerpedPosition;
         }
 
+        public void UpgradeOffset()
+        {
+            
+        }
+        
         #endregion
     }
 }
