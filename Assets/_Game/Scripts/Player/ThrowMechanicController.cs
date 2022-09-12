@@ -31,10 +31,10 @@ namespace _Game.Scripts.Player
         {
             _multiplier = multiplierCount;
             thornSpeed = speed;
-           
         }
         public IEnumerator ThrowThrown()
         {
+            //todo:: object pool must design and thorn object will come from the pool and return to pool 
             if (earnedAbility )
             {
                 if (!lunched)
@@ -53,7 +53,6 @@ namespace _Game.Scripts.Player
                     yield return new WaitForSecondsRealtime(coolDown);
                     lunched = false;    
                 }
-                
             }
             else
             {

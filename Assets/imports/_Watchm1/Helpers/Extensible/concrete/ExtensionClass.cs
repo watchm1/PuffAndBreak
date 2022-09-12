@@ -1,7 +1,9 @@
+using System;
 using _Watchm1.Helpers.Extensible.@abstract;
 using _Watchm1.Helpers.Logger;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace _Watchm1.Helpers.Extensible.concrete
 {
@@ -21,6 +23,11 @@ namespace _Watchm1.Helpers.Extensible.concrete
             newPosition.y = obj.transform.position.y;
             newPosition.z = (int)Random.Range(obj.transform.position.z, obj.transform.position.z+ zRandomRange);
             obj.transform.position = Vector3.Lerp(obj.transform.position, newPosition, Time.deltaTime );
+        }
+
+        public static int FindIndex<T>(this IExtensible extensible, T[] array, T item)
+        {
+            return Array.IndexOf(array, item);
         }
     }
 }
