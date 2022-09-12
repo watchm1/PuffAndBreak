@@ -43,7 +43,6 @@ namespace _Game.Scripts.Player
                     for (int i = 0; i < _multiplier; i++)
                     {
                         var obj = ObjectPool.Instance.GetObjectFromPool(0);
-                        WatchmLogger.Log("name => "+ obj.name);
                         obj.SetActive(true);
                         obj.transform.position = throwBeginPosition.position;
                         var newRandomAngle = Random.Range(0, 310);
