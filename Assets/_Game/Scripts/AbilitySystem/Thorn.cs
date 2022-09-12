@@ -1,5 +1,6 @@
 using System;
 using _Game.Scripts.DamageSystem;
+using _Game.Scripts.Pool;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -14,7 +15,11 @@ namespace _Game.Scripts.AbilitySystem
             {
                 Damage(damageableObject, damageAmount);
             }
-            //Destroy(gameObject);
+
+            if (!other.CompareTag("Player") && !other.CompareTag("Thorn"))
+            {
+                PoolManager.Instance.pool.ReturnObjectToPool(0,gameObject);
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using _Watchm1.Helpers.Extensible.@abstract;
 using _Watchm1.Helpers.Extensible.concrete;
+using _Watchm1.Helpers.Logger;
 using TMPro.Examples;
 using UnityEngine;
 
@@ -30,10 +31,14 @@ namespace _Game.Scripts.Pool
             for (int i = 0; i < pools.Length; i++)
             {
                 pools[i].pooledObject = new List<GameObject>();
-                for (int j = 0; j < pools[i].pooledObject.Count; j++)
+                for (int j = 0; j < pools[i].poolSize; j++)
                 {
-                    var obj = Instantiate(pools[i].poolObjectPrefab);
+                    var obj = Instantiate(pools[i].poolObjectPrefab, transform.position, Quaternion.identity);
+                    pools[i].pooledObject.Add(obj);
                     obj.transform.SetParent(transform);
+                    obj.transform.localPosition = Vector3.zero;
+                    obj.SetActive(false);
+                    obj.name = $"{obj.name}-{j.ToString()}";
                 }
             }
         }
@@ -70,7 +75,7 @@ namespace _Game.Scripts.Pool
         {
             obj.transform.SetParent(transform);
             obj.SetActive(false);
-            obj.transform.localPosition = Vector3.zero;
+            obj.transform.position =transform.position;
             pools[type].pooledObject.Add(obj);
         }
         
