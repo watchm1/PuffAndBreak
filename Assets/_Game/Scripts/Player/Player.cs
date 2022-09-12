@@ -24,8 +24,7 @@ namespace _Game.Scripts.Player
         }
         public PlayerProps props;
         [SerializeField] public GameObject childObject;
-        private Animator _childAnimator;
-        private static readonly int Trigger = Animator.StringToHash("Trigger");
+        public Animator childAnimator;
         public ThrowMechanicController throwMechanicController;
         private void Start()
         {
@@ -34,9 +33,10 @@ namespace _Game.Scripts.Player
             props.canMove = false;
             props.childObjectMeshRenderer = childObject.GetComponentInChildren<SkinnedMeshRenderer>();
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
-            _childAnimator = childObject.GetComponent<Animator>();
+            childAnimator = childObject.GetComponent<Animator>();
             throwMechanicController = GetComponent<ThrowMechanicController>();
             GetComponentInChildren<AbilityController>().abilities[1].Activate(gameObject);
+            GetComponentInChildren<AbilityController>().abilities[2].Activate(gameObject);
         }
 
         private void Update()
@@ -64,17 +64,14 @@ namespace _Game.Scripts.Player
             props.currentState = FishState.Puff;
             props.canMove = false;
             props.childObjectMeshRenderer.SetBlendShapeWeight(0, 100);
-            _childAnimator.SetBool(Trigger, false);
-            UseThrowMechanic();
         }
 
         private void HandleShrinkState()
         {
-        
+            UseThrowMechanic();
             props.currentState = FishState.Shrinked;
             props.canMove = true;
             props.childObjectMeshRenderer.SetBlendShapeWeight(0, 0);
-            _childAnimator.SetBool(Trigger, true);
         }
 
         public void UseThrowMechanic()

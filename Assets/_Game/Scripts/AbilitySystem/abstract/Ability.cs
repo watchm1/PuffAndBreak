@@ -45,7 +45,6 @@ namespace _Game.Scripts.AbilitySystem.@abstract
                 maxUpgradeCount = PlayerPrefsInjector.GetIntValue($"{abilityName}-MaxUpgradeCount");
                 abilityPower = PlayerPrefsInjector.GetFloat($"{abilityName}-Power");
                 price = PlayerPrefsInjector.GetIntValue($"{abilityName}-Price");
-                WatchmLogger.Log(abilityPower);
             }
         }
         public virtual void UpgradeAction()

@@ -22,6 +22,8 @@ namespace _Game.Scripts.Player
         public float multiplier = 1f ;
         private float _horizontal;
         private float _vertical;
+        private static readonly int Trigger = Animator.StringToHash("Trigger");
+
         #endregion
 
         #region LifeCycle
@@ -68,6 +70,14 @@ namespace _Game.Scripts.Player
             transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime);
                 
             HandleRotation(_vertical, _horizontal);
+            if (_horizontal == 0 && _vertical == 0)
+            {
+                _player.childAnimator.SetBool(Trigger, false);
+            }
+            else
+            {
+                _player.childAnimator.SetBool(Trigger, true);
+            }
         }
 
         private void HandleRotation(float vertical, float horizontal)
