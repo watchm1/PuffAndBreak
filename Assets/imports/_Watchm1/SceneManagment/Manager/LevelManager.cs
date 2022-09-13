@@ -49,7 +49,5 @@ namespace _Watchm1.SceneManagment.Manager
                 return true;
             }
         }
-        
-        
     }
 }

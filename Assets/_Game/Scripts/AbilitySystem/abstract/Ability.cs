@@ -21,6 +21,7 @@ namespace _Game.Scripts.AbilitySystem.@abstract
         public int maxUpgradeCount;
         public int price;
         public int unlocked;
+        public bool canBuy;
         public abstract void Activate(GameObject player);
 
         public Ability()
@@ -29,11 +30,11 @@ namespace _Game.Scripts.AbilitySystem.@abstract
         }
         public virtual void Initialize()
         {
+            WatchmLogger.Log("testing");
             if (!PlayerPrefsInjector.CheckLocalStorageValue(abilityName))
             {
                 upgradeCount = 0;
                 maxUpgradeCount = 5;
-                // todo:: max upgrade count will define dynamicly
                 abilityPower = 1.4f;
                 price = 100;
                 unlocked = 0;
@@ -45,6 +46,7 @@ namespace _Game.Scripts.AbilitySystem.@abstract
                 maxUpgradeCount = PlayerPrefsInjector.GetIntValue($"{abilityName}-MaxUpgradeCount");
                 abilityPower = PlayerPrefsInjector.GetFloat($"{abilityName}-Power");
                 price = PlayerPrefsInjector.GetIntValue($"{abilityName}-Price");
+                CheckCanBuy();
             }
         }
         public virtual void UpgradeAction()
@@ -55,6 +57,18 @@ namespace _Game.Scripts.AbilitySystem.@abstract
             PlayerPrefsInjector.SetFloat($"{abilityName}-Power", abilityPower);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-Price", price);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-Unlocked", unlocked);
+        }
+
+        private void CheckCanBuy()
+        { 
+            if (upgradeCount == maxUpgradeCount) // todo:: currency controlling
+            {
+                canBuy = false;
+            }
+            else
+            {
+                canBuy = true;
+            }
         }
         
     }

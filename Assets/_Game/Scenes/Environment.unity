@@ -245,6 +245,12 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &470627012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 105805821, guid: 1a59179350d098049823a60448942ffb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3872190111727022083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &582314861 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb,
@@ -325,6 +331,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1250147591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 515851831, guid: 1a59179350d098049823a60448942ffb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3872190111727022083}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1270470726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 321635045, guid: 1a59179350d098049823a60448942ffb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3872190111727022083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1527050733
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,6 +411,18 @@ MonoBehaviour:
     currentLevelBackEnvironment: {fileID: 8962484824540311951, guid: 26869911e955d754296fb26bafcb9248,
       type: 3}
     levelDone: 0
+--- !u!114 &1663620414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1906493459, guid: e18577fa85e8a4b4096c62d7dd28741a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1654860761019291211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e116a4b5d528943abc3f27882553bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1776205248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1776205248, guid: e18577fa85e8a4b4096c62d7dd28741a,
@@ -687,6 +717,74 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 105805823, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105805823, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpgradeFastMovementAbility
+      objectReference: {fileID: 0}
+    - target: {fileID: 105805823, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 105805823, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 321635047, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321635047, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpgradeThrowAbility
+      objectReference: {fileID: 0}
+    - target: {fileID: 321635047, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 321635047, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 515851833, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515851833, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpgradeMassAbility
+      objectReference: {fileID: 0}
+    - target: {fileID: 515851833, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 515851833, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: _abilityController
+      value: 
+      objectReference: {fileID: 1663620414}
+    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: abilityButtons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: abilityButtons.Array.data[0]
+      value: 
+      objectReference: {fileID: 470627012}
+    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: abilityButtons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1250147591}
+    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: abilityButtons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1270470726}
     - target: {fileID: 606567067, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 

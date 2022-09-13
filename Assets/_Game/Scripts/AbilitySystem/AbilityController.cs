@@ -117,7 +117,7 @@ namespace _Game.Scripts.AbilitySystem
                         abilities[2].UpgradeAction();
                         abilities[2].Activate(gameObject.transform.parent.gameObject);
                     }
-
+                    
                 }
             }
             else

@@ -34,10 +34,6 @@ namespace _Game.Scripts.Camera
 
         #endregion
 
-        private void Update()
-        {
-        }
-
         private void LateUpdate()
         {
             if (LevelManager.Instance.PlayModeActive())

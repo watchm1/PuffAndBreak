@@ -20,16 +20,24 @@ namespace _Game.Scripts.AbilitySystem
         public override void Activate(GameObject player)
         {
             Player.Player owner = player.GetComponent<Player.Player>();
-            if (upgradeCount > 0)
+            if (unlocked == 1)
             {
                 owner.throwMechanicController.earnedAbility = true;
-                if (abilityPower > 0)
+                if (upgradeCount < maxUpgradeCount)
                 {
-                    owner.throwMechanicController.SetRequirementsForMechanic(upgradeCount, abilityPower);
+                    if (abilityPower > 0)
+                    {
+                        owner.throwMechanicController.SetRequirementsForMechanic(upgradeCount, abilityPower);
+                    }
+                    else
+                    {
+                        owner.throwMechanicController.earnedAbility = false;
+                    }
                 }
                 else
                 {
-                    owner.throwMechanicController.earnedAbility = false;
+                    // todo:: make buy ability button disable
+                    WatchmLogger.Log("max level");
                 }
             }
             else
