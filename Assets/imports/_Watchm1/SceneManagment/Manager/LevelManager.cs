@@ -27,11 +27,11 @@ namespace _Watchm1.SceneManagment.Manager
         [HideInInspector]public LevelState currentState;
         [HideInInspector] public GameState currentGameState;
         // Start is called before the first frame update
-        void Start()
+        protected override void Awake()
         {
+            base.Awake();
             currentState = LevelState.Loading;
         }
-
 
         public bool PlayModeActive()
         {
@@ -49,5 +49,7 @@ namespace _Watchm1.SceneManagment.Manager
                 return true;
             }
         }
+        
+        
     }
 }
