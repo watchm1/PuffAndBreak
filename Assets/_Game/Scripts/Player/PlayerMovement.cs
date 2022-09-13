@@ -40,8 +40,9 @@ namespace _Game.Scripts.Player
 
         private void Update()
         {
-            if (LevelManager.Instance.PlayModeActive())
+            if (!LevelManager.Instance.PlayModeActive())
             {
+                return;
             }
 
             if (_player.props.canMove)
@@ -52,7 +53,6 @@ namespace _Game.Scripts.Player
             {
                 PuffedMovement();
             }
-            
         }
 
         #endregion

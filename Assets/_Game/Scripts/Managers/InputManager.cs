@@ -9,5 +9,6 @@ namespace _Game.Scripts.Managers
         {
             return Input.touchCount > 0 ? true : false;
         }
+        
     }
 }

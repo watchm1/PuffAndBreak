@@ -1,5 +1,6 @@
 using _Game.Scripts.AbilitySystem;
 using _Game.Scripts.Managers;
+using _Watchm1.SceneManagment.Manager;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -41,6 +42,10 @@ namespace _Game.Scripts.Player
 
         private void Update()
         {
+            if (!LevelManager.Instance.PlayModeActive())
+            {
+                return;
+            }
             if (props.currentState == FishState.Puff && InputManager.Instance.Touching())
             {
                 // transition to shrink state

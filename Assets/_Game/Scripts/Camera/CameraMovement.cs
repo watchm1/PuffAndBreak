@@ -34,9 +34,10 @@ namespace _Game.Scripts.Camera
 
         private void LateUpdate()
         {
-            if (LevelManager.Instance.PlayModeActive())
+            if (!LevelManager.Instance.PlayModeActive())
             {
                 //todo: menuler ayarlandıktan sonra eklenecek;
+                return;
             }
 
             MoveCamToHorizontalAxis();

@@ -1,6 +1,7 @@
 using System;
 using _Watchm1.EventSystem.Events;
 using _Watchm1.Helpers.Logger;
+using _Watchm1.SceneManagment.Manager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,7 @@ namespace _Game.Scripts.Camera
         private float _xRange;
         private float _yRange;
         private Vector3 _screenBoundPositions;
+
         #endregion
 
         #region LifeCycle
@@ -27,6 +29,10 @@ namespace _Game.Scripts.Camera
 
         private void Update()
         {
+            if (!LevelManager.Instance.PlayModeActive())
+            {
+                return;
+            }
             if (!IsPlayerInsideViewBounds())
             {
                 outOfRange.InvokeEvent();
@@ -54,6 +60,7 @@ namespace _Game.Scripts.Camera
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
         #endregion
     }
 }
