@@ -795,6 +795,10 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 2703ceb461a21084d8076d6b826d82af,
         type: 2}
     - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: abilityController
+      value: 
+      objectReference: {fileID: 1663620414}
+    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: throwThornUpgrade
       value: 
       objectReference: {fileID: 11400000, guid: a415288d6cfcb0445a73fabb9ef388d4,

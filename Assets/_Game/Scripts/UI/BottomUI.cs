@@ -23,6 +23,10 @@ namespace _Game.Scripts.UI
         private void Start()
         {
             CheckAvaliableAbilityForBuyTransaction();
+            foreach (var item in abilityController.abilities)
+            {
+                WatchmLogger.Log(item.canBuy);
+            }
         }
 
         private void CheckAvaliableAbilityForBuyTransaction()

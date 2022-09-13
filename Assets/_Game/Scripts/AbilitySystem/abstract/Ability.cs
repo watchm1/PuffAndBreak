@@ -19,7 +19,7 @@ namespace _Game.Scripts.AbilitySystem.@abstract
         public float abilityPower;
         public int upgradeCount;
         public int maxUpgradeCount;
-        public int price;           
+        public int price;
         public int unlocked;
         public bool canBuy;
         public abstract void Activate(GameObject player);
@@ -49,13 +49,13 @@ namespace _Game.Scripts.AbilitySystem.@abstract
         }
         public virtual void UpgradeAction()
         {
-            CheckCanBuy();
             PlayerPrefsInjector.SetString($"{abilityName}", abilityName);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-CurrentUpgradeCount", upgradeCount);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-MaxUpgradeCount", maxUpgradeCount);
             PlayerPrefsInjector.SetFloat($"{abilityName}-Power", abilityPower);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-Price", price);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-Unlocked", unlocked);
+            CheckCanBuy();
         }
 
         private void CheckCanBuy()
