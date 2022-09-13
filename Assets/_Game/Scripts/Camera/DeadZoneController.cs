@@ -59,8 +59,8 @@ namespace _Game.Scripts.Camera
         public void QuitApp()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            LevelManager.Instance.currentState = LevelState.Loading;
         }
-
         #endregion
     }
 }

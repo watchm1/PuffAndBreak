@@ -6,6 +6,7 @@ using _Watchm1.Helpers.Logger;
 using _Watchm1.Helpers.Singleton;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -24,7 +25,11 @@ public class GameManager : Singleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
-
+        LoadLevelFunction();
+    }
+    public void LoadLevelFunction()
+    {
+        WatchmLogger.Error("yükleniyor");
         if (!PlayerPrefsInjector.CheckLocalStorageValue("LevelIndex"))
         {
             PlayerPrefsInjector.SetIntValue("LevelIndex", 0);
@@ -34,12 +39,11 @@ public class GameManager : Singleton<GameManager>
         {
             currentLevelIndex = PlayerPrefsInjector.GetIntValue("LevelIndex");
         }
-
         try
         {
             var currentLevelData = levelDatas.Find(index => index.levelIndex == currentLevelIndex);
-            Instantiate(currentLevelData.currentLevelPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            Instantiate(currentLevelData.currentLevelBackEnvironment, new Vector3(0, 0, 0), Quaternion.identity);
+            DontDestroyOnLoad(Instantiate(currentLevelData.currentLevelPrefab, new Vector3(0, 0, 0), Quaternion.identity));
+            DontDestroyOnLoad(Instantiate(currentLevelData.currentLevelBackEnvironment, new Vector3(0, 0, 0), Quaternion.identity));
         }
         catch (Exception e)
         {
