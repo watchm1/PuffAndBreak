@@ -84,8 +84,11 @@ namespace _Game.Scripts.AbilitySystem
                 }
                 else
                 {
-                    abilities[0].UpgradeAction();
-                    abilities[0].Activate(gameObject.transform.parent.gameObject);
+                    if (abilities[0].upgradeCount < abilities[0].maxUpgradeCount)
+                    {
+                        abilities[0].UpgradeAction();
+                        abilities[0].Activate(gameObject.transform.parent.gameObject);
+                    }
                 }
             }
             else
@@ -109,8 +112,11 @@ namespace _Game.Scripts.AbilitySystem
                 }
                 else
                 {
-                    abilities[2].UpgradeAction();
-                    abilities[2].Activate(gameObject.transform.parent.gameObject);
+                    if (abilities[2].upgradeCount < abilities[2].maxUpgradeCount)
+                    {
+                        abilities[2].UpgradeAction();
+                        abilities[2].Activate(gameObject.transform.parent.gameObject);
+                    }
 
                 }
             }
@@ -134,8 +140,11 @@ namespace _Game.Scripts.AbilitySystem
                 }
                 else
                 {
-                    abilities[1].UpgradeAction();
-                    abilities[1].Activate(gameObject.transform.parent.gameObject);
+                    if (abilities[1].upgradeCount < abilities[1].maxUpgradeCount)
+                    {
+                        abilities[1].UpgradeAction();
+                        abilities[1].Activate(gameObject.transform.parent.gameObject);
+                    }
                 }    
             }
             else

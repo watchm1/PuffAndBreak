@@ -1,4 +1,6 @@
+using System;
 using _Game.Scripts.LocalStorage;
+using _Watchm1.Helpers.Logger;
 using _Watchm1.SceneManagment.Manager;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -13,11 +15,11 @@ namespace _Game.Scripts.Camera
         [OdinSerialize] private GameObject _followObject = null;
         [OdinSerialize] private bool _lerped;
         [OdinSerialize] private float _movementSpeed;
-        [OdinSerialize] private float _offSet;
+        [OdinSerialize][NonSerialized] public float _offSet;
         private bool _canMove;
         private Vector3 _firstViewPos;
         private Vector3 _startPos;
-        private float _defaultOffset;
+        public float _defaultOffset;
 
         #endregion
 
@@ -26,28 +28,7 @@ namespace _Game.Scripts.Camera
         private void Start()
         {
             _defaultOffset = _offSet;
-            if (PlayerPrefsInjector.CheckLocalStorageValue("IncreaseMass"))
-            {
-                if (PlayerPrefsInjector.GetIntValue("IncreaseMass-Unlocked") == 1)
-                {
-                    var massLevel = PlayerPrefsInjector.GetIntValue("IncreaseMass-CurrentUpgradeCount");
-                    _offSet += _defaultOffset * 0.2f * massLevel;
-                }
-                else
-                {
-                    _offSet = _defaultOffset;
-                }
-            }
-            else
-            {
-                _offSet = _defaultOffset;
-            }
             
-            
-            _firstViewPos = new Vector3(-416, 305, -980);
-            _startPos = new Vector3(-749, 381, -148);
-            _canMove = false;
-            transform.position = _firstViewPos;
         }
         
 
@@ -55,21 +36,20 @@ namespace _Game.Scripts.Camera
 
         private void Update()
         {
-            _defaultOffset = _offSet;
         }
 
         private void LateUpdate()
         {
-            if (!LevelManager.Instance.PlayModeActive())
-            {
-                return;
-            }
-            
-            if (_canMove)
+            if (LevelManager.Instance.PlayModeActive())
             {
                 MoveCamToHorizontalAxis();
                 FollowTargetAtVerticalAxis();
             }
+            else
+            {
+                FollowTargetAtVerticalAxis();
+            }
+           
         }
 
         #region Methods
@@ -88,23 +68,7 @@ namespace _Game.Scripts.Camera
             var lerpedPosition = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 10);
             transform.position = lerpedPosition;
         }
-
-        public void UpgradeOffset()
-        {
-            if (PlayerPrefsInjector.CheckLocalStorageValue("IncreaseMass"))
-            {
-                if (PlayerPrefsInjector.GetIntValue("IncreaseMass-Unlocked") == 1)
-                {
-                    _offSet += _defaultOffset * 0.2f;
-                }
-            }
-        }
-        public void OnFirstTouch()
-        {
-            transform.position = _startPos;
-            _canMove = true;
-        }
-
+        
         #endregion
     }
 }

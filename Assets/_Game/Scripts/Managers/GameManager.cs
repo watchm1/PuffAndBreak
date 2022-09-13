@@ -42,8 +42,9 @@ public class GameManager : Singleton<GameManager>
         try
         {
             var currentLevelData = levelDatas.Find(index => index.levelIndex == currentLevelIndex);
-            DontDestroyOnLoad(Instantiate(currentLevelData.currentLevelPrefab, new Vector3(0, 0, 0), Quaternion.identity));
-            DontDestroyOnLoad(Instantiate(currentLevelData.currentLevelBackEnvironment, new Vector3(0, 0, 0), Quaternion.identity));
+            Instantiate(currentLevelData.currentLevelPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            Instantiate(currentLevelData.currentLevelBackEnvironment, new Vector3(0, 0, 0), Quaternion.identity)
+                ;
         }
         catch (Exception e)
         {

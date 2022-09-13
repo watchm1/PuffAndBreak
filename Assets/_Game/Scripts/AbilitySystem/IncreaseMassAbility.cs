@@ -1,4 +1,5 @@
 using _Game.Scripts.AbilitySystem.@abstract;
+using _Game.Scripts.Camera;
 using _Watchm1.Helpers.Logger;
 using imports._Watchm1.SceneManagment.Settings;
 using UnityEngine;
@@ -42,22 +43,28 @@ namespace _Game.Scripts.AbilitySystem
         }
         public override void Activate(GameObject player)
         {
-            Transform childMesh = player.transform.GetChild(0);
-            var oldLocaleScale = new Vector3(11.3f, 11.3f, 11.3f);
-            if (upgradeCount > 0)
+            if (upgradeCount <= maxUpgradeCount)
             {
-                if (abilityPower > 0)
+                Transform childMesh = player.transform.GetChild(0);
+                var cam = GameObject.FindObjectOfType<CameraMovement>();
+                var oldLocaleScale = new Vector3(11.3f, 11.3f, 11.3f);
+                if (upgradeCount > 0)
                 {
-                    childMesh.transform.localScale *= abilityPower;
+                    if (abilityPower > 0)
+                    {
+                        childMesh.transform.localScale *= abilityPower;
+                        cam._offSet += cam._defaultOffset * 0.2f;
+                    }
+                    else
+                    {
+                        childMesh.transform.localScale = oldLocaleScale;
+                        cam._offSet = cam._defaultOffset;
+                    }
                 }
                 else
                 {
                     childMesh.transform.localScale = oldLocaleScale;
                 }
-            }
-            else
-            {
-                childMesh.transform.localScale = oldLocaleScale;
             }
         }
     }
