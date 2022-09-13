@@ -110,10 +110,8 @@ namespace _Watchm1.SceneManagment.Settings
             var hasChanged = scenesToAdd.Count > 0;
             if (!hasChanged)
             {
-                WatchmLogger.Log("No changes in build scene list");
                 return;
             }
-            WatchmLogger.Log("Updating build list scenes");
             scenesToAdd.ForEach(s => WatchmLogger.Log(s.path));
             UnityEditor.EditorBuildSettings.scenes = scenesToAdd.ToArray();
 

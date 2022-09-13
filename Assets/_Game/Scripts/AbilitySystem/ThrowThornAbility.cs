@@ -37,7 +37,6 @@ namespace _Game.Scripts.AbilitySystem
                 else
                 {
                     // todo:: make buy ability button disable
-                    WatchmLogger.Log("max level");
                 }
             }
             else

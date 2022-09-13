@@ -36,7 +36,6 @@ namespace Editor
                 }
 
                 var file = $"{path}/{typeof(T).Name}.asset";
-                WatchmLogger.Log($"Successfully created {file}");
 
                 string assetPathAndName = AssetDatabase.GenerateUniqueAssetPath(file);
                 AssetDatabase.CreateAsset(obj, assetPathAndName);

@@ -722,8 +722,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 105805823, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 582314861}
+    - target: {fileID: 105805823, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpgradeFastMovementAbility
+      objectReference: {fileID: 0}
+    - target: {fileID: 105805823, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: _Game.Scripts.UI.BottomUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 105805823, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -737,11 +745,19 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 321635047, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 582314861}
     - target: {fileID: 321635047, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpgradeThrowAbility
       objectReference: {fileID: 0}
     - target: {fileID: 321635047, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: _Game.Scripts.UI.BottomUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 321635047, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 0}
@@ -754,8 +770,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 515851833, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 582314861}
+    - target: {fileID: 515851833, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpgradeMassAbility
+      objectReference: {fileID: 0}
+    - target: {fileID: 515851833, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: _Game.Scripts.UI.BottomUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 515851833, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -766,9 +790,24 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: movementUpgrade
+      value: 
+      objectReference: {fileID: 11400000, guid: 2703ceb461a21084d8076d6b826d82af,
+        type: 2}
+    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: throwThornUpgrade
+      value: 
+      objectReference: {fileID: 11400000, guid: a415288d6cfcb0445a73fabb9ef388d4,
+        type: 2}
+    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: _abilityController
       value: 
       objectReference: {fileID: 1663620414}
+    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
+      propertyPath: increaseMassUpgrade
+      value: 
+      objectReference: {fileID: 11400000, guid: 96460b8228f76a646abc316de8e084ce,
+        type: 2}
     - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
       propertyPath: abilityButtons.Array.size
       value: 3

@@ -49,7 +49,6 @@ namespace _Game.Scripts.AbilitySystem
         {
             PlayerPrefsInjector.DeleteAll();
             PlayerPrefs.Save();
-            WatchmLogger.Log("deleted");
         }
 
         #endregion

@@ -38,7 +38,6 @@ namespace _Game.Scripts.AbilitySystem
             }
             else
             {
-                WatchmLogger.Log("ability not active");
                 ownerMovement.multiplier = 1;
             }
         }
@@ -51,6 +50,7 @@ namespace _Game.Scripts.AbilitySystem
                 {
                     abilityPower += (upgradeCount * 0.5f);
                     upgradeCount += 1;
+                    
                     price *= 2;
                     base.UpgradeAction();
                 }

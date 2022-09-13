@@ -19,18 +19,16 @@ namespace _Game.Scripts.AbilitySystem.@abstract
         public float abilityPower;
         public int upgradeCount;
         public int maxUpgradeCount;
-        public int price;
+        public int price;           
         public int unlocked;
         public bool canBuy;
         public abstract void Activate(GameObject player);
 
         public Ability()
         {
-            
         }
         public virtual void Initialize()
         {
-            WatchmLogger.Log("testing");
             if (!PlayerPrefsInjector.CheckLocalStorageValue(abilityName))
             {
                 upgradeCount = 0;
@@ -51,6 +49,7 @@ namespace _Game.Scripts.AbilitySystem.@abstract
         }
         public virtual void UpgradeAction()
         {
+            CheckCanBuy();
             PlayerPrefsInjector.SetString($"{abilityName}", abilityName);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-CurrentUpgradeCount", upgradeCount);
             PlayerPrefsInjector.SetIntValue($"{abilityName}-MaxUpgradeCount", maxUpgradeCount);

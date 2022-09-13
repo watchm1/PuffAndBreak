@@ -7,9 +7,7 @@ namespace _Game.Scripts.UI
 {
     public class UIController : MonoBehaviour
     {
-        [SerializeField] public VoidEvent movementUpgrade;
-        [SerializeField] public VoidEvent throwThornUpgrade;
-        [SerializeField] public VoidEvent increaseMassUpgrade;
+       
         private FloatingJoystick joystickScript;
         private GameObject floatJoystick;
         
@@ -21,34 +19,7 @@ namespace _Game.Scripts.UI
             LevelManager.Instance.currentState = LevelState.WaitingOnfirstTouch;
         }
         
-        public void UpgradeMassAbility()
-        {
-            var currentUpgradeLevel =PlayerPrefsInjector.GetIntValue("IncreaseMass-CurrentUpgradeCount");
-            var maxUpgradeLevel=PlayerPrefsInjector.GetIntValue("IncreaseMass-MaxUpgradeCount");
-
-            if (currentUpgradeLevel < maxUpgradeLevel)
-            {
-                increaseMassUpgrade.InvokeEvent();
-            }
-        }
-        public void UpgradeThrowAbility()
-        {
-            var currentUpgradeLevel =PlayerPrefsInjector.GetIntValue("ThrowThorn-CurrentUpgradeCount");
-            var maxUpgradeLevel=PlayerPrefsInjector.GetIntValue("ThrowThorn-MaxUpgradeCount");
-            if (currentUpgradeLevel < maxUpgradeLevel)
-            {
-                throwThornUpgrade.InvokeEvent();
-            }
-        }
-        public void UpgradeFastMovementAbility()
-        {
-            var currentUpgradeLevel =PlayerPrefsInjector.GetIntValue("FastMove-CurrentUpgradeCount");
-            var maxUpgradeLevel=PlayerPrefsInjector.GetIntValue("FastMove-MaxUpgradeCount");
-            if (currentUpgradeLevel < maxUpgradeLevel)
-            {
-                movementUpgrade.InvokeEvent();
-            }
-        }
+        
         public void OnFirstTouch()
         {
             LevelManager.Instance.currentState = LevelState.OnFirstTouchDone;

@@ -31,7 +31,6 @@ namespace _Game.Scripts.Pool
         
         private void Start()
         {
-            WatchmLogger.Log("çalıştı");
             PoolInitializer();
         }
 
