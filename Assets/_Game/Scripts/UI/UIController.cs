@@ -28,8 +28,9 @@ namespace _Game.Scripts.UI
 
         public void OnFirstTouch()
         {
-            LevelManager.Instance.currentState = LevelState.Start;
+            LevelManager.Instance.currentState = LevelState.OnFirstTouchDone;
             joystickScript.enabled = true;
+            LevelManager.Instance.currentState = LevelState.Start;
         }
 
         public void ResetData()
