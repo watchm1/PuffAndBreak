@@ -16,8 +16,11 @@ MonoBehaviour:
   deleteDllAfterBuilds: 1
   AutomateForAllAOTPlatforms: 1
   automateForPlatforms: 0900000014000000
-  lastScan: 637983398109844616
+  lastScan: 637987623626974033
   supportSerializedTypes:
+  - TypeName: _Game.Scripts.AbilitySystem.abstract.Ability, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
   - TypeName: System.Boolean, mscorlib
     IsCustom: 0
     Emit: 1
@@ -25,5 +28,15 @@ MonoBehaviour:
     IsCustom: 0
     Emit: 1
   - TypeName: UnityEngine.GameObject, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[_Game.Scripts.AbilitySystem.abstract.Ability,
+      Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Object, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: _Watchm1.EventSystem.Events.VoidEvent, Assembly-CSharp
     IsCustom: 0
     Emit: 1
