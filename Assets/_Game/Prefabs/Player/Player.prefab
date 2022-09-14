@@ -593,7 +593,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7410916329374752259}
   - component: {fileID: 747593219810298574}
-  - component: {fileID: 1220563497}
   - component: {fileID: 1220563498}
   - component: {fileID: 6530499485765893475}
   - component: {fileID: 8589142629890094616}
@@ -678,20 +677,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00008767843, y: 0.10473725, z: 0.020907477}
     m_Extent: {x: 0.3712568, y: 0.58706474, z: 0.4160313}
   m_DirtyAABB: 0
---- !u!64 &1220563497
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5327089259481292369}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &1220563498
 MonoBehaviour:
   m_ObjectHideFlags: 0
