@@ -3,20 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Distant Lands/Thalassophobia - Low Poly Oceans/Contents/Materials/Gold 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Distant Lands/Thalassophobia - Low Poly Oceans/Contents/Materials/Gold 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Level/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Level/Level1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/AbilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/IncreaseMassAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/IncreaseMassAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/abstract/Ability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/AbilitySystem/abstract/Ability.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag01-Group 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag01-Group 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag01-Group.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag01-Group.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/_PrefabsPanel_Label.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/_PrefabsPanel_Label.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Popups/_PrefabsPanel_Popups_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Popups/_PrefabsPanel_Popups_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Character_List.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Character_List.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Character_Skin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Character_Skin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Equipment_Popup_Detail.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Equipment_Popup_Detail.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/ThrowMechanicController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/TriggerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Pool/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/UI/BottomUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/UI/FadeEffect.cs" root0="FORCE_HIGHLIGHTING" />
@@ -120,7 +111,7 @@
       <workItem from="1662997464696" duration="1979000" />
       <workItem from="1663059747404" duration="19760000" />
       <workItem from="1663085299253" duration="429000" />
-      <workItem from="1663149745710" duration="2322000" />
+      <workItem from="1663149745710" duration="3381000" />
     </task>
     <servers />
   </component>
