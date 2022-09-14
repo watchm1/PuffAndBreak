@@ -894,6 +894,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4962685254703524481, guid: 1a59179350d098049823a60448942ffb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962685254703524494, guid: 1a59179350d098049823a60448942ffb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962685255856746268, guid: 1a59179350d098049823a60448942ffb,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962685255856746269, guid: 1a59179350d098049823a60448942ffb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4962685255856746270, guid: 1a59179350d098049823a60448942ffb,
         type: 3}
       propertyPath: m_AnchorMax.x

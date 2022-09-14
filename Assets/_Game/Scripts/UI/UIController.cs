@@ -2,6 +2,7 @@ using _Game.Scripts.LocalStorage;
 using _Watchm1.EventSystem.Events;
 using _Watchm1.Helpers.Logger;
 using _Watchm1.SceneManagment.Manager;
+using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ namespace _Game.Scripts.UI
         {
             floatJoystick = GameObject.FindObjectOfType<FloatingJoystick>().gameObject;
             joystickScript = floatJoystick.GetComponent<FloatingJoystick>();
-            joystickScript.enabled = false;
+            joystickScript.gameObject.GetComponent<CanvasRenderer>().SetAlpha(1f);
             LevelManager.Instance.currentState = LevelState.WaitingOnfirstTouch;
             currencyText.text = PlayerPrefsInjector.GetIntValue("Currency").ToString();
         }
@@ -26,7 +27,7 @@ namespace _Game.Scripts.UI
         public void OnFirstTouch()
         {
             LevelManager.Instance.currentState = LevelState.OnFirstTouchDone;
-            joystickScript.enabled = true;
+            joystickScript.gameObject.GetComponent<CanvasRenderer>().SetAlpha(0f);
             LevelManager.Instance.currentState = LevelState.Start;
         }
 

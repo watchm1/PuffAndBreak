@@ -35,12 +35,12 @@ namespace _Game.Scripts.Player
             _settings = GameSettings.Current;
             _verticalSpeed = _settings.playerForwardSpeed;
             _horizontalSpeed = _settings.playerHorizontalSpeed;
-            _floatingJoystick = FindObjectOfType<FloatingJoystick>();
             _player = GetComponent<Player>();
+            _floatingJoystick = FindObjectOfType<FloatingJoystick>();
             GetComponentInChildren<AbilityController>().abilities[0].Activate(gameObject);
             canTouchEnvironment = false;
         }
-
+        
         private void Update()
         {
             if (!LevelManager.Instance.PlayModeActive())
@@ -93,7 +93,7 @@ namespace _Game.Scripts.Player
             }
             
         }
-
+        
         private void PuffedMovement()
         {
             if (!canTouchEnvironment)
@@ -113,6 +113,11 @@ namespace _Game.Scripts.Player
             {
                 return;
             }
+        }
+
+        public void OnFirstTouch()
+        {
+            _floatingJoystick = FindObjectOfType<FloatingJoystick>();
         }
         #endregion
     }
