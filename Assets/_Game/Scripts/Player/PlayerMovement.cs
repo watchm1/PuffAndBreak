@@ -24,7 +24,7 @@ namespace _Game.Scripts.Player
         private float _horizontal;
         private float _vertical;
         private static readonly int Trigger = Animator.StringToHash("Trigger");
-        
+        private Rigidbody _rb;
         public bool canTouchEnvironment;
         #endregion
 
@@ -39,9 +39,10 @@ namespace _Game.Scripts.Player
             _floatingJoystick = FindObjectOfType<FloatingJoystick>();
             GetComponentInChildren<AbilityController>().abilities[0].Activate(gameObject);
             canTouchEnvironment = false;
+            _rb = GetComponent<Rigidbody>();
         }
         
-        private void Update()
+        private void LateUpdate()
         {
             if (!LevelManager.Instance.PlayModeActive())
             {   
@@ -65,14 +66,13 @@ namespace _Game.Scripts.Player
 
         private void HandleMovement()
         {
-            _horizontal = _floatingJoystick.Horizontal * multiplierCount;
-            _vertical = _floatingJoystick.Vertical * multiplierCount;
-            var mutliplyWithSpeedValueHor = _horizontal * _horizontalSpeed;
-            var mutliplyWithSpeedValueVer = _vertical * _verticalSpeed;
-            var desiredPosition = new Vector3(transform.position.x + mutliplyWithSpeedValueHor,
-                transform.position.y + mutliplyWithSpeedValueVer, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime);
-                
+             _horizontal = _floatingJoystick.Horizontal * multiplierCount;
+             _vertical = _floatingJoystick.Vertical * multiplierCount;
+             var mutliplyWithSpeedValueHor = _horizontal * _horizontalSpeed;
+             var mutliplyWithSpeedValueVer = _vertical * _verticalSpeed;
+             var desiredPosition = new Vector3( mutliplyWithSpeedValueHor,
+                  mutliplyWithSpeedValueVer, 0);
+             _rb.velocity = desiredPosition;
             HandleRotation(_vertical, _horizontal);
             if (_horizontal == 0 && _vertical == 0)
             {
@@ -91,18 +91,14 @@ namespace _Game.Scripts.Player
                     _player.childObject.transform.localRotation.y +  (vertical * 10),_player.childObject.transform.localRotation.z);
                 _player.childObject.transform.localRotation = Quaternion.Slerp(_player.childObject.transform.localRotation, Quaternion.LookRotation(direction), Time.deltaTime *10);    
             }
-            
         }
         
         private void PuffedMovement()
         {
             if (!canTouchEnvironment)
             {
-                var desiredPosition = new Vector3(transform.position.x, transform.position.y + _verticalSpeed, transform.position.z);
-                transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime);
-
-                
-               
+                var desiredPosition = new Vector3(0, _verticalSpeed * Time.deltaTime * 30,0);
+                _rb.velocity = desiredPosition;
             }
             var defaultLocalRotation = Quaternion.Euler(0,90,0);
             if (_player.childObject.transform.localRotation != defaultLocalRotation)

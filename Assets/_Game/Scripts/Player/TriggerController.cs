@@ -18,21 +18,21 @@ namespace _Game.Scripts.Player
                 Destroy(collectibleItem.gameObject);
             }
         }
-        private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("CantMoveInsideObject"))
-            {
-                playerMovement.canTouchEnvironment = true;
-            }
-        }
-
-        private void OnCollisionExit(Collision other)
-        {
-            if (other.gameObject.CompareTag("CantMoveInsideObject"))
-            {
-                playerMovement.canTouchEnvironment = false;
-            }
-        }
+        // private void OnCollisionEnter(Collision collision)
+        // {
+        //     if (collision.gameObject.CompareTag("CantMoveInsideObject"))
+        //     {
+        //         playerMovement.canTouchEnvironment = true;
+        //     }
+        // }
+        //
+        // private void OnCollisionExit(Collision other)
+        // {
+        //     if (other.gameObject.CompareTag("CantMoveInsideObject"))
+        //     {
+        //         playerMovement.canTouchEnvironment = false;
+        //     }
+        // }
 
     }
 }
