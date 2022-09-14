@@ -35,7 +35,6 @@ namespace _Game.Scripts.AbilitySystem
                 else
                 {
                     // todo:: make buy ability button disable
-                    WatchmLogger.Error("You cant upgrade your ability cause already max level");
                 }
             }
             else

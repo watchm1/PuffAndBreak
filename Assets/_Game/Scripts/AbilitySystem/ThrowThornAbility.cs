@@ -41,7 +41,6 @@ namespace _Game.Scripts.AbilitySystem
             }
             else
             {
-                WatchmLogger.Error("You haven't earn this ability");
                 owner.throwMechanicController.earnedAbility = false;
             }
         }
@@ -58,7 +57,6 @@ namespace _Game.Scripts.AbilitySystem
                 }
                 else
                 {
-                    WatchmLogger.Error("You cant upgrade your ability cause already max level");
                 }
             }
             else

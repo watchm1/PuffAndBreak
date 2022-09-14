@@ -31,7 +31,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (!PlayerPrefsInjector.CheckLocalStorageValue("LevelIndex"))
         {
-            PlayerPrefsInjector.SetIntValue("LevelIndex", 0);
+            PlayerPrefsInjector.SetIntValue(,"LevelIndex", 0);
             currentLevelIndex = 0;
         }
         else
