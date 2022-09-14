@@ -57,10 +57,9 @@ namespace _Game.Scripts.AbilitySystem.@abstract
             PlayerPrefsInjector.SetIntValue($"{abilityName}-Unlocked", unlocked);
             CheckCanBuy();
         }
-
         private void CheckCanBuy()
         { 
-            if (upgradeCount == maxUpgradeCount) // todo:: currency controlling
+            if (upgradeCount == maxUpgradeCount || price > CurrencyManager.Instance.GetCurrentCurrencyValue()) // todo:: currency controlling
             {
                 canBuy = false;
             }

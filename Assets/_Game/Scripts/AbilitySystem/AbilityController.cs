@@ -75,6 +75,7 @@ namespace _Game.Scripts.AbilitySystem
         {
             if (PlayerPrefsInjector.CheckLocalStorageValue(abilities[0].abilityName))
             {
+                CurrencyManager.Instance.ChangeCurrency(ChangeCurrencyType.Spend, abilities[0].price);
                 if (abilities[0].unlocked == 0)
                 {
                     abilities[0].unlocked = 1;
@@ -101,6 +102,7 @@ namespace _Game.Scripts.AbilitySystem
 
         public void UpgradeThrowAbility()
         {
+            CurrencyManager.Instance.ChangeCurrency(ChangeCurrencyType.Spend, abilities[2].price);
             if (PlayerPrefsInjector.CheckLocalStorageValue(abilities[2].abilityName))
             {
                 if (abilities[2].unlocked == 0)
@@ -129,7 +131,8 @@ namespace _Game.Scripts.AbilitySystem
 
         public void UpgradeIncreaseMassAbility()
         {
-            if (PlayerPrefsInjector.CheckLocalStorageValue(abilities[2].abilityName))
+            CurrencyManager.Instance.ChangeCurrency(ChangeCurrencyType.Spend, abilities[1].price);
+            if (PlayerPrefsInjector.CheckLocalStorageValue(abilities[1].abilityName))
             {
                 if (abilities[1].unlocked == 0)
                 {

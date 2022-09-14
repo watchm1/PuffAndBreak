@@ -26,6 +26,7 @@ namespace _Game.Scripts.AbilitySystem
             {
                 if (upgradeCount < maxUpgradeCount)
                 {
+                    
                     abilityPower += (0.02f);
                     upgradeCount += 1;
                     price *= 2;
