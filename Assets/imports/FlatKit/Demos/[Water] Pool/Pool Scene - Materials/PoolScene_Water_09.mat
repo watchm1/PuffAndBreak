@@ -24,7 +24,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: efcaf526ceb1f4efd9eb4e4c30c6ade6, type: 3}
   m_ValidKeywords:
   - _COLORMODE_LINEAR
-  - _FOAMMODE_GRADIENT_NOISE
+  - _FOAMMODE_NONE
   - _WAVEMODE_ROUND
   m_InvalidKeywords:
   - _ALLOWALPHAOVERFLOW_OFF
@@ -98,7 +98,7 @@ Material:
     - _FoamDepth: -3.98
     - _FoamDirection: 0
     - _FoamFromTexture: 1
-    - _FoamMode: 1
+    - _FoamMode: 0
     - _FoamNoiseAmount: 0.233
     - _FoamProcedural: 1
     - _FoamScale: 0.18

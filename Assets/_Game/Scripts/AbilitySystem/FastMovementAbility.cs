@@ -29,16 +29,16 @@ namespace _Game.Scripts.AbilitySystem
                 //todo: do fast movement one time !!
                 if (abilityPower > 0)
                 {
-                    ownerMovement.multiplier = abilityPower;
+                    ownerMovement.multiplierCount = abilityPower;
                 }
                 else
                 {
-                    ownerMovement.multiplier = 1;
+                    ownerMovement.multiplierCount = 1;
                 }
             }
             else
             {
-                ownerMovement.multiplier = 1;
+                ownerMovement.multiplierCount = 1;
             }
         }
         

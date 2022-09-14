@@ -29,7 +29,7 @@ namespace _Watchm1.SceneManagment.Manager
         // Start is called before the first frame update
         protected override void Awake()
         {
-            base.Awake();
+            dontDestroy = false;
             currentState = LevelState.Loading;
         }
 

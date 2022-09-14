@@ -54,7 +54,6 @@ namespace _Game.Scripts.Player
                     lunched = true;
                     yield return new WaitForSecondsRealtime(coolDown);
                     lunched = false;
-                    
                 }
                 else
                 {

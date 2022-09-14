@@ -7,6 +7,7 @@ using imports._Watchm1.SceneManagment.Settings;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Player
 {
@@ -17,9 +18,9 @@ namespace _Game.Scripts.Player
         private GameSettings _settings;
         private float _verticalSpeed;
         private float _horizontalSpeed;
-        private FloatingJoystick _floatingJoystick;
+        [SerializeField] private FloatingJoystick _floatingJoystick;
         private Player _player;
-        public float multiplier = 1f ;
+        public float multiplierCount = 1f ;
         private float _horizontal;
         private float _vertical;
         private static readonly int Trigger = Animator.StringToHash("Trigger");
@@ -41,7 +42,7 @@ namespace _Game.Scripts.Player
         private void Update()
         {
             if (!LevelManager.Instance.PlayModeActive())
-            {
+            {   
                 return;
             }
 
@@ -61,8 +62,8 @@ namespace _Game.Scripts.Player
 
         private void HandleMovement()
         {
-            _horizontal = _floatingJoystick.Horizontal * multiplier;
-            _vertical = _floatingJoystick.Vertical * multiplier;
+            _horizontal = _floatingJoystick.Horizontal * multiplierCount;
+            _vertical = _floatingJoystick.Vertical * multiplierCount;
             var mutliplyWithSpeedValueHor = _horizontal * _horizontalSpeed;
             var mutliplyWithSpeedValueVer = _vertical * _verticalSpeed;
             var desiredPosition = new Vector3(transform.position.x + mutliplyWithSpeedValueHor,
@@ -79,7 +80,6 @@ namespace _Game.Scripts.Player
                 _player.childAnimator.SetBool(Trigger, true);
             }
         }
-
         private void HandleRotation(float vertical, float horizontal)
         {
             if (horizontal != 0f || vertical != 0f)
