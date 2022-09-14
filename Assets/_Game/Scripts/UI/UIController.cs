@@ -1,8 +1,5 @@
 using _Game.Scripts.LocalStorage;
-using _Watchm1.EventSystem.Events;
-using _Watchm1.Helpers.Logger;
 using _Watchm1.SceneManagment.Manager;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 
