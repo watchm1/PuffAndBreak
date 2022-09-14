@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 533062757809102905}
   m_Layer: 0
   m_Name: Column 1
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300024, guid: 934362735d842b9448a8ee15ab9e9597, type: 3}
 --- !u!1 &533062757813622110
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 533062757813622096}
   m_Layer: 0
   m_Name: Large Cliff 4
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300046, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062757863882951
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 533062757867563161}
   m_Layer: 0
   m_Name: Rock 11
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,7 +389,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300026, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062757901032219
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 533062757901032221}
   m_Layer: 0
   m_Name: Arch 5
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -487,7 +487,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300008, guid: 6ffa637c8ded673449fb9723d8b1b34e, type: 3}
 --- !u!1 &533062757960953776
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 533062757967095945}
   m_Layer: 0
   m_Name: Cliff 3
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,7 +668,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300048, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062757971486777
@@ -1522,7 +1522,7 @@ GameObject:
   - component: {fileID: 533062758041667574}
   m_Layer: 0
   m_Name: Rock 15 (1)
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1604,7 +1604,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300032, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062758049735137
@@ -1621,7 +1621,7 @@ GameObject:
   - component: {fileID: 533062758049735139}
   m_Layer: 0
   m_Name: Cliff 2
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1703,7 +1703,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300044, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062758116328297
@@ -6915,7 +6915,7 @@ GameObject:
   - component: {fileID: 533062758172167726}
   m_Layer: 0
   m_Name: Column 2
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6996,7 +6996,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300022, guid: 934362735d842b9448a8ee15ab9e9597, type: 3}
 --- !u!1 &533062758272261511
@@ -7013,7 +7013,7 @@ GameObject:
   - component: {fileID: 533062758272261529}
   m_Layer: 0
   m_Name: Cliff 2 (1)
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7095,7 +7095,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300044, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062758296295804
@@ -7391,7 +7391,7 @@ GameObject:
   - component: {fileID: 533062758342041289}
   m_Layer: 0
   m_Name: Rock 14
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7472,7 +7472,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062758369906250
@@ -7572,7 +7572,7 @@ GameObject:
   - component: {fileID: 533062758411742550}
   m_Layer: 0
   m_Name: Column 4
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7653,7 +7653,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300012, guid: 6ffa637c8ded673449fb9723d8b1b34e, type: 3}
 --- !u!1 &533062758414555341
@@ -7670,7 +7670,7 @@ GameObject:
   - component: {fileID: 533062758414555343}
   m_Layer: 0
   m_Name: Rock 15
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7752,7 +7752,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300032, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062758430130280
@@ -7867,7 +7867,7 @@ GameObject:
   - component: {fileID: 533062758433325735}
   m_Layer: 0
   m_Name: Rock 4
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7948,7 +7948,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300006, guid: 6ffa637c8ded673449fb9723d8b1b34e, type: 3}
 --- !u!1 &533062758439085209
@@ -8045,10 +8045,10 @@ GameObject:
   - component: {fileID: 533062758505143328}
   - component: {fileID: 533062758505143333}
   - component: {fileID: 533062758505143330}
-  - component: {fileID: 533062758505143331}
+  - component: {fileID: 6108004589692161341}
   m_Layer: 0
   m_Name: Pool_Water
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8118,8 +8118,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &533062758505143331
-MeshCollider:
+--- !u!65 &6108004589692161341
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8128,10 +8128,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1968003479914023355, guid: 47bea0d26a5aa4242b7d382257e0b7b0, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 27.56715, y: 1.6471446e-21, z: 27.56715}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &533062758525241867
 GameObject:
   m_ObjectHideFlags: 0
@@ -8349,7 +8348,7 @@ GameObject:
   - component: {fileID: 533062758544287830}
   m_Layer: 0
   m_Name: Arch 3
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8430,7 +8429,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300016, guid: 934362735d842b9448a8ee15ab9e9597, type: 3}
 --- !u!1 &533062758544733337
@@ -8931,7 +8930,7 @@ GameObject:
   - component: {fileID: 533062758702641892}
   m_Layer: 0
   m_Name: Cliff 2 (4)
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9012,7 +9011,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300044, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062758737138793
@@ -9112,7 +9111,7 @@ GameObject:
   - component: {fileID: 533062758747032877}
   m_Layer: 0
   m_Name: Rock 4 (1)
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9193,7 +9192,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300006, guid: 6ffa637c8ded673449fb9723d8b1b34e, type: 3}
 --- !u!1 &533062758748606968
@@ -9625,7 +9624,7 @@ GameObject:
   - component: {fileID: 533062758837343153}
   m_Layer: 0
   m_Name: Cliff 2 (2)
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9706,7 +9705,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300044, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062758913945091
@@ -10281,7 +10280,7 @@ GameObject:
   - component: {fileID: 533062759050475598}
   m_Layer: 0
   m_Name: Large Rock 1
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10362,7 +10361,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 6ffa637c8ded673449fb9723d8b1b34e, type: 3}
 --- !u!1 &533062759053862707
@@ -11413,7 +11412,7 @@ GameObject:
   - component: {fileID: 533062759425091410}
   m_Layer: 0
   m_Name: Rock 8
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11495,7 +11494,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062759429010417
@@ -11595,7 +11594,7 @@ GameObject:
   - component: {fileID: 533062759432132048}
   m_Layer: 0
   m_Name: Rock 2
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11676,7 +11675,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300008, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062759432374667
@@ -12282,7 +12281,7 @@ GameObject:
   - component: {fileID: 533062759729310740}
   m_Layer: 0
   m_Name: Cliff 1
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12363,7 +12362,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 934362735d842b9448a8ee15ab9e9597, type: 3}
 --- !u!1 &533062759732614284
@@ -13248,7 +13247,7 @@ GameObject:
   - component: {fileID: 533062759879303079}
   m_Layer: 0
   m_Name: Rock 9
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13329,7 +13328,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300022, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062759883907145
@@ -13527,7 +13526,7 @@ GameObject:
   - component: {fileID: 533062759892282991}
   m_Layer: 0
   m_Name: Rock 6
-  m_TagString: Untagged
+  m_TagString: CantMoveInsideObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13608,7 +13607,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300016, guid: cc9fa895bdb4a644385bb29071caeb0b, type: 3}
 --- !u!1 &533062759909884021
@@ -13792,6 +13791,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d2f6d27e45d4ec4ea2427253abab8f3, type: 3}
+--- !u!1 &6795214384902793496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1451871902591932, guid: 0d2f6d27e45d4ec4ea2427253abab8f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6793780107501765284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1224935342993947212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795214384902793496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9931035cb5f4024ea64cffb4f182e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 10
 --- !u!4 &6798533823616632894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4896663422880410, guid: 0d2f6d27e45d4ec4ea2427253abab8f3,

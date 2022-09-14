@@ -24,7 +24,8 @@ namespace _Game.Scripts.Player
         private float _horizontal;
         private float _vertical;
         private static readonly int Trigger = Animator.StringToHash("Trigger");
-
+        
+        public bool canTouchEnvironment;
         #endregion
 
         #region LifeCycle
@@ -37,6 +38,7 @@ namespace _Game.Scripts.Player
             _floatingJoystick = FindObjectOfType<FloatingJoystick>();
             _player = GetComponent<Player>();
             GetComponentInChildren<AbilityController>().abilities[0].Activate(gameObject);
+            canTouchEnvironment = false;
         }
 
         private void Update()
@@ -56,6 +58,7 @@ namespace _Game.Scripts.Player
             }
         }
 
+    
         #endregion
 
         #region Methods
@@ -93,9 +96,14 @@ namespace _Game.Scripts.Player
 
         private void PuffedMovement()
         {
-            var desiredPosition = new Vector3(transform.position.x, transform.position.y + _verticalSpeed, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime);
+            if (!canTouchEnvironment)
+            {
+                var desiredPosition = new Vector3(transform.position.x, transform.position.y + _verticalSpeed, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime);
 
+                
+               
+            }
             var defaultLocalRotation = Quaternion.Euler(0,90,0);
             if (_player.childObject.transform.localRotation != defaultLocalRotation)
             {
