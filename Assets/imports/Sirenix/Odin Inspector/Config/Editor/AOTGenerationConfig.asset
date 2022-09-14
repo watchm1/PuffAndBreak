@@ -16,7 +16,7 @@ MonoBehaviour:
   deleteDllAfterBuilds: 1
   AutomateForAllAOTPlatforms: 1
   automateForPlatforms: 0900000014000000
-  lastScan: 637987664533399176
+  lastScan: 637987670207969571
   supportSerializedTypes:
   - TypeName: _Game.Scripts.AbilitySystem.abstract.Ability, Assembly-CSharp
     IsCustom: 0
