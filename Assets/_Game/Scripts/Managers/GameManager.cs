@@ -27,6 +27,11 @@ public class GameManager : Singleton<GameManager>
         base.Awake();
         LoadLevelFunction();
     }
+
+    private void Start()
+    {
+    }
+
     public void LoadLevelFunction()
     {
         if (!PlayerPrefsInjector.CheckLocalStorageValue("LevelIndex"))
