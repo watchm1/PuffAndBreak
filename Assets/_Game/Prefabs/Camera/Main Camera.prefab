@@ -111,7 +111,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
+  m_RenderPostProcessing: 0
   m_Antialiasing: 2
   m_AntialiasingQuality: 1
   m_StopNaN: 0
@@ -150,10 +150,10 @@ MonoBehaviour:
       Data: true
     - Name: _movementSpeed
       Entry: 4
-      Data: 1
+      Data: 0.3
     - Name: _offSet
       Entry: 4
-      Data: 0
+      Data: 17
   _defaultOffset: 0
 --- !u!114 &3694074243785901548
 MonoBehaviour:

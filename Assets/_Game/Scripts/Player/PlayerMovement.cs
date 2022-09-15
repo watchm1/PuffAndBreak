@@ -96,7 +96,7 @@ namespace _Game.Scripts.Player
         {
             if (!canTouchEnvironment)
             {
-                var desiredPosition = new Vector3(0, _verticalSpeed * Time.deltaTime *4,0);
+                var desiredPosition = new Vector3(0, _verticalSpeed * Time.deltaTime *7,0);
                 _rb.velocity = desiredPosition;
             }
             var defaultLocalRotation = Quaternion.Euler(0,90,0);

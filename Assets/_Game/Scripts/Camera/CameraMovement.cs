@@ -59,7 +59,7 @@ namespace _Game.Scripts.Camera
 
         private void FollowTargetAtVerticalAxis()
         {
-            var desiredPosition = new Vector3(transform.position.x, _followObject.transform.position.y,
+            var desiredPosition = new Vector3(transform.position.x, _followObject.transform.position.y + 1,
                 _followObject.transform.position.z - _offSet);
             var lerpedPosition = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 4);
             transform.position = lerpedPosition;
