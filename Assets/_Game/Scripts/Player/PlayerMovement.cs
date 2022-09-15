@@ -1,6 +1,7 @@
 using System;
 using _Game.Scripts.AbilitySystem;
 using _Game.Scripts.LocalStorage;
+using _Game.Scripts.Managers;
 using _Watchm1.Helpers.Logger;
 using _Watchm1.SceneManagment.Manager;
 using imports._Watchm1.SceneManagment.Settings;
@@ -59,7 +60,12 @@ namespace _Game.Scripts.Player
             }
         }
 
-    
+        private void Update()
+        {
+            _player.childAnimator.SetBool(Trigger, InputManager.Instance.Touching());
+
+        }
+
         #endregion
 
         #region Methods
@@ -74,14 +80,7 @@ namespace _Game.Scripts.Player
                   mutliplyWithSpeedValueVer, 0);
              _rb.velocity = desiredPosition;
             HandleRotation(_vertical, _horizontal);
-            if (_horizontal == 0 && _vertical == 0)
-            {
-                _player.childAnimator.SetBool(Trigger, false);
-            }
-            else
-            {
-                _player.childAnimator.SetBool(Trigger, true);
-            }
+            WatchmLogger.Log("Current touch => " + InputManager.Instance.Touching());
         }
         private void HandleRotation(float vertical, float horizontal)
         {
@@ -97,7 +96,7 @@ namespace _Game.Scripts.Player
         {
             if (!canTouchEnvironment)
             {
-                var desiredPosition = new Vector3(0, _verticalSpeed * Time.deltaTime * 30,0);
+                var desiredPosition = new Vector3(0, _verticalSpeed * Time.deltaTime *4,0);
                 _rb.velocity = desiredPosition;
             }
             var defaultLocalRotation = Quaternion.Euler(0,90,0);

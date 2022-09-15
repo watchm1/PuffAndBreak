@@ -48,7 +48,7 @@ namespace _Game.Scripts.AbilitySystem
             {
                 Transform childMesh = player.transform.GetChild(0);
                 var cam = GameObject.FindObjectOfType<CameraMovement>();
-                var oldLocaleScale = new Vector3(11.3f, 11.3f, 11.3f);
+                var oldLocaleScale = new Vector3(1,1,1);
                 if (upgradeCount > 0)
                 {
                     if (abilityPower > 0)

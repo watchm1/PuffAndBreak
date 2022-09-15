@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a23e1e2f2ad8da4f9c419045380e775, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  playerForwardSpeed: 25
-  playerHorizontalSpeed: 25
+  playerForwardSpeed: 5
+  playerHorizontalSpeed: 5
   fastMovementAbilityName: FastMove
   throwThornsAbilityName: ThrowThorn
   largeMassAbilityName: IncreaseMass
