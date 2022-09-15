@@ -153,7 +153,7 @@ MonoBehaviour:
       Data: 0.3
     - Name: _offSet
       Entry: 4
-      Data: 17
+      Data: 14
   _defaultOffset: 0
 --- !u!114 &3694074243785901548
 MonoBehaviour:
