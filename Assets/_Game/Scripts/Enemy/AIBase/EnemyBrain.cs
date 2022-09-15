@@ -28,7 +28,7 @@ namespace _Game.Scripts.Enemy.AIBase
         // movement variables
         private float _horizontalSpeed;
         private float _verticalSpeed;
-        public List<Transform> randomLocationsForMovingAround;
+        [SerializeField]public List<Transform> randomLocationsForMovingAround;
         private int _playerStayTime;
         // animation
         public Animator animator;
@@ -53,16 +53,8 @@ namespace _Game.Scripts.Enemy.AIBase
             _horizontalSpeed = GameSettings.Current.playerHorizontalSpeed;
             _playerStayTime = 2;
 
-            randomLocationsForMovingAround = new List<Transform>();
 
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                var childTransform = transform.GetChild(i);
-                if (childTransform.tag == "RandomPosition")
-                {
-                    randomLocationsForMovingAround.Add(childTransform);
-                }
-            }
+            ChangeState(new LookingAroundState());
         }
         private void Update()
         {

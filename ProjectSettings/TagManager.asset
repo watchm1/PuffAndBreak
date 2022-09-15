@@ -8,6 +8,7 @@ TagManager:
   - CurrencyItem
   - CantMoveInsideObject
   - RandomPosition
+  - Enemy
   layers:
   - Default
   - TransparentFX
