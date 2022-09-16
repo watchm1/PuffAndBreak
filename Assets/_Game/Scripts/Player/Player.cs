@@ -42,7 +42,10 @@ namespace _Game.Scripts.Player
             props.childObjectMeshRenderer = childObject.GetComponentInChildren<SkinnedMeshRenderer>();
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
             childAnimator = childObject.GetComponent<Animator>();
+            
             throwMechanicController = GetComponent<ThrowMechanicController>();
+            
+            
             GetComponentInChildren<AbilityController>().abilities[1].Activate(gameObject);
             GetComponentInChildren<AbilityController>().abilities[2].Activate(gameObject);
             _takeDamageEffect = new DamageTakenEffect(gameObject);
@@ -97,7 +100,7 @@ namespace _Game.Scripts.Player
         {
             //todo:: adding health controller
             _takeDamageEffect.DoEffect();
-            onTakeDamage.InvokeEvent();
+            //onTakeDamage.InvokeEvent();
         }
     }
 }

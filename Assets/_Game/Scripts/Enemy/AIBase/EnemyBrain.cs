@@ -71,9 +71,9 @@ namespace _Game.Scripts.Enemy.AIBase
             enemyCanvas.gameObject.SetActive(false);
             
             ChangeState(new LookingAroundState());
-            takeDamageEffect = new DamageTakenEffect(gameObject,onTakeDamage);
+            takeDamageEffect = new DamageTakenEffect(gameObject);
         }
-        private void Update()
+        private void LateUpdate()
         {
             currentState.Update(this);
         }

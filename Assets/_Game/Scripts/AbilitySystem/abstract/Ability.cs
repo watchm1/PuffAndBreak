@@ -33,7 +33,7 @@ namespace _Game.Scripts.AbilitySystem.@abstract
             {
                 upgradeCount = 0;
                 maxUpgradeCount = 5;
-                abilityPower = 1.4f;
+                abilityPower = 0.3f;
                 price = 100;
                 unlocked = 0;
                 this.UpgradeAction();
@@ -44,6 +44,7 @@ namespace _Game.Scripts.AbilitySystem.@abstract
                 maxUpgradeCount = PlayerPrefsInjector.GetIntValue($"{abilityName}-MaxUpgradeCount");
                 abilityPower = PlayerPrefsInjector.GetFloat($"{abilityName}-Power");
                 price = PlayerPrefsInjector.GetIntValue($"{abilityName}-Price");
+                unlocked = PlayerPrefsInjector.GetIntValue($"{abilityName}-Unlocked");
                 CheckCanBuy();
             }
         }

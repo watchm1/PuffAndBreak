@@ -22,10 +22,10 @@ namespace _Game.Scripts.Enemy.State
             }
             else
             {
-                if (npc.targetPlayer.TryGetComponent(out IDamageable damaglePlayer))
-                {
-                    damaglePlayer.TakeDamage(10);
-                }
+                // if (npc.targetPlayer.TryGetComponent(out IDamageable damaglePlayer))
+                // {
+                //     damaglePlayer.TakeDamage(10);
+                // }
             }
         }
         private void AttackToPlayer()

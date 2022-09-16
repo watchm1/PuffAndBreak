@@ -25,14 +25,7 @@ namespace _Game.Scripts.AbilitySystem
                 owner.throwMechanicController.earnedAbility = true;
                 if (upgradeCount < maxUpgradeCount)
                 {
-                    if (abilityPower > 0)
-                    {
-                        owner.throwMechanicController.SetRequirementsForMechanic(upgradeCount, abilityPower);
-                    }
-                    else
-                    {
-                        owner.throwMechanicController.earnedAbility = false;
-                    }
+                    owner.throwMechanicController.SetRequirementsForMechanic(upgradeCount, abilityPower);
                 }
                 else
                 {

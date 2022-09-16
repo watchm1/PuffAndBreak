@@ -511,11 +511,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9ebaba55ad1214d8a4ded66fbe081d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroy: 1
+  dontDestroy: 0
   pools:
   - poolObjectPrefab: {fileID: 7676830653585674905, guid: 34af39bed24ef0745a93ced564804d39,
       type: 3}
-    poolSize: 10
+    poolSize: 5
     pooledObject: []
 --- !u!114 &1654860761818422872 stripped
 MonoBehaviour:
@@ -720,14 +720,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2890187191451115884, guid: e18577fa85e8a4b4096c62d7dd28741a,
         type: 3}
-    - target: {fileID: 4533786617440244716, guid: e18577fa85e8a4b4096c62d7dd28741a,
+    - target: {fileID: 2890187193160795550, guid: e18577fa85e8a4b4096c62d7dd28741a,
         type: 3}
-      propertyPath: m_Name
-      value: Player
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890187193160795555, guid: e18577fa85e8a4b4096c62d7dd28741a,
+        type: 3}
+      propertyPath: thornSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4533786617440244716, guid: e18577fa85e8a4b4096c62d7dd28741a,
         type: 3}
-      propertyPath: m_TagString
+      propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4533786617440244717, guid: e18577fa85e8a4b4096c62d7dd28741a,

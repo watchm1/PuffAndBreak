@@ -71,7 +71,6 @@ namespace _Game.Scripts.Pool
                 else
                 {
                     var obj = pools[type].pooledObject[0];
-                    obj.SetActive(true);
                     pools[type].pooledObject.Remove(obj);
                     return obj;
                 }

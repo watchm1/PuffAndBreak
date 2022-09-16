@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 2890187193160795550}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,6 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childObject: {fileID: 8376107493384505275}
+  onTakeDamage: {fileID: 0}
   childAnimator: {fileID: 0}
   throwMechanicController: {fileID: 0}
 --- !u!114 &2890187193160795555
@@ -553,7 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   earnedAbility: 0
   coolDown: 3
-  thornSpeed: 0
+  thornSpeed: 10
   throwBeginPosition: {fileID: 2890187191314519231}
   lunched: 0
 --- !u!54 &2890187193160795552
