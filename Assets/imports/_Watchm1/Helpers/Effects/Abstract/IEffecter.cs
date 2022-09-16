@@ -4,6 +4,7 @@ public enum EffectType
 {
    DoScale,
    ZeroToNormalScale,
+   TakenDamage
 }
 namespace _Watchm1.Helpers.Effects.Abstract
 {

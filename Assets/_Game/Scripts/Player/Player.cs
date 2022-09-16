@@ -1,5 +1,9 @@
 using _Game.Scripts.AbilitySystem;
+using _Game.Scripts.DamageSystem;
+using _Game.Scripts.Effects;
 using _Game.Scripts.Managers;
+using _Watchm1.EventSystem.Events;
+using _Watchm1.Helpers.Effects.Abstract;
 using _Watchm1.SceneManagment.Manager;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -12,7 +16,7 @@ namespace _Game.Scripts.Player
         Shrinked
     }
 
-    public class Player : MonoBehaviour
+    public class Player : MonoBehaviour, IDamageable
     {
         #region Definition
 
@@ -25,6 +29,9 @@ namespace _Game.Scripts.Player
         }
         public PlayerProps props;
         [SerializeField] public GameObject childObject;
+        [SerializeField] public VoidEvent onTakeDamage;
+
+        private IEffecter<DamageTakenEffect> _takeDamageEffect;
         public Animator childAnimator;
         public ThrowMechanicController throwMechanicController;
         private void Start()
@@ -38,6 +45,7 @@ namespace _Game.Scripts.Player
             throwMechanicController = GetComponent<ThrowMechanicController>();
             GetComponentInChildren<AbilityController>().abilities[1].Activate(gameObject);
             GetComponentInChildren<AbilityController>().abilities[2].Activate(gameObject);
+            _takeDamageEffect = new DamageTakenEffect(gameObject);
         }
 
         private void Update()
@@ -84,5 +92,12 @@ namespace _Game.Scripts.Player
             StartCoroutine(throwMechanicController.ThrowThrown());
         }
         #endregion
+
+        public void TakeDamage(int amount)
+        {
+            //todo:: adding health controller
+            _takeDamageEffect.DoEffect();
+            onTakeDamage.InvokeEvent();
+        }
     }
 }

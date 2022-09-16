@@ -1,12 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Game.Scripts.DamageSystem;
+using _Game.Scripts.Effects;
 using _Game.Scripts.Enemy.State;
+using _Watchm1.EventSystem.Events;
+using _Watchm1.Helpers.Effects.Abstract;
 using _Watchm1.Helpers.Logger;
 using imports._Watchm1.SceneManagment.Settings;
 using Pathfinding;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Enemy.AIBase
 {
@@ -18,16 +23,22 @@ namespace _Game.Scripts.Enemy.AIBase
         AttackPlayer,
         Death,
     }
-    public class EnemyBrain : MonoBehaviour
+    public class EnemyBrain : DamageDealer, IDamageable
     {
         #region Definition
         // AI
         [SerializeField] public Canvas enemyCanvas;
         [SerializeField] public AttackType attackType;
+        [SerializeField] private VoidEvent onTakeDamage;
+        
+        
         [HideInInspector]public List<IEnemyState> states;
         [HideInInspector]public IEnemyState  currentState;
         [HideInInspector]public List<Transform> randomLocationsForMovingAround;
         
+        
+        
+        public IEffecter<DamageTakenEffect> takeDamageEffect;
         public Animator animator;
         public AIDestinationSetter destinationSetter;
         public AIPath pathController;
@@ -60,6 +71,7 @@ namespace _Game.Scripts.Enemy.AIBase
             enemyCanvas.gameObject.SetActive(false);
             
             ChangeState(new LookingAroundState());
+            takeDamageEffect = new DamageTakenEffect(gameObject,onTakeDamage);
         }
         private void Update()
         {
@@ -132,8 +144,13 @@ namespace _Game.Scripts.Enemy.AIBase
                     break;
             }
         }
-
+        public void TakeDamage(int amount)
+        {
+            takeDamageEffect.DoEffect();
+            onTakeDamage.InvokeEvent();
+        }
         #endregion
+
         
     }
 }

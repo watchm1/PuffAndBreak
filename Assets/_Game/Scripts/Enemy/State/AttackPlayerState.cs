@@ -1,3 +1,4 @@
+using _Game.Scripts.DamageSystem;
 using _Game.Scripts.Enemy.AIBase;
 using UnityEngine;
 
@@ -18,6 +19,13 @@ namespace _Game.Scripts.Enemy.State
             if (!npc.pathController.reachedDestination)
             {
                 npc.currentEnemyState = EnemyState.FollowPlayer;
+            }
+            else
+            {
+                if (npc.targetPlayer.TryGetComponent(out IDamageable damaglePlayer))
+                {
+                    damaglePlayer.TakeDamage(10);
+                }
             }
         }
         private void AttackToPlayer()
