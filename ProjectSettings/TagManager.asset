@@ -9,6 +9,7 @@ TagManager:
   - CantMoveInsideObject
   - RandomPosition
   - Enemy
+  - EnemyCanvas
   layers:
   - Default
   - TransparentFX

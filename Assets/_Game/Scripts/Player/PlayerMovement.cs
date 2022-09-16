@@ -80,7 +80,6 @@ namespace _Game.Scripts.Player
                   mutliplyWithSpeedValueVer, 0);
              _rb.velocity = desiredPosition;
             HandleRotation(_vertical, _horizontal);
-            WatchmLogger.Log("Current touch => " + InputManager.Instance.Touching());
         }
         private void HandleRotation(float vertical, float horizontal)
         {

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _Game.Scripts.Enemy.State;
+using _Watchm1.Helpers.Logger;
 using imports._Watchm1.SceneManagment.Settings;
 using Pathfinding;
 using Unity.VisualScripting;
@@ -21,19 +22,23 @@ namespace _Game.Scripts.Enemy.AIBase
     {
         #region Definition
         // AI
+        [SerializeField] public Canvas enemyCanvas;
+        [SerializeField] public AttackType attackType;
         [HideInInspector]public List<IEnemyState> states;
         [HideInInspector]public IEnemyState  currentState;
+        [HideInInspector]public List<Transform> randomLocationsForMovingAround;
+        
+        public Animator animator;
         public AIDestinationSetter destinationSetter;
         public AIPath pathController;
-        // movement variables
+        public GameObject targetPlayer;
+        public EnemyState currentEnemyState;
         private float _horizontalSpeed;
         private float _verticalSpeed;
-        [HideInInspector]public List<Transform> randomLocationsForMovingAround;
         private int _playerStayTime;
-        // animation
-        public Animator animator;
-        // state
-        public EnemyState currentEnemyState;
+        private bool _firstDetection;
+        
+        
         #endregion
         #region LifeCycle
         private void Start()
@@ -52,8 +57,8 @@ namespace _Game.Scripts.Enemy.AIBase
             _verticalSpeed = GameSettings.Current.playerForwardSpeed;
             _horizontalSpeed = GameSettings.Current.playerHorizontalSpeed;
             _playerStayTime = 2;
-
-
+            enemyCanvas.gameObject.SetActive(false);
+            
             ChangeState(new LookingAroundState());
         }
         private void Update()
@@ -65,6 +70,8 @@ namespace _Game.Scripts.Enemy.AIBase
             if (other.CompareTag("Player"))
             {
                 currentEnemyState = EnemyState.DetectTimeLinePlayer;
+                enemyCanvas.gameObject.SetActive(true);
+                targetPlayer = other.gameObject;
             }
         }
         private void OnTriggerStay(Collider other)
@@ -80,6 +87,7 @@ namespace _Game.Scripts.Enemy.AIBase
             if (other.CompareTag("Player"))
             {
                 currentEnemyState = EnemyState.LookingAround;
+                enemyCanvas.gameObject.SetActive(false);
             }
         }
         #endregion
