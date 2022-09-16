@@ -11,9 +11,14 @@ namespace _Game.Scripts.Enemy.State
         private int index = 0;
         public void OnBegin(EnemyBrain npc)
         {
-            
+            foreach (var item in GameObject.FindGameObjectsWithTag("RandomPosition"))
+            {
+                if(Vector3.Distance(npc.transform.position, item.transform.position) <= 15f)
+                {
+                    npc.randomLocationsForMovingAround.Add(item.transform);
+                }
+            }
         }
-
         public void Update(EnemyBrain npc)
         {
             npc.StateChanger();

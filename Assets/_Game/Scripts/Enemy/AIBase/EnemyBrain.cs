@@ -28,7 +28,7 @@ namespace _Game.Scripts.Enemy.AIBase
         // movement variables
         private float _horizontalSpeed;
         private float _verticalSpeed;
-        [SerializeField]public List<Transform> randomLocationsForMovingAround;
+        [HideInInspector]public List<Transform> randomLocationsForMovingAround;
         private int _playerStayTime;
         // animation
         public Animator animator;
