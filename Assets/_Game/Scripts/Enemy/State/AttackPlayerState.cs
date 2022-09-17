@@ -14,7 +14,6 @@ namespace _Game.Scripts.Enemy.State
 
         public void Update(EnemyBrain npc)
         {
-            npc.StateChanger();
 
             if (!npc.pathController.reachedDestination)
             {

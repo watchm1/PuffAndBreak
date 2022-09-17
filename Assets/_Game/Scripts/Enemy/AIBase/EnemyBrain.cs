@@ -30,11 +30,10 @@ namespace _Game.Scripts.Enemy.AIBase
         [SerializeField] public Canvas enemyCanvas;
         [SerializeField] public AttackType attackType;
         [SerializeField] private VoidEvent onTakeDamage;
-        
-        
+        [SerializeField]public List<Transform> randomLocationsForMovingAround;
+
         [HideInInspector]public List<IEnemyState> states;
         [HideInInspector]public IEnemyState  currentState;
-        [HideInInspector]public List<Transform> randomLocationsForMovingAround;
         
         
         
@@ -69,18 +68,17 @@ namespace _Game.Scripts.Enemy.AIBase
             _horizontalSpeed = GameSettings.Current.playerHorizontalSpeed;
             _playerStayTime = 2;
             enemyCanvas.gameObject.SetActive(false);
-            
+            randomLocationsForMovingAround = new List<Transform>();
             ChangeState(new LookingAroundState());
             takeDamageEffect = new DamageTakenEffect(gameObject);
         }
-        private void LateUpdate()
+        private void Update()
         {
             currentState.Update(this);
         }
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
-            {
+            if (other.CompareTag("Player")) {
                 currentEnemyState = EnemyState.DetectTimeLinePlayer;
                 enemyCanvas.gameObject.SetActive(true);
                 targetPlayer = other.gameObject;
@@ -90,7 +88,6 @@ namespace _Game.Scripts.Enemy.AIBase
         {
             if (other.CompareTag("Player"))
             {
-                StartCoroutine(IsCharacterInsideZone());
             }
         }
 
@@ -110,7 +107,7 @@ namespace _Game.Scripts.Enemy.AIBase
             currentState = enemyState;
             currentState.OnBegin(this);
         }
-        private IEnumerator IsCharacterInsideZone()
+        public IEnumerator IsCharacterInsideZone()
         {
             yield return new WaitForSeconds(_playerStayTime);
             if (currentEnemyState == EnemyState.DetectTimeLinePlayer)

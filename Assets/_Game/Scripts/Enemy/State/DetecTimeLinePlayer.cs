@@ -11,7 +11,7 @@ namespace _Game.Scripts.Enemy.State
 
         public void Update(EnemyBrain npc)
         {
-            npc.StateChanger();
+            npc.StartCoroutine(npc.IsCharacterInsideZone());
         }
     }
 }

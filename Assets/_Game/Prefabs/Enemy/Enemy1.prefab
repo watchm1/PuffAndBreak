@@ -2114,8 +2114,8 @@ GameObject:
   - component: {fileID: 7862189344979149093}
   - component: {fileID: 7862189344979149094}
   - component: {fileID: 7862189344979149088}
-  - component: {fileID: 7862189344979149095}
   - component: {fileID: 7862189344979149089}
+  - component: {fileID: 1654925380708039488}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -2153,10 +2153,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCanvas: {fileID: 69219321247408740}
+  attackType: 0
+  onTakeDamage: {fileID: 0}
   randomLocationsForMovingAround: []
   animator: {fileID: 7051918331906791297}
   destinationSetter: {fileID: 7862189344979149094}
-  pathController: {fileID: 7862189344979149095}
+  pathController: {fileID: 0}
   targetPlayer: {fileID: 0}
   currentEnemyState: 0
 --- !u!114 &7862189344979149094
@@ -2201,7 +2203,20 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &7862189344979149095
+--- !u!65 &7862189344979149089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7862189344979149099}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.965326, y: 10.817457, z: 0.884442}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1654925380708039488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2214,7 +2229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 1
+  radius: 1.24
   height: 2
   canMove: 1
   maxSpeed: 2
@@ -2236,26 +2251,13 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 4.53
-  pickNextWaypointDist: 2.31
-  endReachedDistance: 3.4
-  alwaysDrawGizmos: 1
-  slowWhenNotFacingTarget: 0
+  slowdownDistance: 1.66
+  pickNextWaypointDist: 1.17
+  endReachedDistance: 1.16
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!65 &7862189344979149089
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862189344979149099}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 15.965326, y: 10.817457, z: 0.884442}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7969719533141508368
 GameObject:
   m_ObjectHideFlags: 0
