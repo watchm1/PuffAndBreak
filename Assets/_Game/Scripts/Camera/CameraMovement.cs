@@ -97,7 +97,7 @@ namespace _Game.Scripts.Camera
             }
         }
 
-        private void ReloadLevel()
+        public void ReloadLevel()
         {
             LevelManager.Instance.ReloadLevel();
         }

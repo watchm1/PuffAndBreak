@@ -17,28 +17,31 @@ namespace _Game.Scripts.Player
     public class PlayerMovement : MonoBehaviour
     {
         #region Definition
+        public bool canTouchEnvironment;
+        public float multiplierCount = 1f ;
+
+        private InputManager _inputManager;
         private GameSettings _settings;
         private float _verticalSpeed;
         private float _horizontalSpeed;
-        [SerializeField] private FloatingJoystick _floatingJoystick;
         private Player _player;
-        public float multiplierCount = 1f ;
         private float _horizontal;
         private float _vertical;
         private static readonly int Trigger = Animator.StringToHash("Trigger");
         private Rigidbody _rb;
-        public bool canTouchEnvironment;
+        
+        
         #endregion
 
         #region LifeCycle
 
         private void Start()
         {
+            _inputManager = InputManager.Instance;
             _settings = GameSettings.Current;
             _verticalSpeed = _settings.playerForwardSpeed;
             _horizontalSpeed = _settings.playerHorizontalSpeed;
             _player = GetComponent<Player>();
-            _floatingJoystick = FindObjectOfType<FloatingJoystick>();
             GetComponentInChildren<AbilityController>().abilities[0].Activate(gameObject);
             canTouchEnvironment = false;
             _rb = GetComponent<Rigidbody>();
@@ -58,12 +61,13 @@ namespace _Game.Scripts.Player
             else
             {
                 PuffedMovement();
+                HandlePuffedRotation();
             }
         }
 
         private void Update()
         {
-            _player.childAnimator.SetBool(Trigger, InputManager.Instance.Touching());
+            _player.childAnimator.SetBool(Trigger, _inputManager.Touching());
 
         }
 
@@ -73,8 +77,8 @@ namespace _Game.Scripts.Player
 
         private void HandleMovement()
         {
-             _horizontal = _floatingJoystick.Horizontal * multiplierCount;
-             _vertical = _floatingJoystick.Vertical * multiplierCount;
+             _horizontal = _inputManager.joystick.Horizontal * multiplierCount;
+             _vertical = _inputManager.joystick.Vertical * multiplierCount;
              var mutliplyWithSpeedValueHor = _horizontal * _horizontalSpeed;
              var mutliplyWithSpeedValueVer = _vertical * _verticalSpeed;
              var desiredPosition = new Vector3( mutliplyWithSpeedValueHor,
@@ -84,14 +88,23 @@ namespace _Game.Scripts.Player
         }
         private void HandleRotation(float vertical, float horizontal)
         {
+            var playerChildLocalRot = _player.childObject.transform.localRotation;
             if (horizontal != 0f || vertical != 0f)
             {
-                var direction = new Vector3(_player.childObject.transform.localRotation.x + (horizontal * 10), 
-                    _player.childObject.transform.localRotation.y +  (vertical * 10),_player.childObject.transform.localRotation.z);
-                _player.childObject.transform.localRotation = Quaternion.Slerp(_player.childObject.transform.localRotation, Quaternion.LookRotation(direction), Time.deltaTime *10);    
+                var direction = new Vector3(playerChildLocalRot.x + (horizontal * 10), 
+                    playerChildLocalRot.y +  (vertical * 10),playerChildLocalRot.z);
+                _player.childObject.transform.localRotation = Quaternion.Slerp(playerChildLocalRot, Quaternion.LookRotation(direction), Time.deltaTime *10);    
             }
         }
-        
+
+        private void HandlePuffedRotation()
+        {
+            var defaultLocalRotation = Quaternion.Euler(0,90,0);
+            if (_player.childObject.transform.localRotation != defaultLocalRotation)
+            {
+                _player.childObject.transform.localRotation = Quaternion.Lerp(_player.childObject.transform.localRotation, defaultLocalRotation, Time.deltaTime) ;
+            }
+        }
         private void PuffedMovement()
         {
             if (!canTouchEnvironment)
@@ -99,16 +112,8 @@ namespace _Game.Scripts.Player
                 var desiredPosition = new Vector3(0, _verticalSpeed * Time.deltaTime *7,0);
                 _rb.velocity = desiredPosition;
             }
-            var defaultLocalRotation = Quaternion.Euler(0,90,0);
-            if (_player.childObject.transform.localRotation != defaultLocalRotation)
-            {
-                _player.childObject.transform.localRotation = Quaternion.Lerp(_player.childObject.transform.localRotation, defaultLocalRotation, Time.deltaTime) ;
-            }
+         
             
-        }
-        public void OnFirstTouch()
-        {
-            _floatingJoystick = FindObjectOfType<FloatingJoystick>();
         }
         #endregion
 
