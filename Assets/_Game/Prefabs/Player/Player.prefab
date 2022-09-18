@@ -521,9 +521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c9f529c3d8355469c2b5f5c812f02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _floatingJoystick: {fileID: 0}
-  multiplierCount: 1
   canTouchEnvironment: 0
+  multiplierCount: 1
 --- !u!114 &2890187193160795556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,8 +537,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childObject: {fileID: 8376107493384505275}
   onTakeDamage: {fileID: 0}
+  throwMechanicController: {fileID: 2890187193160795555}
+  abilityController: {fileID: 2890187191451115884}
   childAnimator: {fileID: 0}
-  throwMechanicController: {fileID: 0}
 --- !u!114 &2890187193160795555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   earnedAbility: 0
   coolDown: 3
-  thornSpeed: 10
+  thornSpeed: 100
   throwBeginPosition: {fileID: 2890187191314519231}
   lunched: 0
 --- !u!54 &2890187193160795552
@@ -585,7 +585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5268675655273014b92cdb1d6dcc7188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 0}
 --- !u!65 &2890187193160795550
 BoxCollider:
   m_ObjectHideFlags: 0
