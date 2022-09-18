@@ -187,6 +187,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4533786617176440628}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &399158493 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2890187193160795555, guid: e18577fa85e8a4b4096c62d7dd28741a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4533786617176440628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399158488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48b214e8cc438f458728822cbc36362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +771,16 @@ PrefabInstance:
       propertyPath: thornSpeed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 2890187193160795556, guid: e18577fa85e8a4b4096c62d7dd28741a,
+        type: 3}
+      propertyPath: abilityController
+      value: 
+      objectReference: {fileID: 1654860761818422872}
+    - target: {fileID: 2890187193160795556, guid: e18577fa85e8a4b4096c62d7dd28741a,
+        type: 3}
+      propertyPath: throwMechanicController
+      value: 
+      objectReference: {fileID: 399158493}
     - target: {fileID: 4533786617440244716, guid: e18577fa85e8a4b4096c62d7dd28741a,
         type: 3}
       propertyPath: m_Name

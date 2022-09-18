@@ -6,7 +6,6 @@ using _Watchm1.EventSystem.Events;
 using _Watchm1.Helpers.Effects.Abstract;
 using _Watchm1.SceneManagment.Manager;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Player
 {
@@ -27,13 +26,15 @@ namespace _Game.Scripts.Player
             public int health;
             public SkinnedMeshRenderer childObjectMeshRenderer;
         }
+        
+        
         public PlayerProps props;
         [SerializeField] public GameObject childObject;
         [SerializeField] public VoidEvent onTakeDamage;
-
+        [SerializeField]public ThrowMechanicController throwMechanicController;
+        [SerializeField] private AbilityController abilityController;
         private IEffecter<DamageTakenEffect> _takeDamageEffect;
         public Animator childAnimator;
-        public ThrowMechanicController throwMechanicController;
         private InputManager _inputManager;
         private void Start()
         {
@@ -42,14 +43,11 @@ namespace _Game.Scripts.Player
             props.canMove = false;
             props.childObjectMeshRenderer = childObject.GetComponentInChildren<SkinnedMeshRenderer>();
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
+            _takeDamageEffect = new DamageTakenEffect(gameObject);
             childAnimator = childObject.GetComponent<Animator>();
             _inputManager = InputManager.Instance;
-            throwMechanicController = GetComponent<ThrowMechanicController>();
-            
-            
-            GetComponentInChildren<AbilityController>().abilities[1].Activate(gameObject);
-            GetComponentInChildren<AbilityController>().abilities[2].Activate(gameObject);
-            _takeDamageEffect = new DamageTakenEffect(gameObject);
+            abilityController.abilities[1].Activate(gameObject);
+            abilityController.abilities[2].Activate(gameObject);
         }
 
         private void Update()
