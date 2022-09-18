@@ -8,7 +8,6 @@ namespace _Game.Scripts.Player
 {
     public class TriggerController : MonoBehaviour
     {
-        [SerializeField] private PlayerMovement playerMovement;
         
         private void OnTriggerEnter(Collider other)
         {
