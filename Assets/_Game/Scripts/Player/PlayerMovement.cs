@@ -104,10 +104,7 @@ namespace _Game.Scripts.Player
             {
                 _player.childObject.transform.localRotation = Quaternion.Lerp(_player.childObject.transform.localRotation, defaultLocalRotation, Time.deltaTime) ;
             }
-            else
-            {
-                return;
-            }
+            
         }
         public void OnFirstTouch()
         {

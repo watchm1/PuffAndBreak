@@ -34,6 +34,7 @@ namespace _Game.Scripts.Player
         private IEffecter<DamageTakenEffect> _takeDamageEffect;
         public Animator childAnimator;
         public ThrowMechanicController throwMechanicController;
+        private InputManager _inputManager;
         private void Start()
         {
             props.health = 100;
@@ -42,7 +43,7 @@ namespace _Game.Scripts.Player
             props.childObjectMeshRenderer = childObject.GetComponentInChildren<SkinnedMeshRenderer>();
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
             childAnimator = childObject.GetComponent<Animator>();
-            
+            _inputManager = InputManager.Instance;
             throwMechanicController = GetComponent<ThrowMechanicController>();
             
             
@@ -57,12 +58,12 @@ namespace _Game.Scripts.Player
             {
                 return;
             }
-            if (props.currentState == FishState.Puff && InputManager.Instance.Touching())
+            if (props.currentState == FishState.Puff && _inputManager.Touching())
             {
                 // transition to shrink state
                 HandleShrinkState();
             }
-            else if (props.currentState == FishState.Shrinked && !InputManager.Instance.Touching())
+            else if (props.currentState == FishState.Shrinked && !_inputManager.Touching())
             {
                 // transition to puff state
                 HandlePuffState();

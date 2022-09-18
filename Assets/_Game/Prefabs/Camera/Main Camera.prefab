@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3694074243785901545}
   - component: {fileID: 3694074243785901546}
   - component: {fileID: 3694074243785901549}
-  - component: {fileID: 3694074243785901548}
   - component: {fileID: 3694074243785901551}
   m_Layer: 0
   m_Name: Main Camera
@@ -154,21 +153,10 @@ MonoBehaviour:
     - Name: _offSet
       Entry: 4
       Data: 14
+    - Name: _outOfRange
+      Entry: 6
+      Data: 
   _defaultOffset: 0
---- !u!114 &3694074243785901548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3694074243785901542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c683190bcc7a8f499341c10e94ae6cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  outOfRange: {fileID: 11400000, guid: 0ed839acf03ae354689227c31ba64950, type: 2}
 --- !u!114 &3694074243785901551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +173,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3694074243785901548}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: _Game.Scripts.Camera.DeadZoneController, Assembly-CSharp
         m_MethodName: QuitApp
         m_Mode: 1

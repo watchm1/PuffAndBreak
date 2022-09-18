@@ -596,11 +596,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3694074243785901548, guid: 3acbbbd824f96d943bc9af0141ceb098,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: player
       value: 
       objectReference: {fileID: 399158488}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3694074243785901549, guid: 3acbbbd824f96d943bc9af0141ceb098,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -620,18 +623,24 @@ PrefabInstance:
     - target: {fileID: 3694074243785901549, guid: 3acbbbd824f96d943bc9af0141ceb098,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[1]
-      value: '"path":"_offSet","value":{"$id":0,"$type":"System.Single, mscorlib",14}'
+      value: '"path":"_outOfRange","value":$eref:1'
       objectReference: {fileID: 0}
     - target: {fileID: 3694074243785901549, guid: 3acbbbd824f96d943bc9af0141ceb098,
         type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3694074243785901549, guid: 3acbbbd824f96d943bc9af0141ceb098,
         type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
       value: 
       objectReference: {fileID: 399158488}
+    - target: {fileID: 3694074243785901549, guid: 3acbbbd824f96d943bc9af0141ceb098,
+        type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ed839acf03ae354689227c31ba64950,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3acbbbd824f96d943bc9af0141ceb098, type: 3}
 --- !u!1001 &3872190111727022083

@@ -26,16 +26,8 @@ public class CurrencyManager : Singleton<CurrencyManager>
     protected override void Awake()
     {
         dontDestroy = false;
-        if(PlayerPrefsInjector.CheckLocalStorageValue("Currency"))
-        {
-            var currentCurrency = PlayerPrefsInjector.GetIntValue("Currency");
-            CurrencyCount = currentCurrency == 0 ? 0 : currentCurrency;
-        }
-        else
-        {
-            CurrencyCount = 0;
-            PlayerPrefsInjector.SetIntValue("Currency", CurrencyCount);
-        }
+        CurrencyCount = PlayerPrefsInjector.GetIntValue("Currency");
+                
     }
 
     #endregion

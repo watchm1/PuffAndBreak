@@ -1,5 +1,6 @@
 using _Watchm1.Helpers.Singleton;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _Watchm1.SceneManagment.Manager
 {
@@ -48,6 +49,11 @@ namespace _Watchm1.SceneManagment.Manager
                 currentGameState = GameState.PlayState;
                 return true;
             }
+        }
+
+        public void ReloadLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
