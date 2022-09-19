@@ -108,7 +108,7 @@ namespace _Game.Scripts.Player
         public void HandleGrowAbility()
         {
             var localScale = transform.localScale;
-            localScale *= _abilityController.GetMultiplier(AbilityType.Grow);
+            localScale += localScale * _abilityController.GetMultiplier(AbilityType.Grow);
             transform.localScale = localScale;
         }
     }

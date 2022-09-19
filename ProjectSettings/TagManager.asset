@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - EnemyCanvas
   - EnemyIconPivot
+  - InGameUI
+  - IconParent1
   layers:
   - Default
   - TransparentFX

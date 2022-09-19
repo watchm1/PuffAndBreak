@@ -151,13 +151,13 @@ MonoBehaviour:
     - Name: _movementSpeed
       Entry: 4
       Data: 0.3
-    - Name: _offSet
+    - Name: offSet
       Entry: 4
-      Data: 14
+      Data: 15
     - Name: _outOfRange
       Entry: 10
       Data: 0
-  _defaultOffset: 0
+  defaultOffset: 0
 --- !u!114 &3694074243785901551
 MonoBehaviour:
   m_ObjectHideFlags: 0

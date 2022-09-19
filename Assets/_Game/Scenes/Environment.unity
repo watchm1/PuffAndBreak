@@ -588,19 +588,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 105805823, guid: 1a59179350d098049823a60448942ffb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpgradeMovement
-      objectReference: {fileID: 0}
-    - target: {fileID: 515851833, guid: 1a59179350d098049823a60448942ffb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpgradeGrow
-      objectReference: {fileID: 0}
-    - target: {fileID: 582314861, guid: 1a59179350d098049823a60448942ffb, type: 3}
-      propertyPath: onCurrencyChange
-      value: 
-      objectReference: {fileID: 11400000, guid: 8211bebcd3e17494da84ee5267a6fda9,
-        type: 2}
     - target: {fileID: 3872190112219691590, guid: 1a59179350d098049823a60448942ffb,
         type: 3}
       propertyPath: m_RootOrder

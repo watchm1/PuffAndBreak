@@ -2,14 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _Game.Scripts.DamageSystem;
-using _Game.Scripts.Effects;
 using _Game.Scripts.Enemy.State;
-using _Watchm1.EventSystem.Events;
-using _Watchm1.Helpers.Effects.Abstract;
 using _Watchm1.Helpers.Logger;
-using imports._Watchm1.SceneManagment.Settings;
 using Pathfinding;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -23,28 +18,30 @@ namespace _Game.Scripts.Enemy.AIBase
         AttackPlayer,
         Death,
     }
+
+    public enum AttackType
+    {
+        Shark,
+        Diver,
+        Whale
+    }
     public class EnemyBrain : DamageDealer, IDamageable
     {
         #region Definition
         // AI
         [SerializeField] public AttackType attackType;
         [SerializeField] public List<Transform> randomLocationsForMovingAround;
-        [SerializeField] private EnemyIconOverlayController enemyIconOverlayController;
-        [SerializeField] private Transform iconTransform;
-        
         [HideInInspector]public List<IEnemyState> states;
         [HideInInspector]public IEnemyState  currentState;
-        
-        
-        
         public Animator animator;
         public AIDestinationSetter destinationSetter;
         public AIPath pathController;
         public GameObject targetPlayer;
         public EnemyState currentEnemyState;
         private int _playerStayTime;
-        
-        
+
+
+        [SerializeField]private EnemyIconOverlayController iconOverlayController;
         #endregion
         #region LifeCycle
         private void Start()
@@ -52,17 +49,12 @@ namespace _Game.Scripts.Enemy.AIBase
             states = new List<IEnemyState>
             {
                 new LookingAroundState(),
-                new DetecTimeLinePlayer(),
-                new FollowPlayerState(),
-                new AttackPlayerState(),
-                new DeathState()
             };
             destinationSetter = GetComponent<AIDestinationSetter>();
             pathController = GetComponent<AIPath>();
             _playerStayTime = 2;
             randomLocationsForMovingAround = new List<Transform>();
             ChangeState(states[0]);
-            enemyIconOverlayController.pivot = iconTransform;
         }
         private void Update()
         {
@@ -74,7 +66,7 @@ namespace _Game.Scripts.Enemy.AIBase
             {
                 currentEnemyState = EnemyState.DetectTimeLinePlayer;
                 targetPlayer = other.gameObject;
-                HandleIconShow();
+                iconOverlayController.HandleIconShow();
             }
         }
         private void OnTriggerExit(Collider other)
@@ -82,7 +74,7 @@ namespace _Game.Scripts.Enemy.AIBase
             if (other.CompareTag("Player"))
             {
                 currentEnemyState = EnemyState.LookingAround;
-                HandleIconShow();
+                iconOverlayController.HandleIconShow();
             }
         }
         #endregion
@@ -105,7 +97,11 @@ namespace _Game.Scripts.Enemy.AIBase
                 yield break;
             }
         }
-        
+
+        public void HandleRotation(Transform target)
+        {
+            // todo: will code for enemy's rotation will set for enemy's target
+        }
         public void StateChanger()
         {
             switch (currentEnemyState)
@@ -130,20 +126,7 @@ namespace _Game.Scripts.Enemy.AIBase
         public void TakeDamage(int amount)
         {
         }
-
-        private void HandleIconShow()
-        {
-            if (!enemyIconOverlayController.gameObject.activeSelf)
-            {
-                enemyIconOverlayController.gameObject.SetActive(true);
-                enemyIconOverlayController.isActive = true;
-            }
-            else
-            {
-                enemyIconOverlayController.gameObject.SetActive(false);
-                enemyIconOverlayController.isActive = false;
-            }
-        }
+        
         #endregion
 
         

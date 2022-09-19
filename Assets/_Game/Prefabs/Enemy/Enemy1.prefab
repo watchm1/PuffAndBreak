@@ -1777,6 +1777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3032194970048404943}
+  - component: {fileID: 3573549107819137168}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: EnemyIconPivot
@@ -1792,13 +1793,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7058685862419929150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.54, z: 0}
+  m_LocalPosition: {x: 0, y: 1.806, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7862189344979149092}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3573549107819137168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7058685862419929150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6bd2449aef1c541b66b7b029b10d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {fileID: 3032194970048404943}
+  icon: {fileID: 6218285336260880132, guid: 6ea7483502681874e81e92bde51fa2c0, type: 3}
+  isActive: 0
 --- !u!1 &7067684041192468602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,16 +1995,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631efcb9df1195e43bc28b63f63f6a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 2
+  attackType: 1
   randomLocationsForMovingAround: []
-  enemyIconOverlayController: {fileID: 6382496809715132057, guid: c47386e29c4bca94e87de263e034c3bb,
-    type: 3}
-  iconTransform: {fileID: 3032194970048404943}
   animator: {fileID: 7051918331906791297}
   destinationSetter: {fileID: 7862189344979149094}
   pathController: {fileID: 1654925380708039488}
   targetPlayer: {fileID: 0}
   currentEnemyState: 0
+  iconOverlayController: {fileID: 3573549107819137168}
 --- !u!114 &7862189344979149094
 MonoBehaviour:
   m_ObjectHideFlags: 0
