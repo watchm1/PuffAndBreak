@@ -1,8 +1,7 @@
-using _Game.Scripts.AbilitySystem;
+using _Game.Scripts.Collectible;
 using _Game.Scripts.DamageSystem;
 using _Game.Scripts.Effects;
 using _Game.Scripts.Managers;
-using _Watchm1.EventSystem.Events;
 using _Watchm1.Helpers.Effects.Abstract;
 using _Watchm1.SceneManagment.Manager;
 using UnityEngine;
@@ -14,28 +13,29 @@ namespace _Game.Scripts.Player
         Puff,
         Shrinked
     }
-
+    [System.Serializable]
+    public struct PlayerProps
+    {
+        public bool canMove;
+        public FishState currentState;
+        public int health;
+        public SkinnedMeshRenderer childObjectMeshRenderer;
+    }
     public class Player : MonoBehaviour, IDamageable
     {
         #region Definition
 
-        public struct PlayerProps
-        {
-            public bool canMove;
-            public FishState currentState;
-            public int health;
-            public SkinnedMeshRenderer childObjectMeshRenderer;
-        }
-        
-        
-        public PlayerProps props;
+       
         [SerializeField] public GameObject childObject;
-        [SerializeField] public VoidEvent onTakeDamage;
-        [SerializeField]public ThrowMechanicController throwMechanicController;
-        [SerializeField] private AbilityController abilityController;
-        private IEffecter<DamageTakenEffect> _takeDamageEffect;
+        
         public Animator childAnimator;
+        public PlayerProps props;
+        private IEffecter<DamageTakenEffect> _takeDamageEffect;
         private InputManager _inputManager;
+        private AbilityController _abilityController;
+        #endregion
+        
+        
         private void Start()
         {
             props.health = 100;
@@ -43,11 +43,12 @@ namespace _Game.Scripts.Player
             props.canMove = false;
             props.childObjectMeshRenderer = childObject.GetComponentInChildren<SkinnedMeshRenderer>();
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
+            _abilityController = GameManager.Instance.abilityController;
+            
             _takeDamageEffect = new DamageTakenEffect(gameObject);
             childAnimator = childObject.GetComponent<Animator>();
             _inputManager = InputManager.Instance;
-            abilityController.abilities[1].Activate(gameObject);
-            abilityController.abilities[2].Activate(gameObject);
+            HandleGrowAbility();
         }
 
         private void Update()
@@ -70,7 +71,14 @@ namespace _Game.Scripts.Player
                 return;
         }
 
-        #endregion
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent(out CollectibleItem collectibleItem))
+            {
+                collectibleItem.HandleCollection();
+            }
+        }
+
 
         #region Methods
 
@@ -83,16 +91,11 @@ namespace _Game.Scripts.Player
 
         private void HandleShrinkState()
         {
-            UseThrowMechanic();
             props.currentState = FishState.Shrinked;
             props.canMove = true;
             props.childObjectMeshRenderer.SetBlendShapeWeight(0, 0);
         }
 
-        public void UseThrowMechanic()
-        {
-            StartCoroutine(throwMechanicController.ThrowThrown());
-        }
         #endregion
 
         public void TakeDamage(int amount)
@@ -100,6 +103,13 @@ namespace _Game.Scripts.Player
             //todo:: adding health controller
             _takeDamageEffect.DoEffect();
             //onTakeDamage.InvokeEvent();
+        }
+
+        public void HandleGrowAbility()
+        {
+            var localScale = transform.localScale;
+            localScale *= _abilityController.GetMultiplier(AbilityType.Grow);
+            transform.localScale = localScale;
         }
     }
 }

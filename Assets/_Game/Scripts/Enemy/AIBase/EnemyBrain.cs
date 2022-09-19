@@ -27,26 +27,22 @@ namespace _Game.Scripts.Enemy.AIBase
     {
         #region Definition
         // AI
-        [SerializeField] public Canvas enemyCanvas;
         [SerializeField] public AttackType attackType;
-        [SerializeField] private VoidEvent onTakeDamage;
-        [SerializeField]public List<Transform> randomLocationsForMovingAround;
-
+        [SerializeField] public List<Transform> randomLocationsForMovingAround;
+        [SerializeField] private EnemyIconOverlayController enemyIconOverlayController;
+        [SerializeField] private Transform iconTransform;
+        
         [HideInInspector]public List<IEnemyState> states;
         [HideInInspector]public IEnemyState  currentState;
         
         
         
-        public IEffecter<DamageTakenEffect> takeDamageEffect;
         public Animator animator;
         public AIDestinationSetter destinationSetter;
         public AIPath pathController;
         public GameObject targetPlayer;
         public EnemyState currentEnemyState;
-        private float _horizontalSpeed;
-        private float _verticalSpeed;
         private int _playerStayTime;
-        private bool _firstDetection;
         
         
         #endregion
@@ -61,16 +57,12 @@ namespace _Game.Scripts.Enemy.AIBase
                 new AttackPlayerState(),
                 new DeathState()
             };
-            currentState = null; // todo:: will change
             destinationSetter = GetComponent<AIDestinationSetter>();
             pathController = GetComponent<AIPath>();
-            _verticalSpeed = GameSettings.Current.playerForwardSpeed;
-            _horizontalSpeed = GameSettings.Current.playerHorizontalSpeed;
             _playerStayTime = 2;
-            enemyCanvas.gameObject.SetActive(false);
             randomLocationsForMovingAround = new List<Transform>();
-            ChangeState(new LookingAroundState());
-            takeDamageEffect = new DamageTakenEffect(gameObject);
+            ChangeState(states[0]);
+            enemyIconOverlayController.pivot = iconTransform;
         }
         private void Update()
         {
@@ -78,25 +70,19 @@ namespace _Game.Scripts.Enemy.AIBase
         }
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player")) {
-                currentEnemyState = EnemyState.DetectTimeLinePlayer;
-                enemyCanvas.gameObject.SetActive(true);
-                targetPlayer = other.gameObject;
-            }
-        }
-        private void OnTriggerStay(Collider other)
-        {
             if (other.CompareTag("Player"))
             {
+                currentEnemyState = EnemyState.DetectTimeLinePlayer;
+                targetPlayer = other.gameObject;
+                HandleIconShow();
             }
         }
-
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Player"))
             {
                 currentEnemyState = EnemyState.LookingAround;
-                enemyCanvas.gameObject.SetActive(false);
+                HandleIconShow();
             }
         }
         #endregion
@@ -119,7 +105,7 @@ namespace _Game.Scripts.Enemy.AIBase
                 yield break;
             }
         }
-
+        
         public void StateChanger()
         {
             switch (currentEnemyState)
@@ -143,8 +129,20 @@ namespace _Game.Scripts.Enemy.AIBase
         }
         public void TakeDamage(int amount)
         {
-            takeDamageEffect.DoEffect();
-            onTakeDamage.InvokeEvent();
+        }
+
+        private void HandleIconShow()
+        {
+            if (!enemyIconOverlayController.gameObject.activeSelf)
+            {
+                enemyIconOverlayController.gameObject.SetActive(true);
+                enemyIconOverlayController.isActive = true;
+            }
+            else
+            {
+                enemyIconOverlayController.gameObject.SetActive(false);
+                enemyIconOverlayController.isActive = false;
+            }
         }
         #endregion
 

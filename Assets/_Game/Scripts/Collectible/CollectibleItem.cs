@@ -23,6 +23,7 @@ namespace _Game.Scripts.Collectible
                 case CollectibleType.Other:
                     break;
             }
+            Destroy(gameObject);
         }
     }
 }

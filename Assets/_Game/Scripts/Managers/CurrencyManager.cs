@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using _Game.Scripts.LocalStorage;
 using _Watchm1.EventSystem.Events;
-using _Watchm1.Helpers.Logger;
 using _Watchm1.Helpers.Singleton;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public enum ChangeCurrencyType
 {
@@ -27,7 +25,7 @@ public class CurrencyManager : Singleton<CurrencyManager>
     {
         dontDestroy = false;
         CurrencyCount = PlayerPrefsInjector.GetIntValue("Currency");
-                
+        onCurrencyChange.InvokeEvent();
     }
 
     #endregion

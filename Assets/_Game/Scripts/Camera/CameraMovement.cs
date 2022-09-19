@@ -1,5 +1,6 @@
 using System;
-using _Game.Scripts.LocalStorage;
+using _Game.Scripts.Managers;
+using _Game.Scripts.Player;
 using _Watchm1.EventSystem.Events;
 using _Watchm1.Helpers.Logger;
 using _Watchm1.SceneManagment.Manager;
@@ -16,21 +17,21 @@ namespace _Game.Scripts.Camera
         [OdinSerialize] private GameObject _followObject;
         [OdinSerialize] private bool _lerped;
         [OdinSerialize] private float _movementSpeed;
-        [OdinSerialize][NonSerialized] public float _offSet;
+        [OdinSerialize][NonSerialized] public float offSet;
         [OdinSerialize] private VoidEvent _outOfRange;
         private UnityEngine.Camera _main;
         private bool _canMove;
         private Vector3 _firstViewPos;
         private Vector3 _startPos;
-        public float _defaultOffset;
-
+        public float defaultOffset;
+        
         #endregion
 
         #region LifeCycle
 
         private void Start()
         {
-            _defaultOffset = _offSet;
+            defaultOffset = offSet;
             _main = GetComponent<UnityEngine.Camera>();
         }
         
@@ -77,13 +78,23 @@ namespace _Game.Scripts.Camera
 
         private void FollowTargetAtVerticalAxis()
         {
+            float newOffset; 
+            var multiplier = GameManager.Instance.abilityController.GetMultiplier(AbilityType.Grow);
+            if (multiplier == 1)
+            {
+                newOffset = offSet;
+            }
+            else
+            {
+                newOffset = offSet + (offSet * multiplier);
+            }
+                
             var position = transform.position;
-            var desiredPosition = new Vector3(position.x, _followObject.transform.position.y + 1,
-                _followObject.transform.position.z - _offSet);
+            var targetPos = _followObject.transform.position;
+            var desiredPosition = new Vector3(position.x, targetPos.y + 1, targetPos.z - newOffset);
             var lerpedPosition = Vector3.Lerp(position, desiredPosition, Time.deltaTime * 4);
             transform.position = lerpedPosition;
         }
-
         private bool IsPlayerInsideViewBounds()
         {
             var viewPos = _main.WorldToViewportPoint(_followObject.transform.position);
@@ -102,5 +113,7 @@ namespace _Game.Scripts.Camera
             LevelManager.Instance.ReloadLevel();
         }
         #endregion
+
+       
     }
 }

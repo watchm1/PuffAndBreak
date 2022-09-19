@@ -1,81 +1,83 @@
+using System;
 using System.Collections.Generic;
-using _Game.Scripts.AbilitySystem;
 using _Game.Scripts.LocalStorage;
-using _Watchm1.EventSystem.Events;
-using _Watchm1.Helpers.Logger;
+using _Game.Scripts.Managers;
+using _Game.Scripts.Player;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 namespace _Game.Scripts.UI
 {
     public class BottomUI : MonoBehaviour
     {
         [SerializeField] private List<GameObject> abilityButtons;
-        [SerializeField]private AbilityController abilityController;
-        [SerializeField] public VoidEvent movementUpgrade;
-        [SerializeField] public VoidEvent throwThornUpgrade;
-        [SerializeField] public VoidEvent increaseMassUpgrade;
+
+        private AbilityController _abilityController;
         // 0 fast
         // 1 mass
         // 2 throw
+
         private void Start()
         {
-            CheckAvaliableAbilityForBuyTransaction();
-            
+            _abilityController = GameManager.Instance.abilityController;
+            CheckButton(0);
+            CheckButton(1);
+            CheckButton(2);
         }
 
-        private void CheckAvaliableAbilityForBuyTransaction()
-        {
-            var abilities = abilityController.abilities;
-            for (int i = 0; i < abilities.Count; i++)
-            {
-                if (abilities[i].canBuy)
-                {       
-                    abilityButtons[i].GetComponent<Selectable>().interactable = true;
-                }
-                else
-                {
-                    abilityButtons[i].GetComponent<Selectable>().interactable = false;
-                }
-            }
-        }
         public void OnFirstTouchDone()
         {
             gameObject.SetActive(false);
             // giving an animation
         }
-        public void UpgradeMassAbility()
-        {
-            var currentUpgradeLevel =PlayerPrefsInjector.GetIntValue("IncreaseMass-CurrentUpgradeCount");
-            var maxUpgradeLevel=PlayerPrefsInjector.GetIntValue("IncreaseMass-MaxUpgradeCount");
 
-            if (currentUpgradeLevel < maxUpgradeLevel)
-            {
-                increaseMassUpgrade.InvokeEvent();
-            }
-            CheckAvaliableAbilityForBuyTransaction();
+        public void UpgradeMovement()
+        {
+            _abilityController.Upgrade(60, AbilityType.FastMovement);
+            CheckButton(0);
+            CheckButton(1);
+            CheckButton(2);
         }
+
         public void UpgradeThrowAbility()
         {
-            var currentUpgradeLevel =PlayerPrefsInjector.GetIntValue("ThrowThorn-CurrentUpgradeCount");
-            var maxUpgradeLevel=PlayerPrefsInjector.GetIntValue("ThrowThorn-MaxUpgradeCount");
-            if (currentUpgradeLevel < maxUpgradeLevel)
-            {
-                throwThornUpgrade.InvokeEvent();
-            }
-            CheckAvaliableAbilityForBuyTransaction();
+            _abilityController.Upgrade(70, AbilityType.Throw);
+            CheckButton(0);
+            CheckButton(1);
+            CheckButton(2);
         }
-        public void UpgradeFastMovementAbility()
+
+        public void UpgradeGrow()
         {
-            var currentUpgradeLevel =PlayerPrefsInjector.GetIntValue("FastMove-CurrentUpgradeCount");
-            var maxUpgradeLevel=PlayerPrefsInjector.GetIntValue("FastMove-MaxUpgradeCount");
-            if (currentUpgradeLevel < maxUpgradeLevel)
+            _abilityController.Upgrade(70, AbilityType.Grow);
+            CheckButton(0);
+            CheckButton(1);
+            CheckButton(2);
+        }
+
+
+        private void CheckButton(int type)
+        {
+            switch (type)
             {
-                movementUpgrade.InvokeEvent();
+                case 0:
+                    abilityButtons[0].GetComponent<Selectable>().interactable = CheckCanBuy(AbilityType.FastMovement) ? true : false;
+                    break;
+                case 1:
+                    abilityButtons[1].GetComponent<Selectable>().interactable = CheckCanBuy(AbilityType.Grow) ? true : false;
+                    break;
+                case 2:
+                    abilityButtons[2].GetComponent<Selectable>().interactable = CheckCanBuy(AbilityType.Throw) ? true : false;
+                    break;
             }
-            CheckAvaliableAbilityForBuyTransaction();
+        }
+        private bool CheckCanBuy(AbilityType type)
+        {
+            var check = PlayerPrefsInjector.GetIntValue($"{type.ToString()}-price") <=
+                        CurrencyManager.Instance.GetCurrentCurrencyValue() &&
+                        PlayerPrefsInjector.GetIntValue($"{type}-upgradeLevel") <
+                        PlayerPrefsInjector.GetIntValue($"{type.ToString()}-maxUpgrade");
+            return check;
         }
     }
 }

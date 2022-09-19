@@ -1,15 +1,7 @@
-using System;
-using _Game.Scripts.AbilitySystem;
-using _Game.Scripts.DamageSystem;
-using _Game.Scripts.LocalStorage;
 using _Game.Scripts.Managers;
-using _Watchm1.Helpers.Logger;
 using _Watchm1.SceneManagment.Manager;
 using imports._Watchm1.SceneManagment.Settings;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Player
 {
@@ -42,7 +34,6 @@ namespace _Game.Scripts.Player
             _verticalSpeed = _settings.playerForwardSpeed;
             _horizontalSpeed = _settings.playerHorizontalSpeed;
             _player = GetComponent<Player>();
-            GetComponentInChildren<AbilityController>().abilities[0].Activate(gameObject);
             canTouchEnvironment = false;
             _rb = GetComponent<Rigidbody>();
         }

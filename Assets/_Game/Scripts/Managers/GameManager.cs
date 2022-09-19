@@ -1,58 +1,61 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using _Game.Scripts.LocalStorage;
+using _Game.Scripts.Player;
 using _Watchm1.Helpers.Logger;
 using _Watchm1.Helpers.Singleton;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class GameManager : Singleton<GameManager>
+namespace _Game.Scripts.Managers
 {
-    [System.Serializable]
-    public struct LevelData
+    public class GameManager : Singleton<GameManager>
     {
-        public int levelIndex;
-        public GameObject currentLevelPrefab;
-        public GameObject currentLevelBackEnvironment;
-        public bool levelDone;
-    }
-
-    [SerializeField] public List<LevelData> levelDatas;
-    private int currentLevelIndex;
-
-    protected override void Awake()
-    {
-        base.Awake();
-        LoadLevelFunction();
-    }
-
-    private void Start()
-    {
-    }
-
-    public void LoadLevelFunction()
-    {
-        if (!PlayerPrefsInjector.CheckLocalStorageValue("LevelIndex"))
+        [System.Serializable]
+        public struct LevelData
         {
-            PlayerPrefsInjector.SetIntValue("LevelIndex", 0);
-            currentLevelIndex = 0;
+            public int levelIndex;
+            public GameObject currentLevelPrefab;
+            public GameObject currentLevelBackEnvironment;
+            public bool levelDone;
         }
-        else
+
+        [SerializeField] public List<LevelData> levelDatas;
+        [SerializeField] public AbilityController abilityController;
+        private int _currentLevelIndex;
+
+        protected override void Awake()
         {
-            currentLevelIndex = PlayerPrefsInjector.GetIntValue("LevelIndex");
+            base.Awake();
+            LoadLevelFunction();
         }
-        try
+
+        private void Start()
         {
-            var currentLevelData = levelDatas.Find(index => index.levelIndex == currentLevelIndex);
-            Instantiate(currentLevelData.currentLevelPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            Instantiate(currentLevelData.currentLevelBackEnvironment, new Vector3(0, 0, 0), Quaternion.identity);
+           
         }
-        catch (Exception e)
+
+        public void LoadLevelFunction()
         {
-            WatchmLogger.Warning("Something went worng"+ e);
-            throw;
+            if (!PlayerPrefsInjector.CheckLocalStorageValue("LevelIndex"))
+            {
+                PlayerPrefsInjector.SetIntValue("LevelIndex", 0);
+                _currentLevelIndex = 0;
+            }
+            else
+            {
+                _currentLevelIndex = PlayerPrefsInjector.GetIntValue("LevelIndex");
+            }
+            try
+            {
+                var currentLevelData = levelDatas.Find(index => index.levelIndex == _currentLevelIndex);
+                Instantiate(currentLevelData.currentLevelPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+                Instantiate(currentLevelData.currentLevelBackEnvironment, new Vector3(0, 0, 0), Quaternion.identity);
+            }
+            catch (Exception e)
+            {
+                WatchmLogger.Warning("Something went worng"+ e);
+                throw;
+            }
         }
     }
 }

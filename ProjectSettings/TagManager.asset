@@ -10,6 +10,7 @@ TagManager:
   - RandomPosition
   - Enemy
   - EnemyCanvas
+  - EnemyIconPivot
   layers:
   - Default
   - TransparentFX
