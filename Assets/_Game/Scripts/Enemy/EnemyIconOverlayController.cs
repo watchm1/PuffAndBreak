@@ -1,6 +1,4 @@
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Enemy
 {
@@ -14,7 +12,7 @@ namespace _Game.Scripts.Enemy
         {
             isActive = false;
             _uiUse = Instantiate(icon, GameObject.FindGameObjectWithTag("InGameUI").transform).gameObject;
-            _uiUse.SetActive(true);
+            _uiUse.SetActive(false);
         }
 
         private void LateUpdate()
@@ -30,6 +28,18 @@ namespace _Game.Scripts.Enemy
             pivot = target;
         }
 
+        public void SetFadeEffect()
+        {
+            var fadeEffect =_uiUse.gameObject.GetComponent<FadeEffect>();
+            if (fadeEffect.enabled == false)
+            {
+                fadeEffect.enabled = true;
+            }
+            else
+            {
+                fadeEffect.enabled = false;
+            }
+        }
         public void HandleIconShow()
         {
             if (!isActive)

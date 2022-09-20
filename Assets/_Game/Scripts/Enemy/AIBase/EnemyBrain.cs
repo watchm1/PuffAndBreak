@@ -41,7 +41,7 @@ namespace _Game.Scripts.Enemy.AIBase
         private int _playerStayTime;
 
 
-        [SerializeField]private EnemyIconOverlayController iconOverlayController;
+        [SerializeField]public EnemyIconOverlayController iconOverlayController;
         #endregion
         #region LifeCycle
         private void Start()
@@ -126,7 +126,27 @@ namespace _Game.Scripts.Enemy.AIBase
         public void TakeDamage(int amount)
         {
         }
-        
+
+        public void SetNpcRotation(Transform target)
+        {
+            Vector3 newRot = new Vector3(); 
+            if (transform.position.x < target.transform.position.x)
+            {
+                if (newRot.y != 90)
+                    newRot.y = 90;
+            }
+            else
+            {
+                if(newRot.y != -90)
+                    newRot.y = -90;
+            }
+
+            newRot.z = 0f;
+            if (transform.GetChild(0).localRotation != Quaternion.Euler(newRot))
+            {
+                transform.GetChild(0).localRotation = Quaternion.Euler(newRot);
+            }
+        }
         #endregion
 
         

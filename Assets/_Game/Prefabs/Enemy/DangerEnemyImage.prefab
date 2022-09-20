@@ -93,7 +93,7 @@ MonoBehaviour:
   firstAlphaValue: 0
   secondAlphaValue: 1
   uiEffectiableObj: {fileID: 6218285336260880132}
-  multiplier: 1
+  multiplier: 2
 --- !u!225 &1893868125
 CanvasGroup:
   m_ObjectHideFlags: 0

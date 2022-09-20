@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
+using System.Collections;
 using _Game.Scripts.Enemy.AIBase;
-using _Watchm1.Helpers.Logger;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _Game.Scripts.Enemy.State
@@ -37,7 +33,7 @@ namespace _Game.Scripts.Enemy.State
         public void Update(EnemyBrain npc)
         {
             SetDestinationOfNpc(npc);
-            SetNpcRotation(npc);
+            npc.SetNpcRotation(npc.destinationSetter.target);
         }
 
         private void SetDestinationOfNpc(EnemyBrain npc)
@@ -51,26 +47,16 @@ namespace _Game.Scripts.Enemy.State
                 }
                 if (npc.destinationSetter.target != npc.randomLocationsForMovingAround[_index])
                 {
+                    npc.StartCoroutine(Delay());
                     npc.destinationSetter.target = npc.randomLocationsForMovingAround[_index];
                 }
+
             }
         }
-        private void SetNpcRotation(EnemyBrain npc)
+
+        private IEnumerator Delay()
         {
-            if (npc.transform.position.x < npc.destinationSetter.target.transform.position.x)
-            {
-                if (_newRot.y != 90)
-                    _newRot.y = 90;
-            }
-            else
-            {
-                if(_newRot.y != -90)
-                    _newRot.y = -90;
-            }
-            if (npc.transform.GetChild(0).localRotation != Quaternion.Euler(_newRot))
-            {
-                npc.transform.GetChild(0).localRotation = Quaternion.Euler(_newRot);
-            }
+            yield return new WaitForSeconds(1f);
         }
     }
 }

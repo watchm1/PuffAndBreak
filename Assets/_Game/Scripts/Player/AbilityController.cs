@@ -37,21 +37,9 @@ namespace _Game.Scripts.Player
             growAbility = Init(100, 0.2f, AbilityType.Grow);
             throwAbility = Init(100, 0.3f, AbilityType.Throw);
             fastMovementAbility = Init(50, 0.2f, AbilityType.FastMovement);
-            
-            WatchmLogger.Log("AbilityController => "+growAbility.multiplier);
-            WatchmLogger.Log("AbilityController => "+throwAbility.multiplier);
-            WatchmLogger.Log("AbilityController => "+fastMovementAbility.multiplier);
         }
-
-        private void Start()
-        {
-           
-        }
-
         #endregion
-
         #region Methods
-
         private Ability Init(int price, float multiplier, AbilityType type)
         {
             var ability = new Ability();
