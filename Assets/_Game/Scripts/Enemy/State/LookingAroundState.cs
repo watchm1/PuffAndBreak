@@ -10,19 +10,22 @@ namespace _Game.Scripts.Enemy.State
 
         public void OnBegin(EnemyBrain npc)
         {
+            npc.destinationSetter.target = null;
             npc.iconOverlayController.SetFadeEffect(true);
             _index = 0;
-            if (npc.randomLocationsForMovingAround != null && npc.randomLocationsForMovingAround.Count == 0)
+            if (npc.randomLocationsForMovingAround != null)
             {
-                foreach (var item in GameObject.FindGameObjectsWithTag("RandomPosition"))
+                if (npc.randomLocationsForMovingAround.Count == 0)
                 {
-                    if (Vector3.Distance(npc.transform.position, item.transform.position) <= 15f)
+                    foreach (var item in GameObject.FindGameObjectsWithTag("RandomPosition"))
                     {
-                        npc.randomLocationsForMovingAround.Add(item.transform);
-                    }
+                        if (Vector3.Distance(npc.transform.position, item.transform.position) <= 15f)
+                        {
+                            npc.randomLocationsForMovingAround.Add(item.transform);
+                        }
+                    }    
                 }
-
-                npc.destinationSetter.target = npc.randomLocationsForMovingAround[_index];
+                npc.destinationSetter.target = npc.randomLocationsForMovingAround[0];
             }
         }
 

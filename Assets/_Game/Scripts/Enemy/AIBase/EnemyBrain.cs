@@ -49,6 +49,7 @@ namespace _Game.Scripts.Enemy.AIBase
             states = new List<IEnemyState>
             {
                 new LookingAroundState(),
+                new FollowPlayerState()
             };
             destinationSetter = GetComponent<AIDestinationSetter>();
             pathController = GetComponent<AIPath>();
@@ -64,17 +65,28 @@ namespace _Game.Scripts.Enemy.AIBase
         {
             if (other.CompareTag("Player"))
             {
-                currentEnemyState = EnemyState.DetectTimeLinePlayer;
                 targetPlayer = other.gameObject;
                 iconOverlayController.HandleIconShow();
             }
         }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                StartCoroutine(IsCharacterInsideZone());
+            }
+        }
+
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Player"))
             {
                 currentEnemyState = EnemyState.LookingAround;
+                ChangeState(states[0]);
                 iconOverlayController.HandleIconShow();
+                WatchmLogger.Log("Current target => "+ destinationSetter.target.name);
+
             }
         }
         #endregion
@@ -88,14 +100,8 @@ namespace _Game.Scripts.Enemy.AIBase
         public IEnumerator IsCharacterInsideZone()
         {
             yield return new WaitForSeconds(_playerStayTime);
-            if (currentEnemyState == EnemyState.DetectTimeLinePlayer)
-            {
-                currentEnemyState = EnemyState.FollowPlayer;
-            }
-            else
-            {
-                yield break;
-            }
+            currentEnemyState = EnemyState.FollowPlayer;
+            ChangeState(states[1]);
         }
 
         public void HandleRotation(Transform target)
@@ -109,17 +115,8 @@ namespace _Game.Scripts.Enemy.AIBase
                 case EnemyState.LookingAround:
                     ChangeState(states[0]);
                     break;
-                case EnemyState.DetectTimeLinePlayer:
-                    ChangeState(states[1]);
-                    break;
                 case EnemyState.FollowPlayer:
-                    ChangeState(states[2]);
-                    break;
-                case EnemyState.AttackPlayer:
-                    ChangeState(states[3]);
-                    break;
-                case EnemyState.Death:
-                    ChangeState(states[4]);
+                    ChangeState(states[1]);
                     break;
             }
         }
