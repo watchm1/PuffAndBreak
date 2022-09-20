@@ -7,15 +7,10 @@ namespace _Game.Scripts.Enemy.State
     public class LookingAroundState : IEnemyState
     {
         private int _index;
-        private Vector3 _newRot;
 
         public void OnBegin(EnemyBrain npc)
         {
             _index = 0;
-            _newRot = new Vector3();
-            _newRot.x = 0;
-            _newRot.y = 0;
-            _newRot.z = 0;
             if (npc.randomLocationsForMovingAround != null && npc.randomLocationsForMovingAround.Count == 0)
             {
                 foreach (var item in GameObject.FindGameObjectsWithTag("RandomPosition"))
