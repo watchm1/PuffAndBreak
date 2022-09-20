@@ -10,6 +10,7 @@ namespace _Game.Scripts.Enemy.State
 
         public void OnBegin(EnemyBrain npc)
         {
+            npc.iconOverlayController.SetFadeEffect(true);
             _index = 0;
             if (npc.randomLocationsForMovingAround != null && npc.randomLocationsForMovingAround.Count == 0)
             {

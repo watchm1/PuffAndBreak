@@ -28,17 +28,10 @@ namespace _Game.Scripts.Enemy
             pivot = target;
         }
 
-        public void SetFadeEffect()
+        public void SetFadeEffect(bool value)
         {
             var fadeEffect =_uiUse.gameObject.GetComponent<FadeEffect>();
-            if (fadeEffect.enabled == false)
-            {
-                fadeEffect.enabled = true;
-            }
-            else
-            {
-                fadeEffect.enabled = false;
-            }
+            fadeEffect.enabled = value;
         }
         public void HandleIconShow()
         {
