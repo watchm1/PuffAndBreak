@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/EnemyDiver@Swimming.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/EnemyDiver@Swimming.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/EnemyDiver@T-Pose.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/EnemyDiver@T-Pose.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/Enemy1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/EnemyIconOverlayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/EnemyIconOverlayController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/animation/DiverAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/animation/DiverAnimatorController.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +128,7 @@
       <workItem from="1663485691222" duration="2301000" />
       <workItem from="1663578048668" duration="21694000" />
       <workItem from="1663615841750" duration="7558000" />
-      <workItem from="1663671990055" duration="5476000" />
+      <workItem from="1663671990055" duration="6268000" />
     </task>
     <servers />
   </component>
