@@ -1,5 +1,6 @@
 using System.IO.Pipes;
 using _Game.Scripts.Enemy.AIBase;
+using _Watchm1.Helpers.Logger;
 using UnityEngine;
 
 namespace _Game.Scripts.Enemy.State
@@ -12,7 +13,7 @@ namespace _Game.Scripts.Enemy.State
         public void OnBegin(EnemyBrain npc)
         {
             _animActive = false;
-            npc.iconOverlayController.SetFadeEffect(false);
+            npc.iconOverlayController.SetFadeEffect(false);         
             npc.destinationSetter.target = null;
             npc.destinationSetter.target = npc.targetPlayer.transform;
         }
@@ -27,10 +28,11 @@ namespace _Game.Scripts.Enemy.State
                 _animActive = false;
             }
             TriggerAnim(npc);
+
         }
         private bool DistanceChecker(EnemyBrain npc)
         {
-            npc.SetNpcRotation(npc.targetPlayer.transform);
+            npc.SetNpcRotation(npc.targetPlayer.transform.position);
             if (npc.pathController.reachedDestination && npc.destinationSetter.target == npc.targetPlayer.transform)
             {
                 return true;

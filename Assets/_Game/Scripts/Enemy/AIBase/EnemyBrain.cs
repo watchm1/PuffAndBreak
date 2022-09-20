@@ -74,7 +74,11 @@ namespace _Game.Scripts.Enemy.AIBase
         {
             if (other.CompareTag("Player"))
             {
-                StartCoroutine(IsCharacterInsideZone());
+                if (currentEnemyState == EnemyState.LookingAround && destinationSetter.target != targetPlayer)
+                {
+                    WatchmLogger.Log("kaç kere buradasın");
+                    StartCoroutine(IsCharacterInsideZone());
+                }
             }
         }
 
@@ -82,11 +86,9 @@ namespace _Game.Scripts.Enemy.AIBase
         {
             if (other.CompareTag("Player"))
             {
-                currentEnemyState = EnemyState.LookingAround;
                 ChangeState(states[0]);
+                currentEnemyState = EnemyState.LookingAround;
                 iconOverlayController.HandleIconShow();
-                WatchmLogger.Log("Current target => "+ destinationSetter.target.name);
-
             }
         }
         #endregion
@@ -108,26 +110,15 @@ namespace _Game.Scripts.Enemy.AIBase
         {
             // todo: will code for enemy's rotation will set for enemy's target
         }
-        public void StateChanger()
-        {
-            switch (currentEnemyState)
-            {
-                case EnemyState.LookingAround:
-                    ChangeState(states[0]);
-                    break;
-                case EnemyState.FollowPlayer:
-                    ChangeState(states[1]);
-                    break;
-            }
-        }
+        
         public void TakeDamage(int amount)
         {
         }
 
-        public void SetNpcRotation(Transform target)
+        public void SetNpcRotation(Vector3 targetPos)
         {
             Vector3 newRot = new Vector3(); 
-            if (transform.position.x < target.transform.position.x)
+            if (transform.position.x < targetPos.x)
             {
                 if (newRot.y != 90)
                     newRot.y = 90;

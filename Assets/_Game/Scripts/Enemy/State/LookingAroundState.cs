@@ -1,5 +1,7 @@
 using System.Collections;
 using _Game.Scripts.Enemy.AIBase;
+using _Watchm1.Helpers.Logger;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _Game.Scripts.Enemy.State
@@ -10,7 +12,6 @@ namespace _Game.Scripts.Enemy.State
 
         public void OnBegin(EnemyBrain npc)
         {
-            npc.destinationSetter.target = null;
             npc.iconOverlayController.SetFadeEffect(true);
             _index = 0;
             if (npc.randomLocationsForMovingAround != null)
@@ -25,6 +26,7 @@ namespace _Game.Scripts.Enemy.State
                         }
                     }    
                 }
+                npc.destinationSetter.target = null;
                 npc.destinationSetter.target = npc.randomLocationsForMovingAround[0];
             }
         }
@@ -32,7 +34,9 @@ namespace _Game.Scripts.Enemy.State
         public void Update(EnemyBrain npc)
         {
             SetDestinationOfNpc(npc);
-            npc.SetNpcRotation(npc.destinationSetter.target);
+            npc.SetNpcRotation(npc.destinationSetter.target.transform.position);
+
+            
         }
 
         private void SetDestinationOfNpc(EnemyBrain npc)
@@ -49,10 +53,8 @@ namespace _Game.Scripts.Enemy.State
                     npc.StartCoroutine(Delay());
                     npc.destinationSetter.target = npc.randomLocationsForMovingAround[_index];
                 }
-
             }
         }
-
         private IEnumerator Delay()
         {
             yield return new WaitForSeconds(1f);
