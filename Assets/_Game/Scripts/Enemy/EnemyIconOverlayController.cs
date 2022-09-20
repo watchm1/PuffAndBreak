@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Enemy
 {
@@ -30,7 +31,7 @@ namespace _Game.Scripts.Enemy
 
         public void SetFadeEffect(bool value)
         {
-            var fadeEffect =_uiUse.gameObject.GetComponent<FadeEffect>();
+            var fadeEffect =icon.gameObject.GetComponent<FadeEffect>();
             fadeEffect.enabled = value;
         }
         public void HandleIconShow()
