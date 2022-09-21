@@ -22,19 +22,21 @@ namespace _Game.Scripts.Enemy.State
             if (DistanceChecker(npc))
             {
                 _animActive = true;
+                npc.animator.Play("Swimming", 1, 1);
             }
             else
             {
                 _animActive = false;
             }
             TriggerAnim(npc);
-
         }
         private bool DistanceChecker(EnemyBrain npc)
         {
+            var childTransorm = npc.transform.GetChild(0);
             npc.SetNpcRotation(npc.targetPlayer.transform.position);
             if (npc.pathController.reachedDestination && npc.destinationSetter.target == npc.targetPlayer.transform)
             {
+                childTransorm.LookAt(npc.targetPlayer.transform);
                 return true;
             }
             else
@@ -45,6 +47,7 @@ namespace _Game.Scripts.Enemy.State
         private void TriggerAnim(EnemyBrain npc)
         {
             npc.animator.SetBool(Attack,_animActive);
+            
         }
     }
 }

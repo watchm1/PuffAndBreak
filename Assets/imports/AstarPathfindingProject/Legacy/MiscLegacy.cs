@@ -9,7 +9,8 @@ namespace Pathfinding {
 		/// Deprecated: When unifying the interfaces for different movement scripts, this property has been renamed to <see cref="reachedEndOfPath"/>
 		/// </summary>
 		[System.Obsolete("When unifying the interfaces for different movement scripts, this property has been renamed to reachedEndOfPath.  [AstarUpgradable: 'TargetReached' -> 'reachedEndOfPath']")]
-		public bool TargetReached { get { return reachedEndOfPath; } }
+		public bool TargetReached { get { return reachedEndOfPath;
+		} }
 
 		/// <summary>
 		/// Rotation speed.

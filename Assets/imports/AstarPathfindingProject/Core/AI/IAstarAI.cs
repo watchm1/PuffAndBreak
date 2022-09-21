@@ -137,7 +137,7 @@ namespace Pathfinding {
 		/// See: <see cref="remainingDistance"/>
 		/// See: <see cref="reachedDestination"/>
 		/// </summary>
-		bool reachedEndOfPath { get; }
+		bool reachedEndOfPath { get;}
 
 		/// <summary>
 		/// Position in the world that this agent should move to.

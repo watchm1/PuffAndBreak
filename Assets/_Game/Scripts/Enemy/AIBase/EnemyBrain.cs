@@ -40,7 +40,6 @@ namespace _Game.Scripts.Enemy.AIBase
         public EnemyState currentEnemyState;
         private int _playerStayTime;
 
-
         [SerializeField]public EnemyIconOverlayController iconOverlayController;
         #endregion
         #region LifeCycle
@@ -74,21 +73,23 @@ namespace _Game.Scripts.Enemy.AIBase
         {
             if (other.CompareTag("Player"))
             {
-                if (currentEnemyState == EnemyState.LookingAround && destinationSetter.target != targetPlayer)
+                if (currentEnemyState == EnemyState.LookingAround )
                 {
-                    WatchmLogger.Log("kaç kere buradasın");
                     StartCoroutine(IsCharacterInsideZone());
                 }
             }
         }
-
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Player"))
             {
-                ChangeState(states[0]);
-                currentEnemyState = EnemyState.LookingAround;
-                iconOverlayController.HandleIconShow();
+                if (currentEnemyState == EnemyState.FollowPlayer)
+                {
+                    ChangeState(states[0]);
+                    currentEnemyState = EnemyState.LookingAround;
+                    iconOverlayController.HandleIconShow();
+                    pathController.SearchPath();
+                }
             }
         }
         #endregion
