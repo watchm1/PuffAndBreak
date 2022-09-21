@@ -1,10 +1,8 @@
 using _Game.Scripts.Collectible;
 using _Game.Scripts.DamageSystem;
 using _Game.Scripts.Managers;
-using _Watchm1.Helpers.Effects.Abstract;
 using _Watchm1.SceneManagment.Manager;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Player
 {
@@ -99,8 +97,8 @@ namespace _Game.Scripts.Player
         public void TakeDamage(int amount)
         {
             //todo:: adding health controller
-           HealthDealer(amount);
-           _takenDamageParticle.Play();
+            _takenDamageParticle.Play();
+            HealthDealer(amount);
         }
 
         private void HealthDealer(int amount)
@@ -112,7 +110,7 @@ namespace _Game.Scripts.Player
             else
             {
                 HealthManager.Instance.CurrentHealth = 0;
-                LevelManager.Instance.ReloadLevel();
+                LevelManager.Instance.InvokeLevelFail();
             }
         }
         public void HandleGrowAbility()

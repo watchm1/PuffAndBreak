@@ -3,23 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/Motions/Gunplay.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/Motions/Gunplay.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/DangerEnemyImage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/DangerEnemyImage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/Enemy1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects/DamageTakenEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects/DamageTakenEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/AIBase/EnemyBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/AIBase/EnemyBrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/LookingAroundState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/LookingAroundState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Camera/CameraMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Camera/CameraMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/animation/DiverAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/animation/DiverAnimatorController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireBlue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireBlue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireGreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireGreen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFirePink.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFirePink.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireRed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireRed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_UI_Etc/_PrefabsPanel_UI_Etc.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_UI_Etc/_PrefabsPanel_UI_Etc.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/00_Component_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/00_Component_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Caht.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Caht.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Character_List.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Character_List.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Character_Skin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Character_Skin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Clan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Clan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Daily_Bonus_28day.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Daily_Bonus_28day.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Lobby.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Lobby.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Mission.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Mission.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Play_Boss_Effect_common (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Play_Boss_Effect_common (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Season_Pass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Season_Pass.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Season_Reward.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Season_Reward.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Shop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Shop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage_List.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage_List.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage_List_Blue_common (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage_List_Blue_common (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage_List_Green_common (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage_List_Green_common (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Light/00_Component_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Light/00_Component_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/_Watchm1/SceneManagment/Manager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/_Watchm1/SceneManagment/Manager/LevelManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +149,7 @@
       <workItem from="1663615841750" duration="7558000" />
       <workItem from="1663671990055" duration="8655000" />
       <workItem from="1663709598709" duration="2952000" />
-      <workItem from="1663753452682" duration="12304000" />
+      <workItem from="1663753452682" duration="13892000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,4 @@
+using _Watchm1.EventSystem.Events;
 using _Watchm1.Helpers.Singleton;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,7 +26,8 @@ namespace _Watchm1.SceneManagment.Manager
     }
     public class LevelManager : Singleton<LevelManager>
     {
-        [HideInInspector]public LevelState currentState;
+        [SerializeField] public VoidEvent onLevelFail; 
+        [HideInInspector] public LevelState currentState;
         [HideInInspector] public GameState currentGameState;
         // Start is called before the first frame update
         protected override void Awake()
@@ -50,10 +52,16 @@ namespace _Watchm1.SceneManagment.Manager
                 return true;
             }
         }
-
+        
         public void ReloadLevel()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void InvokeLevelFail()
+        {
+            currentState = LevelState.Fail;
+            onLevelFail.InvokeEvent();
         }
     }
 }

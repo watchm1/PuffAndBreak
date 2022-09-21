@@ -110,7 +110,7 @@ namespace _Game.Scripts.Camera
 
         public void ReloadLevel()
         {
-            LevelManager.Instance.ReloadLevel();
+            LevelManager.Instance.InvokeLevelFail();
         }
         #endregion
 
