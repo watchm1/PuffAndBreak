@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 1527050737}
   - component: {fileID: 1527050738}
   - component: {fileID: 1527050739}
+  - component: {fileID: 1527050740}
   m_Layer: 0
   m_Name: ---MANAGERS---
   m_TagString: Untagged
@@ -489,6 +490,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroy: 0
   joystick: {fileID: 0}
+--- !u!114 &1527050740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527050733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c4296716d66c440b59c1ce1ffc660a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroy: 0
 --- !u!1001 &3694074244032040993
 PrefabInstance:
   m_ObjectHideFlags: 0

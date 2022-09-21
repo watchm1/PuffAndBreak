@@ -34,8 +34,6 @@ namespace _Game.Scripts.Player
         private InputManager _inputManager;
         private AbilityController _abilityController;
         #endregion
-        
-        
         private void Start()
         {
             props.health = 100;
@@ -102,7 +100,15 @@ namespace _Game.Scripts.Player
         {
             //todo:: adding health controller
             _takeDamageEffect.DoEffect();
-            //onTakeDamage.InvokeEvent();
+            if (HealthManager.Instance.CurrentHealth > amount)
+            {
+                HealthManager.Instance.CurrentHealth -= amount;
+            }
+            else
+            {
+                HealthManager.Instance.CurrentHealth = 0;
+                LevelManager.Instance.currentState = LevelState.BeforeFail;
+            }
         }
 
         public void HandleGrowAbility()

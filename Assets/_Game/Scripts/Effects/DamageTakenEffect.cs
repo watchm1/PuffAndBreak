@@ -15,8 +15,6 @@ namespace _Game.Scripts.Effects
         public DamageTakenEffect(GameObject objectSelf)
         {
             _objectSelf = objectSelf;
-
-            var meshRenderer = _objectSelf.GetComponent<MeshRenderer>();
         }
     }
 }

@@ -117,7 +117,6 @@ namespace _Game.Scripts.Enemy.AIBase
         public void TakeDamage(int amount)
         {
         }
-
         public void DamageToPlayer()
         {
             WatchmLogger.Log("Event Triggered");
