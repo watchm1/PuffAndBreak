@@ -26,6 +26,7 @@ namespace _Game.Scripts.Player
        
         [SerializeField] public GameObject childObject;
         [SerializeField] public ParticleSystem takenDamageEffect;
+        [SerializeField] public DamageEffect effect;
         public Animator childAnimator;
         public PlayerProps props;
         private InputManager _inputManager;
@@ -102,6 +103,7 @@ namespace _Game.Scripts.Player
 
         private void HealthDealer(int amount)
         {
+            effect.FlashEffect();
             if (HealthManager.Instance.CurrentHealth > amount)
             {
                 HealthManager.Instance.CurrentHealth -= amount;

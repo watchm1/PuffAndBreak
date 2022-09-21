@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 2890187193160795550}
   - component: {fileID: 399158496}
   - component: {fileID: 4372756514782170229}
+  - component: {fileID: 399158504}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -324,7 +325,7 @@ MonoBehaviour:
   childObject: {fileID: 8376107493384505275}
   takenDamageEffect: {fileID: 1892333751805388, guid: 452f8c6f5b6d23b4e966a40a9e4720c1,
     type: 3}
-  childAnimator: {fileID: 0}
+  childAnimator: {fileID: 399158504}
   props:
     canMove: 0
     currentState: 0
@@ -399,6 +400,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45022a0924cb9304088cbce23976c17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &399158504
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533786617440244716}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 93f10da312e973241813f9f394b0c681, type: 3}
+  m_Controller: {fileID: 9100000, guid: 85873580778b87548b693e3c22cad7c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5225219164562019723
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5675904230967687036}
   - component: {fileID: 2469096171830354865}
+  - component: {fileID: 509326624352931402}
   m_Layer: 0
   m_Name: mesh_3_4.nr
   m_TagString: Untagged
@@ -586,6 +608,23 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00008767843, y: 0.10473725, z: 0.020907477}
     m_Extent: {x: 0.3712568, y: 0.58706474, z: 0.4160313}
   m_DirtyAABB: 0
+--- !u!114 &509326624352931402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057596387136861998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea4a56a50cf8f94dbf57fa9357fbfc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 2469096171830354865}
+  originalMetarial: {fileID: 2100000, guid: 7cb03ddede071d24d827ae570d061a04, type: 2}
+  damageEffectMaterial: {fileID: 2100000, guid: a00582c1127ec90458c32cf71e28b6bd,
+    type: 2}
+  duration: 0
 --- !u!1 &8376107493384505275
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +634,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9184592048691059969}
-  - component: {fileID: 3367902883243456914}
   m_Layer: 0
   m_Name: PusfferFish
   m_TagString: Untagged
@@ -621,26 +659,6 @@ Transform:
   m_Father: {fileID: 4533786617440244717}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!95 &3367902883243456914
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8376107493384505275}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2a82d1188f0e28d478cf9458b88a4688, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4533786616650854608
 PrefabInstance:
   m_ObjectHideFlags: 0
