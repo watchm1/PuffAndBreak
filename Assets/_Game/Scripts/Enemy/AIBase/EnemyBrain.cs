@@ -5,6 +5,7 @@ using _Game.Scripts.DamageSystem;
 using _Game.Scripts.Enemy.State;
 using _Watchm1.Helpers.Logger;
 using Pathfinding;
+using Sirenix.OdinInspector.Editor.Modules;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -31,6 +32,7 @@ namespace _Game.Scripts.Enemy.AIBase
         // AI
         [SerializeField] public AttackType attackType;
         [SerializeField] public List<Transform> randomLocationsForMovingAround;
+        [SerializeField] public int damageAmount;
         [HideInInspector]public List<IEnemyState> states;
         [HideInInspector]public IEnemyState  currentState;
         public Animator animator;
@@ -116,6 +118,11 @@ namespace _Game.Scripts.Enemy.AIBase
         {
         }
 
+        public void DamageToPlayer()
+        {
+            WatchmLogger.Log("Event Triggered");
+            targetPlayer.GetComponent<Player.Player>().TakeDamage(damageAmount);  
+        }
         public void SetNpcRotation(Vector3 targetPos)
         {
             Vector3 newRot = new Vector3(); 

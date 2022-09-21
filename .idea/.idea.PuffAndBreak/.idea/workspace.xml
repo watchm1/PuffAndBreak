@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/Swimming.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/Swimming.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/DangerEnemyImage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/DangerEnemyImage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/Motions/Gunplay.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/Motions/Gunplay.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/Enemy1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Level/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Level/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects/DamageTakenEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects/DamageTakenEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/AIBase/EnemyBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/AIBase/EnemyBrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/FollowPlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/FollowPlayerState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/LookingAroundState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/LookingAroundState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/animation/DiverAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/animation/DiverAnimatorController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/AstarPathfindingProject/Core/AI/IAstarAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/AstarPathfindingProject/Core/AI/IAstarAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/AstarPathfindingProject/Legacy/MiscLegacy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/AstarPathfindingProject/Legacy/MiscLegacy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/LookingAroundState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/LocalStorage/PlayerPrefsInjector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Managers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Managers/HealthManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Managers/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/AbilityController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -134,7 +132,7 @@
       <workItem from="1663615841750" duration="7558000" />
       <workItem from="1663671990055" duration="8655000" />
       <workItem from="1663709598709" duration="2952000" />
-      <workItem from="1663753452682" duration="4743000" />
+      <workItem from="1663753452682" duration="8516000" />
     </task>
     <servers />
   </component>
