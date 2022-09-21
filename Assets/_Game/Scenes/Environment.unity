@@ -207,6 +207,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45022a0924cb9304088cbce23976c17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &399158504
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399158488}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 93f10da312e973241813f9f394b0c681, type: 3}
+  m_Controller: {fileID: 9100000, guid: 85873580778b87548b693e3c22cad7c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,22 +985,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2469096171830354865, guid: e18577fa85e8a4b4096c62d7dd28741a,
-        type: 3}
-      propertyPath: m_BlendShapeWeights.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2469096171830354865, guid: e18577fa85e8a4b4096c62d7dd28741a,
-        type: 3}
-      propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2890187193160795556, guid: e18577fa85e8a4b4096c62d7dd28741a,
         type: 3}
-      propertyPath: takenDamageEffect
+      propertyPath: childAnimator
       value: 
-      objectReference: {fileID: 1892333751805388, guid: 452f8c6f5b6d23b4e966a40a9e4720c1,
-        type: 3}
+      objectReference: {fileID: 399158504}
     - target: {fileID: 4533786617440244716, guid: e18577fa85e8a4b4096c62d7dd28741a,
         type: 3}
       propertyPath: m_Name
@@ -1041,5 +1050,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3367902883243456914, guid: e18577fa85e8a4b4096c62d7dd28741a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e18577fa85e8a4b4096c62d7dd28741a, type: 3}

@@ -25,23 +25,22 @@ namespace _Game.Scripts.Player
 
        
         [SerializeField] public GameObject childObject;
-        [SerializeField] public GameObject takenDamageEffect;
+        [SerializeField] public ParticleSystem takenDamageEffect;
         public Animator childAnimator;
         public PlayerProps props;
         private InputManager _inputManager;
         private AbilityController _abilityController;
-        private ParticleSystem _takenDamageParticle;
+        
         #endregion
         private void Start()
         {
-            _takenDamageParticle = Instantiate(takenDamageEffect, transform).GetComponent<ParticleSystem>();
             props.health = 100;
             props.currentState = FishState.Puff;
             props.canMove = false;
             props.childObjectMeshRenderer = childObject.GetComponentInChildren<SkinnedMeshRenderer>();
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
             _abilityController = GameManager.Instance.abilityController;
-            
+            takenDamageEffect.Pause();
             childAnimator = childObject.GetComponent<Animator>();
             _inputManager = InputManager.Instance;
             HandleGrowAbility();
@@ -97,7 +96,7 @@ namespace _Game.Scripts.Player
         public void TakeDamage(int amount)
         {
             //todo:: adding health controller
-            _takenDamageParticle.Play();
+            takenDamageEffect.Play();
             HealthDealer(amount);
         }
 
