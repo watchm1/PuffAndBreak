@@ -28,10 +28,8 @@ namespace _Game.Scripts.Enemy.State
                 }
                 npc.destinationSetter.target = null;
                 npc.destinationSetter.target = npc.randomLocationsForMovingAround[0];
-                
             }
         }
-
         public void Update(EnemyBrain npc)
         {
             SetDestinationOfNpc(npc);

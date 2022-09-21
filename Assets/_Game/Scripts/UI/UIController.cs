@@ -8,14 +8,14 @@ namespace _Game.Scripts.UI
     public class UIController : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI currencyText;
-        private FloatingJoystick joystickScript;
-        private GameObject floatJoystick;
+        private FloatingJoystick _joystickScript;
+        private GameObject _floatJoystick;
 
         private void Awake()
         {
-            floatJoystick = GameObject.FindObjectOfType<FloatingJoystick>().gameObject;
-            joystickScript = floatJoystick.GetComponent<FloatingJoystick>();
-            joystickScript.gameObject.GetComponent<CanvasRenderer>().SetAlpha(1f);
+            _floatJoystick = GameObject.FindObjectOfType<FloatingJoystick>().gameObject;
+            _joystickScript = _floatJoystick.GetComponent<FloatingJoystick>();
+            _joystickScript.gameObject.GetComponent<CanvasRenderer>().SetAlpha(1f);
             LevelManager.Instance.currentState = LevelState.WaitingOnfirstTouch;
             currencyText.text = PlayerPrefsInjector.GetIntValue("Currency").ToString();
         }
@@ -24,7 +24,7 @@ namespace _Game.Scripts.UI
         public void OnFirstTouch()
         {
             LevelManager.Instance.currentState = LevelState.OnFirstTouchDone;
-            joystickScript.gameObject.GetComponent<CanvasRenderer>().SetAlpha(0f);
+            _joystickScript.gameObject.GetComponent<CanvasRenderer>().SetAlpha(0f);
             LevelManager.Instance.currentState = LevelState.Start;
         }
 

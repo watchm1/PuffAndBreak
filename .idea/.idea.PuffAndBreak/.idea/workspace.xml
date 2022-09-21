@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects/DamageTakenEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects/DamageTakenEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/Motions/Gunplay.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/Enemy/Motions/Gunplay.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/DangerEnemyImage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/DangerEnemyImage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/Enemy1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects/DamageTakenEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Effects/DamageTakenEffect.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/AIBase/EnemyBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/AIBase/EnemyBrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Managers/HealthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Managers/HealthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/LookingAroundState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/LookingAroundState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/animation/DiverAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/animation/DiverAnimatorController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireBlue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireBlue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireGreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireGreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFirePink.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFirePink.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireRed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/Epic Toon FX/Prefabs/Combat/Nova/Fire/NovaFireRed.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +35,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Collectible/CollectibleItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/DamageSystem/DamageDealer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/DamageSystem/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Effects/DamageTakenEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/AIBase/EnemyBrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/FollowPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/IEnemyState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,7 +142,7 @@
       <workItem from="1663615841750" duration="7558000" />
       <workItem from="1663671990055" duration="8655000" />
       <workItem from="1663709598709" duration="2952000" />
-      <workItem from="1663753452682" duration="9341000" />
+      <workItem from="1663753452682" duration="12304000" />
     </task>
     <servers />
   </component>

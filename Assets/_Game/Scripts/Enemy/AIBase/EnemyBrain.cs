@@ -42,6 +42,7 @@ namespace _Game.Scripts.Enemy.AIBase
         public EnemyState currentEnemyState;
         private int _playerStayTime;
 
+
         [SerializeField]public EnemyIconOverlayController iconOverlayController;
         #endregion
         #region LifeCycle
@@ -119,8 +120,7 @@ namespace _Game.Scripts.Enemy.AIBase
         }
         public void DamageToPlayer()
         {
-            WatchmLogger.Log("Event Triggered");
-            targetPlayer.GetComponent<Player.Player>().TakeDamage(damageAmount);  
+            targetPlayer.GetComponent<Player.Player>().TakeDamage(damageAmount);
         }
         public void SetNpcRotation(Vector3 targetPos)
         {

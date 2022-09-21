@@ -503,6 +503,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroy: 0
+--- !u!114 &1551661036 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5334794309945371195, guid: 1a59179350d098049823a60448942ffb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3872190111727022083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3694074244032040993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -579,17 +591,12 @@ PrefabInstance:
     - target: {fileID: 3694074243785901549, guid: 3acbbbd824f96d943bc9af0141ceb098,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3694074243785901549, guid: 3acbbbd824f96d943bc9af0141ceb098,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
       value: '"path":"_followObject","value":$eref:0'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3694074243785901549, guid: 3acbbbd824f96d943bc9af0141ceb098,
-        type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[1]
-      value: '"path":"offSet","value":{"$id":0,"$type":"System.Single, mscorlib",15}'
       objectReference: {fileID: 0}
     - target: {fileID: 3694074243785901549, guid: 3acbbbd824f96d943bc9af0141ceb098,
         type: 3}
@@ -620,6 +627,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3872190111727022085, guid: 1a59179350d098049823a60448942ffb,
+        type: 3}
+      propertyPath: currencyText
+      value: 
+      objectReference: {fileID: 1551661036}
     - target: {fileID: 3872190112219691590, guid: 1a59179350d098049823a60448942ffb,
         type: 3}
       propertyPath: m_RootOrder
@@ -699,6 +711,12 @@ PrefabInstance:
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2890187193160795556, guid: e18577fa85e8a4b4096c62d7dd28741a,
+        type: 3}
+      propertyPath: takenDamageEffect
+      value: 
+      objectReference: {fileID: 1892333751805388, guid: 452f8c6f5b6d23b4e966a40a9e4720c1,
+        type: 3}
     - target: {fileID: 4533786617440244716, guid: e18577fa85e8a4b4096c62d7dd28741a,
         type: 3}
       propertyPath: m_Name

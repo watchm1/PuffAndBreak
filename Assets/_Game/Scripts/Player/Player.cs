@@ -1,10 +1,10 @@
 using _Game.Scripts.Collectible;
 using _Game.Scripts.DamageSystem;
-using _Game.Scripts.Effects;
 using _Game.Scripts.Managers;
 using _Watchm1.Helpers.Effects.Abstract;
 using _Watchm1.SceneManagment.Manager;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Player
 {
@@ -27,15 +27,16 @@ namespace _Game.Scripts.Player
 
        
         [SerializeField] public GameObject childObject;
-        
+        [SerializeField] public GameObject takenDamageEffect;
         public Animator childAnimator;
         public PlayerProps props;
-        private IEffecter<DamageTakenEffect> _takeDamageEffect;
         private InputManager _inputManager;
         private AbilityController _abilityController;
+        private ParticleSystem _takenDamageParticle;
         #endregion
         private void Start()
         {
+            _takenDamageParticle = Instantiate(takenDamageEffect, transform).GetComponent<ParticleSystem>();
             props.health = 100;
             props.currentState = FishState.Puff;
             props.canMove = false;
@@ -43,7 +44,6 @@ namespace _Game.Scripts.Player
             props.childObjectMeshRenderer.SetBlendShapeWeight(0,100);
             _abilityController = GameManager.Instance.abilityController;
             
-            _takeDamageEffect = new DamageTakenEffect(gameObject);
             childAnimator = childObject.GetComponent<Animator>();
             _inputManager = InputManager.Instance;
             HandleGrowAbility();
@@ -99,7 +99,12 @@ namespace _Game.Scripts.Player
         public void TakeDamage(int amount)
         {
             //todo:: adding health controller
-            _takeDamageEffect.DoEffect();
+           HealthDealer(amount);
+           _takenDamageParticle.Play();
+        }
+
+        private void HealthDealer(int amount)
+        {
             if (HealthManager.Instance.CurrentHealth > amount)
             {
                 HealthManager.Instance.CurrentHealth -= amount;
@@ -107,10 +112,9 @@ namespace _Game.Scripts.Player
             else
             {
                 HealthManager.Instance.CurrentHealth = 0;
-                LevelManager.Instance.currentState = LevelState.BeforeFail;
+                LevelManager.Instance.ReloadLevel();
             }
         }
-
         public void HandleGrowAbility()
         {
             var localScale = transform.localScale;
