@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/DangerEnemyImage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Enemy/DangerEnemyImage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/UI/UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/FollowPlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enemy/State/FollowPlayerState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Fonts/Quicksand-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Fonts/Quicksand-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Fonts/Quicksand-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Fonts/Quicksand-SemiBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag00-Group.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag00-Group.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag00_n_Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag00_n_Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag02-Group.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_Component_Labels/Label_Tag02-Group.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage_List_Blue_common (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Dark/Stage_List_Blue_common (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Light/Ranking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Light/Ranking.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Light/Stage_List_Blue_common.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/GUI PRO Kit - Simple Casual/Prefabs/Prefabs_DemoScene_Panels/Light/Stage_List_Blue_common.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Animal/LamaModel 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Animal/LamaModel 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GraphicTemplate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GraphicTemplate.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +130,7 @@
       <workItem from="1663753452682" duration="14223000" />
       <workItem from="1663791521143" duration="2833000" />
       <workItem from="1663838921842" duration="730000" />
+      <workItem from="1663882049350" duration="4000" />
     </task>
     <servers />
   </component>
