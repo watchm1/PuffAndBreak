@@ -10,7 +10,6 @@ Material:
   m_Name: SelectableAreaGround 1
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_ValidKeywords:
-  - DR_RIM_ON
   - _CELPRIMARYMODE_SINGLE
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords:
@@ -111,7 +110,7 @@ Material:
     - _FlatRimSize: 0.3
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
-    - _Flatness: 1
+    - _Flatness: 0.658
     - _FlatnessExtra: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -135,10 +134,10 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimEnabled: 1
-    - _SelfShadingSize: 0.816
+    - _RimEnabled: 0
+    - _SelfShadingSize: 0.626
     - _SelfShadingSizeExtra: 0.6
-    - _ShadowEdgeSize: 0.05
+    - _ShadowEdgeSize: 0.414
     - _ShadowEdgeSizeExtra: 0.05
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -156,7 +155,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.4528302, g: 0.30291253, b: 0.23709506, a: 1}
+    - _BaseColor: {r: 0.5568628, g: 0.39607847, b: 0.3254902, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDim: {r: 0.5568628, g: 0.39607847, b: 0.3254902, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}

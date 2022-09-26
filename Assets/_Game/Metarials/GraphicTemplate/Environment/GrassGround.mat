@@ -10,10 +10,10 @@ Material:
   m_Name: GrassGround
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_ValidKeywords:
-  - _CELPRIMARYMODE_SINGLE
   - _TEXTUREBLENDINGMODE_MULTIPLY
   - _UNITYSHADOWMODE_MULTIPLY
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _CELPRIMARYMODE_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -96,7 +96,7 @@ Material:
     - _CameraDistanceImpact: 0
     - _CelExtraEnabled: 0
     - _CelNumSteps: 3
-    - _CelPrimaryMode: 1
+    - _CelPrimaryMode: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -149,7 +149,7 @@ Material:
     - _TextureImpact: 1
     - _UnityShadowMode: 1
     - _UnityShadowOcclusion: 0
-    - _UnityShadowPower: 1
+    - _UnityShadowPower: 0.285
     - _UnityShadowSharpness: 1
     - _VertexColorsEnabled: 0
     - _WorkflowMode: 1

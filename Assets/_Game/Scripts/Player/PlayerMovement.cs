@@ -11,7 +11,7 @@ namespace _Game.Scripts.Player
         #region Definition
         public bool canTouchEnvironment;
         public float multiplierCount = 1f ;
-
+        private AbilityController _controller;
         private InputManager _inputManager;
         private GameSettings _settings;
         private float _verticalSpeed;
@@ -21,14 +21,12 @@ namespace _Game.Scripts.Player
         private float _vertical;
         private static readonly int Trigger = Animator.StringToHash("Trigger");
         private Rigidbody _rb;
-        
-        
+        private float _abilityMultiplier;
         #endregion
-
         #region LifeCycle
-
         private void Start()
         {
+            _controller = GetComponent<AbilityController>();
             _inputManager = InputManager.Instance;
             _settings = GameSettings.Current;
             _verticalSpeed = _settings.playerForwardSpeed;
@@ -37,7 +35,6 @@ namespace _Game.Scripts.Player
             canTouchEnvironment = false;
             _rb = GetComponent<Rigidbody>();
         }
-        
         private void LateUpdate()
         {
             if (!LevelManager.Instance.PlayModeActive())
@@ -61,15 +58,15 @@ namespace _Game.Scripts.Player
             _player.childAnimator.SetBool(Trigger, _inputManager.Touching());
 
         }
-
         #endregion
-
         #region Methods
-
         private void HandleMovement()
         {
-             _horizontal = _inputManager.joystick.Horizontal * multiplierCount;
+            _abilityMultiplier = _controller.GetMultiplier(AbilityType.FastMovement);
+            _horizontal = _inputManager.joystick.Horizontal * multiplierCount;
              _vertical = _inputManager.joystick.Vertical * multiplierCount;
+             _horizontal += _horizontal * _abilityMultiplier;
+             _vertical += _vertical * _abilityMultiplier;
              var mutliplyWithSpeedValueHor = _horizontal * _horizontalSpeed;
              var mutliplyWithSpeedValueVer = _vertical * _verticalSpeed;
              var desiredPosition = new Vector3( mutliplyWithSpeedValueHor,
@@ -107,7 +104,5 @@ namespace _Game.Scripts.Player
             
         }
         #endregion
-
-        
     }
 }

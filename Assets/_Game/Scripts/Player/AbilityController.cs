@@ -1,5 +1,4 @@
 using _Game.Scripts.LocalStorage;
-using _Watchm1.Helpers.Logger;
 using UnityEngine;
 
 namespace _Game.Scripts.Player
@@ -10,9 +9,6 @@ namespace _Game.Scripts.Player
         Throw,
         Grow
     }
-
- 
-
     public class AbilityController : MonoBehaviour
     {
         #region Definition
@@ -29,9 +25,7 @@ namespace _Game.Scripts.Player
         public Ability throwAbility;
         public Ability fastMovementAbility;
         #endregion
-
         #region LifeCycle
-        
         private void Awake()
         {
             growAbility = Init(100, 0.2f, AbilityType.Grow);
@@ -93,7 +87,7 @@ namespace _Game.Scripts.Player
                     }
                     else
                     {
-                        return 1f;
+                        return 0;
                     }
                 case AbilityType.Throw:
                 {
@@ -113,7 +107,7 @@ namespace _Game.Scripts.Player
                     }
                     else
                     {
-                        return 1f;
+                        return 0;
                     }
                 default:
                     return 1;
@@ -121,7 +115,6 @@ namespace _Game.Scripts.Player
         } // this function returns a ability power value
         public void Upgrade(int addPrice, AbilityType type)
         {
-           
             switch (type)
             {
                 case AbilityType.Grow:

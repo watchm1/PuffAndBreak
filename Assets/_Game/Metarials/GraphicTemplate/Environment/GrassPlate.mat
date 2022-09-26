@@ -23,7 +23,6 @@ Material:
   m_Name: GrassPlate
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_ValidKeywords:
-  - DR_RIM_ON
   - _CELPRIMARYMODE_SINGLE
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords:
@@ -148,10 +147,10 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimEnabled: 1
-    - _SelfShadingSize: 0.377
+    - _RimEnabled: 0
+    - _SelfShadingSize: 0.912
     - _SelfShadingSizeExtra: 0.6
-    - _ShadowEdgeSize: 0.05
+    - _ShadowEdgeSize: 0.074
     - _ShadowEdgeSizeExtra: 0.05
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -169,9 +168,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.6117647, g: 0.8431373, b: 0.07058824, a: 1}
+    - _BaseColor: {r: 0.60784316, g: 0.8352942, b: 0.050980397, a: 1}
     - _Color: {r: 0.5969352, g: 0.95283014, b: 0.52585435, a: 1}
-    - _ColorDim: {r: 0.4666012, g: 0.6415094, b: 0.057493754, a: 1}
+    - _ColorDim: {r: 0.47058827, g: 0.5882353, b: 0.07058824, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorDimExtra: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}

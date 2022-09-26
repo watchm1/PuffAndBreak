@@ -3,6 +3,7 @@ using _Game.Scripts.DamageSystem;
 using _Game.Scripts.Managers;
 using _Watchm1.SceneManagment.Manager;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Player
 {
@@ -27,6 +28,7 @@ namespace _Game.Scripts.Player
         [SerializeField] public GameObject childObject;
         [SerializeField] public ParticleSystem takenDamageEffect;
         [SerializeField] public DamageEffect effect;
+        [SerializeField] private ThrowSpikeController controller;
         public Animator childAnimator;
         public PlayerProps props;
         private InputManager _inputManager;
@@ -87,6 +89,7 @@ namespace _Game.Scripts.Player
 
         private void HandleShrinkState()
         {
+            controller.ThrowSpikeFunction();
             props.currentState = FishState.Shrinked;
             props.canMove = true;
             props.childObjectMeshRenderer.SetBlendShapeWeight(0, 0);

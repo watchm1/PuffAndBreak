@@ -23,7 +23,6 @@ Material:
   m_Name: SoilPlate
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_ValidKeywords:
-  - DR_RIM_ON
   - _CELPRIMARYMODE_SINGLE
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords:
@@ -124,7 +123,7 @@ Material:
     - _FlatRimSize: 1
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
-    - _Flatness: 0.646
+    - _Flatness: 0.567
     - _FlatnessExtra: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -148,10 +147,10 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimEnabled: 1
-    - _SelfShadingSize: 0.684
+    - _RimEnabled: 0
+    - _SelfShadingSize: 0.866
     - _SelfShadingSizeExtra: 0.6
-    - _ShadowEdgeSize: 0.364
+    - _ShadowEdgeSize: 0.0932
     - _ShadowEdgeSizeExtra: 0.05
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -169,9 +168,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.7264151, g: 0.56769645, b: 0.38719293, a: 1}
+    - _BaseColor: {r: 0.90196085, g: 0.6862745, b: 0.4666667, a: 1}
     - _Color: {r: 0.8301887, g: 0.657299, b: 0.35635456, a: 1}
-    - _ColorDim: {r: 0.7254902, g: 0.5686275, b: 0.38823533, a: 1}
+    - _ColorDim: {r: 0.4716981, g: 0.3998309, b: 0.3448736, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorDimExtra: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}

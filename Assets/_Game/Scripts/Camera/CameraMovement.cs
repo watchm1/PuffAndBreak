@@ -19,6 +19,7 @@ namespace _Game.Scripts.Camera
         [OdinSerialize] private float _movementSpeed;
         [OdinSerialize][NonSerialized] public float offSet;
         [OdinSerialize] private VoidEvent _outOfRange;
+        private AbilityController _controller;
         private UnityEngine.Camera _main;
         private bool _canMove;
         private Vector3 _firstViewPos;
@@ -33,6 +34,8 @@ namespace _Game.Scripts.Camera
         {
             defaultOffset = offSet;
             _main = GetComponent<UnityEngine.Camera>();
+            _controller = _followObject.GetComponent<AbilityController>();
+            _movementSpeed += _movementSpeed * _controller.GetMultiplier(AbilityType.FastMovement);
         }
         
 
