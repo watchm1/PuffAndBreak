@@ -19,22 +19,26 @@ namespace _Game.Scripts.Player
             AbilityDefinitionHandler();
             canThrow = true;
         }
-        private void AbilityDefinitionHandler()
+        public void AbilityDefinitionHandler()
         {
-            _unlockPointCount = 4;
-            _throwSpeed = 2f;
+            if (controller.throwAbility.unlocked == 0)
             {
-                if (controller.throwAbility.upgradeLevel % 2 == 0 && controller.throwAbility.upgradeLevel >0 )
+                _unlockPointCount = 4;
+                _throwSpeed = 2f;
+            }
+            else
+            {
+                _unlockPointCount = 4;
+                if (controller.throwAbility.upgradeLevel % 2 == 0)
                 {
-                    _unlockPointCount += 1;
+                    _unlockPointCount += controller.throwAbility.upgradeLevel == 2 ? 1:2;
                 }
                 else
                 {
-                    _throwSpeed *= controller.throwAbility.multiplier;
+                    _throwSpeed *= controller.GetMultiplier(AbilityType.Throw);
                 }
             }
         }
-
         public void ThrowSpikeFunction()
         {
             if (!canThrow) return;

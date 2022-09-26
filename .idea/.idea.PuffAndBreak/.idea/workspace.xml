@@ -3,43 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="83f1a899-6e49-4775-98e1-910d4068a31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuffAndBreak/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Animal/Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Animal/Body.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Animal/LamaModel 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Animal/LamaModel 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Animal/LamaModel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Animal/LamaModel.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/Banana.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/Banana.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/GrassGround.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/GrassGround.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/GrassPlate 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/GrassPlate 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/GrassPlate 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/GrassPlate 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/GrassPlate.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/GrassPlate.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SelectableAreaGround 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SelectableAreaGround 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SelectableAreaGround.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SelectableAreaGround.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SetIron.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SetIron.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SoilGround.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SoilGround.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SoilPlate.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SoilPlate.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SoilStonePiece.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/SoilStonePiece.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/StoneUp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/StoneUp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/Tree.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Environment/Tree.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Fruit/Lemon.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Fruit/Lemon.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Fruit/Mushroom.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Fruit/Mushroom.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Market/MarketGround.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Market/MarketGround.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Market/Roof.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Market/Roof.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Market/Wood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Metarials/GraphicTemplate/Market/Wood.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/GraphicTemplate/Models/Animals/llama.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/GraphicTemplate/Models/Animals/llama.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/GraphicTemplate/Models/Fruit/Mushroom.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/GraphicTemplate/Models/Fruit/Mushroom.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/GraphicTemplate/Models/Market/marketRoof.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/GraphicTemplate/Models/Market/marketRoof.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/GraphicTemplate/Models/Market/marketRoof.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Models/GraphicTemplate/Models/Market/marketRoof.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/thorn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/thorn.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Environment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GraphicTemplate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GraphicTemplate.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Camera/CameraMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Camera/CameraMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/AbilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imports/FlatKit/[Render Pipeline] URP/ExampleSettings/[FlatKit] Example Settings URP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imports/FlatKit/[Render Pipeline] URP/ExampleSettings/[FlatKit] Example Settings URP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Thorn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Thorn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/ThrowSpikeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/ThrowSpikeController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +135,7 @@
       <workItem from="1663791521143" duration="2833000" />
       <workItem from="1663838921842" duration="730000" />
       <workItem from="1663882049350" duration="4000" />
-      <workItem from="1664210750550" duration="9435000" />
+      <workItem from="1664210750550" duration="10425000" />
     </task>
     <servers />
   </component>
