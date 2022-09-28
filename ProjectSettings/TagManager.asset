@@ -13,6 +13,7 @@ TagManager:
   - EnemyIconPivot
   - InGameUI
   - IconParent1
+  - PopUp
   layers:
   - Default
   - TransparentFX
